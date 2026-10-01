@@ -1,62 +1,101 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+
 <head>
-<meta charset="UTF-8">
+
+<meta charset="utf-8">
+<meta name="robots" content="NOODP">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Find a Part | Obsolete & Legacy Industrial Parts | IPT Engineering</title>
+<title>Find a Part | Obsolete &amp; Legacy Industrial Parts | IPT Engineering</title>
 
-<meta name="description" content="Can't find an obsolete, discontinued or difficult-to-source industrial part? IPT Engineering searches worldwide manufacturers, distributors and suppliers for hard-to-find industrial parts and spares.">
+<meta name="keywords" content="obsolete industrial parts, obsolete parts, discontinued industrial parts, legacy parts, hard-to-find parts, industrial spares, replacement parts, difficult to source parts" />
+
+<meta name="description" content="Can't find an obsolete, discontinued or hard-to-find industrial part? IPT Engineering searches manufacturers, distributors and specialist suppliers worldwide to find difficult-to-source industrial parts and spares." />
+
+<link rel="canonical" href="https://fecofcu.github.io/Website/find-a-part.html">
+
+<!-- Favicon -->
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Main Page Styles -->
 
 <link media="screen" rel="stylesheet" href="styles.css"/>
 
-<script data-goatcounter="https://iptengineering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<!-- Additional styling for the part enquiry form -->
 
 <style>
-.part-form {
+
+.part-enquiry {
     max-width: 760px;
     margin: 0 auto;
 }
 
-.part-form .field {
+.part-enquiry .field {
     margin-bottom: 20px;
 }
 
-.part-form label {
+.part-enquiry label {
     display: block;
-    font-weight: bold;
     margin-bottom: 7px;
+    font-weight: 700;
 }
 
-.part-form label span {
-    font-weight: normal;
+.part-enquiry label span {
+    font-weight: 400;
     color: #777;
 }
 
-.part-form input,
-.part-form textarea {
+.part-enquiry input,
+.part-enquiry textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     background: #fff;
+    color: #333;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     box-sizing: border-box;
 }
 
-.part-form textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.part-form input:focus,
-.part-form textarea:focus {
+.part-enquiry input:focus,
+.part-enquiry textarea:focus {
     outline: none;
     border-color: #2E6DB4;
 }
 
-.part-photo-note {
+.part-enquiry textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.part-enquiry .photo-note {
     margin: 25px 0;
     padding: 15px;
     background: #f2f2f2;
@@ -64,11 +103,11 @@
     line-height: 1.6;
 }
 
-.part-actions {
+.part-enquiry .actions {
     margin-top: 25px;
 }
 
-.part-actions a {
+.part-enquiry .actions a {
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -76,50 +115,52 @@
     margin-bottom: 12px;
     text-align: center;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
 }
 
-.part-actions .whatsapp {
+.part-enquiry .whatsapp {
     background: #22A559;
     color: #fff;
 }
 
-.part-actions .email {
+.part-enquiry .email {
     background: #0B1F3A;
     color: #fff;
 }
 
-.part-actions .copy {
+.part-enquiry .or {
+    text-align: center;
+    margin: 5px 0 12px;
+    color: #777;
+    font-size: 13px;
+}
+
+.part-enquiry .copy {
     display: block;
     width: 100%;
     border: 0;
     background: none;
     color: #2E6DB4;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     text-decoration: underline;
     cursor: pointer;
     padding: 8px;
 }
 
-.part-or {
-    text-align: center;
-    color: #777;
-    margin: 5px 0 12px;
-}
-
-.part-required {
+.part-enquiry .required-message {
     display: none;
     color: #C0392B;
     margin: 10px 0 15px;
     font-size: 13px;
 }
 
-.part-required.show {
+.part-enquiry .required-message.show {
     display: block;
 }
 
-.part-hint {
+.part-enquiry .contact-hint {
     margin-top: 20px;
     text-align: center;
     color: #666;
@@ -127,299 +168,404 @@
     line-height: 1.6;
 }
 
-.part-intro {
-    margin-bottom: 30px;
+.part-enquiry .search-help {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f4f4f4;
 }
 
-.part-intro h2 {
-    margin-bottom: 10px;
+.part-enquiry .search-help h3 {
+    margin-top: 0;
 }
 
-.part-benefits {
-    margin: 25px 0 35px;
+.part-enquiry .search-help ul {
+    margin-bottom: 0;
 }
 
-.part-benefits ul {
-    margin-top: 12px;
-}
-
-.part-benefits li {
-    margin-bottom: 8px;
-}
 </style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180153299-1"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-180153299-1');
+</script>
+
+<!-- Google Tag Manager -->
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8CNHXM');
+</script>
+
+<!-- End Google Tag Manager -->
+
+<script data-goatcounter="https://iptengineering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- Header -->
 
-<div id="header-wrapper">
-    <header id="header">
-        <div id="logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="IPT Engineering Ltd">
-            </a>
-        </div>
+<div id="header">
+
+  <div id="header-wrapper">
 
 ```
-    <div id="header-right">
-        <div id="header-links">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-        </div>
+<!-- Logo -->
+<div id="logo">
+  <a title="IPT Engineering" href="index.html">
+    <img src="images/logo.png" width="250" alt="IPT Engineering" title="IPT Engineering"/>
+  </a>
+</div>
 
-        <div id="header-cta">
-            <a href="find-a-part.html">Need a part? Send us the details</a>
-        </div>
-    </div>
+<!-- Main Menu -->
+<div id="menu-main">
+  <nav>
+    <ul class="main">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="last" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Contact Details -->
+<div id="header-contact">
+
+  <p class="header-text">
+    <span class="light-blue">Need a part? </span>
+    <a class="tel" tabIndex="-1" href="find-a-part.html">Send us the details</a>
+  </p>
+
+</div>
+```
+
+  </div>
+
+</div>
+<!-- Header End -->
+
+<!-- Sub Menu -->
+
+<div id="menu">
+
+  <div id="menu-wrapper">
+
+```
+<header>
+
+  <nav>
+
+    <ul>
+
+      <li>
+        <a href="actuators.html">Actuators</a>
+      </li>
+
+      <li>
+        <a href="butterfly-valves.html">Valves</a>
+      </li>
+
+      <li>
+        <a href="fluid-couplings.html">Fluid Couplings</a>
+      </li>
+
+      <li>
+        <a href="airsweep-material-flow-systems.html">Airsweep Flow Systems</a>
+      </li>
+
+      <li>
+        <a href="find-a-part.html">Find a Part</a>
+      </li>
+
+      <li>
+        <a href="consultancy.html">Consultancy Services</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
 </header>
 ```
 
+  </div>
+
 </div>
 
-<!-- MAIN NAVIGATION -->
+<!-- Banner -->
 
-<div id="menu-wrapper">
-    <div id="menu">
-        <ul>
-            <li><a href="actuators.html">Electric Actuators</a></li>
-            <li><a href="butterfly-valves.html">Industrial Valves</a></li>
-            <li><a href="fluid-couplings.html">Fluid Couplings</a></li>
-            <li><a href="airsweep-material-flow-systems.html">Material Flow Systems</a></li>
-            <li><a href="find-a-part.html">Find a Part</a></li>
-            <li><a href="consultancy.html">Consultancy</a></li>
-        </ul>
-    </div>
-</div>
+<div id="banner">
 
-<!-- BANNER -->
-
-<div id="banner-short">
-    <div class="container">
-        <div class="banner-text">
-            <h1>Find a Part</h1>
-            <p>Obsolete, discontinued and difficult-to-source industrial parts</p>
-        </div>
-    </div>
-</div>
-
-<!-- CONTENT -->
-
-<div id="content-wrapper">
-    <div class="container">
+  <div id="banner-wrapper">
 
 ```
-    <div id="content">
+<div id="banner-text">
 
-        <div class="part-intro">
+  <div id="banner-text01" class="slideUp">
 
-            <h1>Can't find your part?</h1>
+    <p class="banner-text">
+      Can't find the part you need?
+    </p>
 
-            <h2>Send us the details.</h2>
+    <p class="banner-text small">
+      Obsolete, discontinued and difficult-to-source industrial parts
+    </p>
 
-            <p>
-                Finding an obsolete or discontinued industrial part can bring
-                a production problem to a standstill. IPT Engineering can help.
-            </p>
-
-            <p>
-                Tell us what you are looking for and we will search our
-                worldwide network of manufacturers, distributors and suppliers
-                to identify the part or a suitable replacement.
-            </p>
-
-            <div class="part-benefits">
-
-                <h3>We can help with:</h3>
-
-                <ul>
-                    <li>Obsolete and discontinued industrial parts</li>
-                    <li>Legacy equipment and components</li>
-                    <li>Parts where the original manufacturer is no longer supplying them</li>
-                    <li>Difficult-to-source replacement parts</li>
-                    <li>Industrial spares and maintenance components</li>
-                    <li>Identification of parts from photographs or nameplates</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="part-form">
-
-            <h2>Send us your enquiry</h2>
-
-            <p>
-                Give us as much information as you have. A part number,
-                description or photograph can often be enough to start the search.
-            </p>
-
-            <div class="field">
-
-                <label for="part">
-                    Part number or description
-                    <span>(required)</span>
-                </label>
-
-                <textarea
-                    id="part"
-                    placeholder="e.g. AUMA GS 100.3 gearbox, Fluidrive coupling part, Beck actuator component, or describe what it does and where it is fitted"></textarea>
-
-            </div>
-
-            <div class="field">
-
-                <label for="name">
-                    Name / company
-                    <span>(optional)</span>
-                </label>
-
-                <input
-                    id="name"
-                    type="text"
-                    placeholder="Your name and company">
-
-            </div>
-
-            <div class="field">
-
-                <label for="contact">
-                    Your email or phone
-                    <span>(optional)</span>
-                </label>
-
-                <input
-                    id="contact"
-                    type="text"
-                    placeholder="So we know how to reach you">
-
-            </div>
-
-            <div class="field">
-
-                <label for="notes">
-                    Anything else?
-                    <span>(optional)</span>
-                </label>
-
-                <textarea
-                    id="notes"
-                    placeholder="Nameplate details, equipment manufacturer, quantity required, urgency, location, etc."></textarea>
-
-            </div>
-
-            <div class="part-photo-note">
-
-                <strong>📷 A photograph can make identification much faster.</strong>
-
-                <br>
-
-                If you have a photograph of the part, nameplate or existing
-                equipment, attach it when WhatsApp or your email application
-                opens after you press one of the buttons below.
-
-            </div>
-
-            <p class="part-required" id="req-msg">
-                Please add a part number or description first — that's the one
-                thing we need to start the search.
-            </p>
-
-            <div class="part-actions">
-
-                <a
-                    id="send-wa"
-                    class="whatsapp"
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                    data-goatcounter-click="send-whatsapp">
-                    Send enquiry via WhatsApp
-                </a>
-
-                <div class="part-or">OR</div>
-
-                <a
-                    id="send-email"
-                    class="email"
-                    href="#"
-                    data-goatcounter-click="send-email">
-                    Send enquiry via Email
-                </a>
-
-                <button
-                    id="copy-fallback"
-                    class="copy"
-                    type="button"
-                    data-goatcounter-click="copy-details">
-                    Or copy the details to paste into an email
-                </button>
-
-            </div>
-
-            <p class="part-hint">
-                info@iptengineering.com &nbsp;•&nbsp; WhatsApp 07912 023945
-            </p>
-
-        </div>
-
-        <div class="promo-box">
-
-            <h3>Don't have the original part number?</h3>
-
-            <p>
-                That's not necessarily a problem. Send us a photograph,
-                nameplate information or a description of the equipment and
-                what the component does. We can use the information available
-                to investigate possible sources and replacements.
-            </p>
-
-            <p>
-                <strong>
-                    The more information you can provide, the easier it is
-                    for us to identify the part.
-                </strong>
-            </p>
-
-        </div>
-
-    </div>
+  </div>
 
 </div>
 ```
 
+  </div>
+
 </div>
 
-<!-- FOOTER -->
+<!-- Main Content -->
 
-<div id="footer-wrapper">
+<div class="main-content">
+
+  <div class="main-content-wrapper">
 
 ```
-<div id="footer">
+<header>
 
-    <div class="footer-left">
+  <h1>Find a Part</h1>
 
-        <h3>IPT Engineering Ltd</h3>
+  <h3>Obsolete &amp; Legacy Industrial Parts</h3>
 
-        <p>
-            Finding difficult-to-source industrial parts,
-            components and engineered solutions.
-        </p>
+  <div class="hr"></div>
 
-        <p>
-            International House<br>
-            36–38 Cornhill<br>
-            London EC3V 3NG<br>
-            United Kingdom
-        </p>
+</header>
 
+<p class="main-text">
+  <span class="bold">Can't find the part you need?</span>
+  Tell us what you are looking for and IPT Engineering will search our
+  worldwide network of manufacturers, distributors and specialist suppliers
+  to find the part or identify a suitable replacement.
+</p>
+
+<p class="main-text">
+  Obsolete doesn't necessarily mean unavailable. Equipment can remain in
+  service for decades after its original components have been discontinued.
+  A part number, manufacturer, photograph, nameplate or equipment details
+  may be enough for us to start the search.
+</p>
+
+<p class="main-text">
+  We can help with obsolete and discontinued industrial parts, legacy
+  equipment, difficult-to-source spares and replacement components.
+</p>
+```
+
+  </div>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main-content-bg">
+
+  <div class="main-content-wrapper">
+
+```
+<header>
+
+  <h2>Send Us the Details</h2>
+
+  <div class="hr"></div>
+
+</header>
+
+
+<div class="part-enquiry">
+
+  <p class="main-text">
+    Give us as much information as you have. The more detail you can
+    provide, the easier it is for us to identify the part and investigate
+    possible sources.
+  </p>
+
+
+  <div class="field">
+
+    <label for="part">
+      Part number or description
+      <span>(required)</span>
+    </label>
+
+    <textarea
+      id="part"
+      placeholder="e.g. AUMA GS 100.3 gearbox, Fluidrive coupling part, Beck actuator component, or describe what it does and where it is fitted"></textarea>
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="name">
+      Name / company
+      <span>(optional)</span>
+    </label>
+
+    <input
+      id="name"
+      type="text"
+      placeholder="Your name and company">
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="contact">
+      Your email or phone
+      <span>(optional)</span>
+    </label>
+
+    <input
+      id="contact"
+      type="text"
+      placeholder="So we know how to reach you">
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="notes">
+      Anything else?
+      <span>(optional)</span>
+    </label>
+
+    <textarea
+      id="notes"
+      placeholder="Nameplate details, equipment manufacturer, quantity required, urgency, location, etc."></textarea>
+
+  </div>
+
+
+  <div class="photo-note">
+
+    <strong>Photographs can make identification much faster.</strong>
+
+    <br>
+
+    If you have a photograph of the part, nameplate or existing equipment,
+    attach it when WhatsApp or your email application opens after you
+    press one of the buttons below.
+
+  </div>
+
+
+  <p class="required-message" id="req-msg">
+
+    Please add a part number or description first — that's the one thing
+    we need to start the search.
+
+  </p>
+
+
+  <div class="actions">
+
+    <a
+      id="send-wa"
+      class="whatsapp"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      data-goatcounter-click="send-whatsapp">
+
+      Send enquiry via WhatsApp
+
+    </a>
+
+
+    <div class="or">
+      OR
     </div>
 
-    <div class="footer-right">
 
-        <h3>Quick Links</h3>
+    <a
+      id="send-email"
+      class="email"
+      href="#"
+      data-goatcounter-click="send-email">
 
-        <p>
-            <a href="index.html">Home</a><br>
+      Send enquiry via Email
+
+    </a>
+
+
+    <button
+      id="copy-fallback"
+      class="copy"
+      type="button"
+      data-goatcounter-click="copy-details">
+
+      Or copy the details to paste into an email
+
+    </button>
+
+  </div>
+
+
+  <p class="contact-hint">
+
+    info@iptengineering.com &nbsp;•&nbsp; WhatsApp 07912 023945
+
+  </p>
+
+
+  <div class="search-help">
+
+    <h3>Don't have the original part number?</h3>
+
+    <p class="main-text">
+
+      That's not necessarily a problem. Send us whatever information
+      you have — including a photograph, nameplate details, manufacturer,
+      equipment type or a description of what the component does.
+
+    </p>
+
+    <p class="main-text">
+
+      We will use the information available to investigate possible
+      sources, alternatives and replacement parts.
+
+    </p>
+
+    <ul class="bullets">
+
+      <li>
+        Obsolete and discontinued components
+      </li>
+
+      <li>
+        Legacy industrial equipment
+      </li>
+
+      <li>
+        Hard-to-find replacement parts
+      </li>
+
+      <li>
+        Industrial maintenance spares
+      </li>
+
+      <li>
+        Parts no
 ```
