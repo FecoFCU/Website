@@ -226,7 +226,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 
   <div id="header-wrapper">
 
-```
 <!-- Logo -->
 <div id="logo">
   <a title="IPT Engineering" href="index.html">
@@ -257,7 +256,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
   </p>
 
 </div>
-```
 
   </div>
 
@@ -270,7 +268,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 
   <div id="menu-wrapper">
 
-```
 <header>
 
   <nav>
@@ -306,7 +303,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
   </nav>
 
 </header>
-```
 
   </div>
 
@@ -318,7 +314,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 
   <div id="banner-wrapper">
 
-```
 <div id="banner-text">
 
   <div id="banner-text01" class="slideUp">
@@ -334,7 +329,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
   </div>
 
 </div>
-```
 
   </div>
 
@@ -346,7 +340,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 
   <div class="main-content-wrapper">
 
-```
 <header>
 
   <h1>Find a Part</h1>
@@ -375,7 +368,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
   We can help with obsolete and discontinued industrial parts, legacy
   equipment, difficult-to-source spares and replacement components.
 </p>
-```
 
   </div>
 
@@ -387,7 +379,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 
   <div class="main-content-wrapper">
 
-```
 <header>
 
   <h2>Send Us the Details</h2>
@@ -573,6 +564,205 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
         Industrial maintenance spares
       </li>
 
-      <li>
-        Parts no
-```
+    </ul>
+
+  </div>
+
+</div>
+
+  </div>
+
+</div>
+
+<script>
+  const WA_NUMBER = "447912023945";
+  const EMAIL_TO = "info@iptengineering.com";
+
+  function getValues() {
+    return {
+      part: document.getElementById('part').value.trim(),
+      name: document.getElementById('name').value.trim(),
+      contact: document.getElementById('contact').value.trim(),
+      notes: document.getElementById('notes').value.trim(),
+    };
+  }
+
+  function buildMessage(v) {
+    let lines = [`Part needed: ${v.part || '(not filled in yet)'}`];
+    if (v.name) lines.push(`From: ${v.name}`);
+    if (v.contact) lines.push(`Contact: ${v.contact}`);
+    if (v.notes) lines.push(`Notes: ${v.notes}`);
+    return lines.join('\n');
+  }
+
+  const waLink = document.getElementById('send-wa');
+  const emailLink = document.getElementById('send-email');
+  const msg = document.getElementById('req-msg');
+
+  function refreshLinks() {
+    const v = getValues();
+    const text = encodeURIComponent(buildMessage(v));
+    waLink.href = `https://wa.me/${WA_NUMBER}?text=${text}`;
+    const subject = encodeURIComponent(`Part enquiry: ${(v.part || 'new enquiry').slice(0, 60)}`);
+    const body = encodeURIComponent(buildMessage(v) + '\n\n(Please attach a photo before sending)');
+    emailLink.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+  }
+
+  function guardClick(e) {
+    const { part } = getValues();
+    if (!part) {
+      e.preventDefault();
+      msg.classList.add('show');
+      document.getElementById('part').focus();
+      return;
+    }
+    msg.classList.remove('show');
+    refreshLinks();
+  }
+
+  ['part', 'name', 'contact', 'notes'].forEach(id => {
+    document.getElementById(id).addEventListener('input', refreshLinks);
+  });
+  waLink.addEventListener('click', guardClick);
+  emailLink.addEventListener('click', guardClick);
+  refreshLinks();
+
+  const copyBtn = document.getElementById('copy-fallback');
+  copyBtn.addEventListener('click', async () => {
+    const { part } = getValues();
+    if (!part) {
+      msg.classList.add('show');
+      document.getElementById('part').focus();
+      return;
+    }
+    const text = `To: ${EMAIL_TO}\n\n${buildMessage(getValues())}\n\n(Remember to attach a photo)`;
+    try {
+      await navigator.clipboard.writeText(text);
+      copyBtn.textContent = 'Copied — paste into a new email';
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.textContent = 'Or copy the details to paste into an email';
+        copyBtn.classList.remove('copied');
+      }, 3000);
+    } catch (err) {
+      copyBtn.textContent = 'Copy failed — select the text above manually';
+    }
+  });
+</script>
+
+<!-- Footer -->
+
+<div id="footer">
+  <div id="footer-wrapper">
+
+<div id="footer-column-01">
+
+  <h3 class="white">Contact Us</h3>
+
+  <p class="footer-text">
+    IPT Engineering Ltd<br/>
+    International House<br/>
+    36-38 Cornhill<br/>
+    London<br/>
+    EC3V 3NG<br/>
+    United Kingdom
+  </p>
+
+  <p class="footer-text">
+    <a class="footer-link" href="mailto:info@iptengineering.com">
+      Email IPT Engineering
+    </a>
+  </p>
+
+</div>
+
+<div id="footer-column-02">
+
+  <h3 class="white">Services</h3>
+
+  <ul class="featureList">
+    <li class="gthan">
+      <a class="footer-link" href="find-a-part.html">Obsolete &amp; Legacy Parts</a>
+    </li>
+    <li class="gthan">
+      <a class="footer-link" href="actuators.html">Electrical Actuators</a>
+    </li>
+    <li class="gthan">
+      <a class="footer-link" href="fluid-couplings.html">Fluid Couplings</a>
+    </li>
+    <li class="gthan">
+      <a class="footer-link" href="airsweep-material-flow-systems.html">Airsweep Material Flow Systems</a>
+    </li>
+    <li class="gthan">
+      <a class="footer-link" href="consultancy.html">Consultancy Services</a>
+    </li>
+  </ul>
+
+</div>
+
+<div id="footer-column-03" class="center">
+
+  <div class="image-wrapper">
+    <img src="images/footer-logo.png" alt="IPT Engineering" title="IPT Engineering" width="250px"/>
+  </div>
+
+  <p class="footer-text">
+    <a class="footer-link" href="cookies.html">Cookies</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a class="footer-link" href="legal.html">legal</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a class="footer-link" href="sitemap.html">Sitemap</a>
+  </p>
+  <p class="footer-text"><a class="footer-link" href="https://www.linkedin.com/company/ipt-engineering-ltd/" target="_blank" rel="noopener">Follow IPT Engineering on LinkedIn</a></p>
+
+</div>
+
+  </div>
+</div>
+
+<!-- Baseline -->
+
+<div id="baseline">
+  <div id="baseline-wrapper" class="center">
+    <p class="footer-text">
+      &copy;2026 IPT Engineering Ltd. All Rights Reserved.
+    </p>
+  </div>
+</div>
+
+<!-- Fonts -->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+<!-- JQuery -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Menu fixed -->
+
+<script>
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 150) {
+    $('#menu').addClass('fixed');
+  } else {
+    $('#menu').removeClass('fixed');
+  }
+});
+</script>
+
+<!-- Mean Menu Styles -->
+
+<link rel="stylesheet" href="css/meanmenu.css" media="all" />
+
+<!-- Menu -->
+
+<script src="js/jquery.meanmenu.js"></script>
+
+<script>
+jQuery(document).ready(function () {
+  jQuery('header nav').meanmenu();
+});
+</script>
+
+</body>
+</html>
