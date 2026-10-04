@@ -72,8 +72,8 @@
 <!-- Google Tag Manager -->
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js');var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K8CNHXM');</script>
 
@@ -213,8 +213,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 	</p>
 
 	<div class="center">
-	  <a class="blank" href="find-a-part.html">
-	    <div class="service-button">Need a Valve or Replacement Part?</div>
+	  <a class="blank" href="#valve-quote">
+	    <div class="service-button">Request a Valve Quotation</div>
 	  </a>
 	</div>
 
@@ -338,6 +338,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+i:'';j.async=true;j.src=
 
   </div>
 </div>
+
+<!-- Valve Quote Form -->
+
+<div class="main-content-bg" id="valve-quote">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Request a Butterfly Valve Quotation</h2>
+      <h3>Tell us what you need and we will quote</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">Fill in what you know. Fields marked * are needed for a quotation; choose "Not sure" for anything else and we will advise.</p>
+    <style>
+      .vq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;margin:20px 0}
+      .vq-field label{display:block;margin-bottom:5px;font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#036}
+      .vq-field label span{color:#b3261e}
+      .vq-field select,.vq-field input,.vq-field textarea{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid #c8ced6;border-radius:3px;background:#fff;font-family:'Open Sans',sans-serif;font-size:.95em;color:#222}
+      .vq-wide{grid-column:1/-1}
+      .vq-actions a{display:inline-block;margin:4px 8px 4px 0;padding:12px 20px;border-radius:3px;color:#fff!important;text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:bold}
+      #vq-email{background:#036}#vq-wa{background:#25a35a}#vq-copy{background:none;color:#036!important;text-decoration:underline;padding:12px 4px}
+      #vq-msg{display:none;color:#b3261e;font-family:'Open Sans',sans-serif;margin:8px 0}
+      @media (max-width:900px){.vq-grid{grid-template-columns:1fr 1fr}}
+      @media (max-width:520px){.vq-grid{grid-template-columns:1fr}}
+    </style>
+    <form id="vq-form" onsubmit="return false">
+      <div class="vq-grid">
+        <div class="vq-field"><label for="vq-type">Valve type</label><select id="vq-type"><option value="">Select…</option><option>Wafer</option><option>Wafer Light</option><option>Lug</option><option>Flanged</option><option>Galactic (PTFE seated)</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-size">Size <span>*</span></label><select id="vq-size"><option value="">Select…</option><option>DN50 (2")</option><option>DN65 (2½")</option><option>DN80 (3")</option><option>DN100 (4")</option><option>DN125 (5")</option><option>DN150 (6")</option><option>DN200 (8")</option><option>DN250 (10")</option><option>DN300 (12")</option><option>DN350 (14")</option><option>DN400 (16")</option><option>DN450 (18")</option><option>DN500 (20")</option><option>DN600 (24")</option><option>DN700 (28")</option><option>DN800 (32")</option><option>DN900 (36")</option><option>DN1000 (40")</option><option>DN1200 (48")</option><option>Other / not sure</option></select></div>
+        <div class="vq-field"><label for="vq-qty">Quantity <span>*</span></label><input id="vq-qty" type="text" placeholder="e.g. 4"></div>
+        <div class="vq-field"><label for="vq-pressure">Working pressure</label><select id="vq-pressure"><option value="">Select…</option><option>PN6</option><option>PN10</option><option>PN16</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-flange">Flange / pipe standard</label><select id="vq-flange"><option value="">Select…</option><option>EN 1092 PN10</option><option>EN 1092 PN16</option><option>ANSI / ASME Class 150</option><option>BS 10 Table D</option><option>BS 10 Table E</option><option>Other</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-body">Body material</label><select id="vq-body"><option value="">Select…</option><option>Cast iron</option><option>Ductile iron</option><option>Carbon steel</option><option>Stainless steel</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-disc">Disc material</label><select id="vq-disc"><option value="">Select…</option><option>Ductile iron (coated)</option><option>Stainless steel</option><option>Aluminium bronze</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-seat">Seat / liner</label><select id="vq-seat"><option value="">Select…</option><option>EPDM</option><option>NBR (nitrile)</option><option>FKM (Viton)</option><option>Silicone</option><option>PTFE</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-medium">Medium <span>*</span></label><input id="vq-medium" type="text" placeholder="e.g. water, air, steam, slurry"></div>
+        <div class="vq-field"><label for="vq-temp">Temperature range</label><input id="vq-temp" type="text" placeholder="e.g. 5 to 80°C"></div>
+        <div class="vq-field"><label for="vq-op">Operation</label><select id="vq-op"><option value="">Select…</option><option>Lever</option><option>Gearbox and handwheel</option><option>Electric actuator (Beck)</option><option>Electric actuator (other)</option><option>Pneumatic actuator</option><option>Bare shaft</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-atex">ATEX area?</label><select id="vq-atex"><option value="">Select…</option><option>No</option><option>Yes</option><option>Not sure</option></select></div>
+        <div class="vq-field"><label for="vq-delivery">Delivery location / required by</label><input id="vq-delivery" type="text" placeholder="e.g. Leeds, end of March"></div>
+        <div class="vq-field"><label for="vq-name">Name / company</label><input id="vq-name" type="text" placeholder="Your name and company"></div>
+        <div class="vq-field"><label for="vq-contact">Email or phone <span>*</span></label><input id="vq-contact" type="text" placeholder="So we can send the quotation"></div>
+        <div class="vq-field vq-wide"><label for="vq-notes">Anything else?</label><textarea id="vq-notes" rows="3" placeholder="Existing valve make and model, application, control signal for an actuator, etc."></textarea></div>
+      </div>
+      <p id="vq-msg"></p>
+      <div class="vq-actions">
+        <a id="vq-email" href="#">Send by email</a><a id="vq-wa" href="#">Send by WhatsApp</a><a id="vq-copy" href="#">Or copy the details</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Valve Quote Form End -->
 
 <!-- Applications -->
 
@@ -594,5 +645,6 @@ jQuery(document).ready(function () {
 });
 </script>
 
+<script src="js/valve-quote.js"></script>
 </body>
 </html>
