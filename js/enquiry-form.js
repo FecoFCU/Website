@@ -7,8 +7,14 @@
     var els = Array.prototype.slice.call(f.querySelectorAll("[data-label]"));
     function v(e) { return (e.value || "").trim(); }
     function build() {
-      var lines = [f.getAttribute("data-subject"), ""];
-      els.forEach(function (e) { if (v(e)) lines.push(e.getAttribute("data-label") + ": " + v(e)); });
+      var lines = [f.getAttribute("data-subject"), ""], last = null;
+      els.forEach(function (e) {
+        if (!v(e)) return;
+        var fs = e.closest("fieldset"), lg = fs && fs.querySelector("legend");
+        var sec = lg ? lg.textContent.trim() : null;
+        if (sec && sec !== last) { if (last !== null) lines.push(""); lines.push(sec.toUpperCase()); last = sec; }
+        lines.push(e.getAttribute("data-label") + ": " + v(e));
+      });
       lines.push("", "Sent from " + location.href);
       return lines.join("\n");
     }
@@ -20,7 +26,17 @@
     }
     f.querySelector(".enq-email").addEventListener("click", function (e) {
       e.preventDefault(); if (!ok()) return;
-      location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(f.getAttribute("data-subject")) + "&body=" + encodeURIComponent(build());
+      var text = build(), subj = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(f.getAttribute("data-subject"));
+      if (encodeURIComponent(text).length < 1800) { location.href = subj + "&body=" + encodeURIComponent(text); return; }
+      // Long enquiries can be cut off by some email programs: copy the full text and ask for it to be pasted.
+      var go = function (copied) {
+        msg.textContent = copied ? "Your details are copied. Paste them into the email that opens (Ctrl+V or long-press, Paste)."
+                                 : "Your enquiry is long: please use \"Or copy the details\" and paste into an email to " + EMAIL + ".";
+        msg.style.display = "block";
+        if (copied) location.href = subj + "&body=" + encodeURIComponent("Please paste the copied enquiry details here.\n\n");
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { go(true); }, function () { go(false); });
+      else go(false);
     });
     f.querySelector(".enq-wa").addEventListener("click", function (e) {
       e.preventDefault(); if (!ok()) return;
