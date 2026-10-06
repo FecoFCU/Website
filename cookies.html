@@ -30,12 +30,13 @@
 <![endif]-->
 
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180153299-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T3V1556WY"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-180153299-1');
+gtag('config', 'G-0T3V1556WY');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m)gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});});
 </script>
 
 <!-- Google Tag Manager -->
