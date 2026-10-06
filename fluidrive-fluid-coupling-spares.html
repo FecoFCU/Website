@@ -86,6 +86,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .cs-card p{line-height:1.5;color:#44505e}
 .cs-card .cs-more{display:inline-block;margin-top:10px;color:#036;font-weight:bold}
 .cs-card:hover{border-color:#036}
+.cs-fig.diag img{aspect-ratio:auto!important;object-fit:contain}
+.hw-main{max-width:900px;margin:24px auto 8px}
+.hw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px}
+@media (max-width:700px){.hw-grid{grid-template-columns:1fr}}
 @media (max-width:700px){.cs-grid{grid-template-columns:1fr 1fr}.cs-pair{gap:10px}}
 @media (max-width:440px){.cs-grid{grid-template-columns:1fr}}
 </style>
@@ -243,6 +247,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="main-content-bg">
   <div class="main-content-wrapper">
+    <header>
+      <h2>How a Fluid Coupling Works</h2>
+      <h3>Fixed-fill and scoop-controlled couplings</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    A fluid coupling has no mechanical connection between the motor and the driven machine. The motor turns the impeller, which throws oil outwards and across to the runner. The oil circulates between them as a vortex, driving the runner and the output shaft. Because power is carried by the oil, the motor starts unloaded, shock loads are damped and if the driven machine jams, the coupling slips instead of stalling the motor.
+    </p>
+    <div class="hw-main">
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/fluid-coupling-how-it-works.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/fluid-coupling-how-it-works.jpg" alt="Section through a fixed-fill fluid coupling showing the impeller, runner, casing and oil vortex" loading="lazy"></a><figcaption><strong>Fixed-fill coupling (FCU)</strong>: the oil quantity is set at filling, so the coupling always runs at full speed less a small slip</figcaption></figure>
+    </div>
+    <p class="main-text">
+    A scoop-controlled coupling (SCR) adds a reservoir to the rotating casing and a stationary scoop tube that can be moved in and out. Moving the scoop transfers oil between the reservoir and the working circuit, so the output speed can be varied smoothly while the motor runs at constant speed.
+    </p>
+    <div class="hw-grid">
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-control-1-retracted.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-control-1-retracted.jpg" alt="Scoop-controlled fluid coupling with the scoop tube retracted and the working circuit empty" loading="lazy"></a><figcaption><strong>1. Scoop retracted</strong>: oil held in the reservoir, working circuit empty, output stationary</figcaption></figure>
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-control-2-moving-out.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-control-2-moving-out.jpg" alt="Scoop-controlled fluid coupling with the scoop tube moving out and the working circuit filling" loading="lazy"></a><figcaption><strong>2. Scoop moving out</strong>: oil transfers to the working circuit and the output accelerates</figcaption></figure>
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-control-3-fully-out.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-control-3-fully-out.jpg" alt="Scoop-controlled fluid coupling with the scoop tube fully out and the working circuit full" loading="lazy"></a><figcaption><strong>3. Scoop fully out</strong>: working circuit full, a thin annulus left in the reservoir, output at full speed</figcaption></figure>
+    </div>
+    <p class="main-text">
+    Diagrams by IPT Engineering. Click any diagram to view it full size.
+    </p>
     <header>
       <h2>How an FCU Coupling Is Built</h2>
 
