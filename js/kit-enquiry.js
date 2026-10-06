@@ -21,8 +21,9 @@
       var cells = tr.querySelectorAll("td");
       if (cells.length < 2) return;
       var size = cells[0].textContent.trim();
-      var part = cells[1].textContent.trim();
-      var title = product + ", size " + size + " (" + part + ")";
+      var part = table.hasAttribute("data-no-part") ? "" : cells[1].textContent.trim();
+      var prod = table.getAttribute("data-product") || product;
+      var title = prod + ", size " + size + (part && !/ask|^[–-]$/i.test(part) ? " (" + part + ")" : "");
       var msg = "Enquiry: " + title + "\n\nQuantity required:\nName / company:\nContact number:\n\nSent from " + location.href;
       var td = document.createElement("td"); td.className = "kit-enq";
       var em = document.createElement("a"); em.className = "kit-email"; em.textContent = "Email";
