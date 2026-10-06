@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+
+<!-- Ensure HTMl5 elements display ok in IE below 9 -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Enable Media Queries in IE below 9 -->
+<!--[if lt IE 9]>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="NOODP">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Fluid Couplings Work | Fixed-Fill &amp; Scoop Couplings | IPT</title>
+
+<link rel="canonical" href="https://iptengineering.com/how-fluid-couplings-work.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IPT Engineering Ltd">
+<meta property="og:title" content="How Fluid Couplings Work | Fixed-Fill &amp; Scoop Couplings | IPT">
+<meta property="og:description" content="How fluid couplings work: fixed-fill, delay-chamber, scoop-filling and scoop-trimming couplings explained with clear diagrams by IPT Engineering.">
+<meta property="og:url" content="https://iptengineering.com/how-fluid-couplings-work.html">
+<meta property="og:image" content="https://iptengineering.com/images/fluid-couplings/fluid-coupling-how-it-works.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="description" content="How fluid couplings work: fixed-fill, delay-chamber, scoop-filling and scoop-trimming couplings explained with clear diagrams by IPT Engineering." />
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Main Page Styles -->
+<link media="screen" rel="stylesheet" href="css/Styles.css"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T3V1556WY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0T3V1556WY');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m)gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});});
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8CNHXM');</script>
+<!-- End Google Tag Manager -->
+
+
+<link media="screen" rel="stylesheet" href="css/menu-dropdown.css"/>
+<style>
+.cs-pair,.cs-grid{display:grid;gap:16px;margin:24px 0 8px}
+.cs-pair{grid-template-columns:1fr 1fr}
+.cs-grid{grid-template-columns:repeat(3,1fr)}
+.cs-fig{margin:0;background:#fff;border:1px solid #e3e6ea}
+.cs-fig img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.cs-grid.wide .cs-fig img,.cs-pair.wide .cs-fig img{aspect-ratio:4/3}
+.cs-fig figcaption,.cs-card p,.cs-card .cs-more,.cs-tag{font-family:'Open Sans',sans-serif}
+.cs-fig figcaption{padding:10px 12px;font-size:.9em;line-height:1.4;color:#44505e}
+.cs-tag{display:inline-block;font-size:.75em;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;margin-right:6px;color:#fff;background:#036}
+.cs-tag.before{background:#7a6a58}
+.cs-results li{margin:.4em 0}
+.cs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
+.cs-card{display:block;background:#fff;border:1px solid #e3e6ea;text-decoration:none;color:inherit}
+.cs-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.cs-card .cs-card-body{padding:16px 18px 20px}
+.cs-card h3{margin:0 0 8px;color:#036}
+.cs-card p{line-height:1.5;color:#44505e}
+.cs-card .cs-more{display:inline-block;margin-top:10px;color:#036;font-weight:bold}
+.cs-card:hover{border-color:#036}
+@media (max-width:700px){.cs-grid{grid-template-columns:1fr 1fr}.cs-pair{gap:10px}}
+@media (max-width:440px){.cs-grid{grid-template-columns:1fr}}
+</style>
+<style>
+.cs-fig.diag img{aspect-ratio:auto!important;object-fit:contain}
+.hw-main{max-width:900px;margin:24px auto 8px}
+.hw-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 8px}
+.hw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.fc-path{font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;background:#fff;border-left:4px solid #036;padding:12px 16px;margin:18px 0;line-height:1.6}
+.fc-steps{font-family:'Open Sans',sans-serif;line-height:1.6;color:#333;margin:12px 0 12px 22px}
+.fc-steps li{margin:.35em 0}
+.fc-h3{color:#036;margin-top:28px}
+@media (max-width:700px){.hw-pair,.hw-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "How Fluid Couplings Work", "description": "How fluid couplings work: fixed-fill, delay-chamber, scoop-filling and scoop-trimming couplings explained with clear diagrams by IPT Engineering.", "image": "https://iptengineering.com/images/fluid-couplings/fluid-coupling-how-it-works.jpg", "author": {"@type": "Organization", "name": "IPT Engineering Ltd"}, "publisher": {"@type": "Organization", "name": "IPT Engineering Ltd", "url": "https://iptengineering.com/"}, "mainEntityOfPage": "https://iptengineering.com/how-fluid-couplings-work.html"}</script>
+</head>
+
+<body>
+
+<!-- Header -->
+<div id="header">
+  <div id="header-wrapper">
+  
+    <!-- Logo -->
+	<div id="logo">
+	  <a title="IPT Engineering" href="https://iptengineering.com/">
+	    <img src="images/logo.png" width="250" alt="Electric Actuators" title="Electric Actuators"/>
+	  </a>
+	</div>
+	
+	<!-- Main Menu -->
+	<div id="menu-main">
+	  <nav>
+		<ul class="main">
+		  <li>
+		  <a href="index.html">Home</a>
+		  </li>
+		  <li>
+		  <a href="case-studies.html">Case Studies</a>
+		  </li>
+		  <li>
+		  <a class="last" href="contact.html">Contact</a>
+		  </li>
+		</ul>
+	  </nav>
+	</div>
+	
+	<!-- Contact Details -->
+	<div id="header-contact">
+	  
+	  <p class="header-text">
+	  <span class="light-blue">Need a part? </span><a class="tel" tabIndex="-1" href="find-a-part.html">Send us the details</a>
+	  </p>
+	  
+	</div>
+	
+	
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Sub Menu -->
+<div id="menu">
+  <div id="menu-wrapper">
+    <header>
+      <nav>
+		<ul>
+          <li>
+            <a class="down" href="find-a-part.html">Find a Part</a>
+            <ul>
+              <li class="sub-head"><a href="find-a-part.html">Find a Part</a></li>
+              <li><a href="ex-stock-surplus.html">Ex-Stock: AUMA Gearboxes &amp; Vamein Seats</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="fluid-couplings.html">Fluid Couplings</a>
+            <ul>
+              <li class="sub-head"><a href="fluid-couplings.html">Fluid Couplings &amp; Spares</a></li>
+              <li><a href="how-fluid-couplings-work.html">How Fluid Couplings Work</a></li>
+              <li><a href="fluidrive-fluid-coupling-spares.html">Fluidrive Spares</a></li>
+              <li><a href="sime-fluid-coupling-spares.html">SIME Spares</a></li>
+              <li><a href="fluid-coupling-fusible-plugs.html">Fusible Plugs</a></li>
+              <li><a href="fcu-driving-plate-kits.html">Driving Plate Kits</a></li>
+              <li><a href="fcu-output-kits.html">FCU Output Kits</a></li>
+              <li><a href="sfu-output-kits.html">SFU Output Kits</a></li>
+              <li><a href="scr-output-kits.html">SCR Output Kits</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="actuators.html">Actuator Services</a>
+            <ul class="cols2">
+              <li class="sub-head"><a href="actuators.html">Actuator Services</a></li>
+              <li><a href="beck-actuators.html">Beck Electric Actuators</a></li>
+              <li><a href="about-beck.html">About Beck</a></li>
+              <li><a href="the-beck-motor.html">The Beck Motor</a></li>
+              <li><a href="installations.html">Beck Installations</a></li>
+              <li><a href="biomass-plant-applications.html">Biomass Plant Applications</a></li>
+              <li><a href="group-11-rotary-actuator.html">Group 11 Rotary Damper Drives</a></li>
+              <li><a href="group-11-quarter-turn.html">Group 11 Quarter-Turn Actuators</a></li>
+              <li><a href="group-22-rotary-actuator.html">Group 22 Rotary Actuators</a></li>
+              <li><a href="group-29-specification.html">Group 29 Linear Actuators</a></li>
+              <li><a href="group-31-specification.html">Group 31 Rotary Actuators</a></li>
+              <li><a href="group-42-specification.html">Group 42 Long Stroke Actuators</a></li>
+              <li><a href="group-75.html">Group 75 Compact Actuators</a></li>
+              <li><a href="digital-control-module.html">Digital Control Module</a></li>
+              <li><a href="beck-link-assist.html">Beck Link-Assist</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="butterfly-valves.html">Valves</a>
+            <ul>
+              <li class="sub-head"><a href="butterfly-valves.html">Vamein Butterfly Valves</a></li>
+              <li><a href="butterfly-valve-guide.html">Butterfly Valve Guide</a></li>
+              <li><a href="butterfly-valve-size-chart.html">Butterfly Valve Size Chart</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="industrial-dampers.html">Dampers</a>
+          </li>
+          <li>
+            <a href="airsweep-material-flow-systems.html">AirSweep</a>
+          </li>
+          <li>
+            <a href="consultancy.html">Consultancy</a>
+          </li>
+        </ul>
+	  </nav>
+	</header>
+  </div>
+</div>
+
+<!-- Banner -->
+<div id="banner-short">
+  <div id="banner-short-wrapper">
+    
+	<div id="banner-text">
+	  <div id="banner-text01" class="slideUp">
+	    <p class="banner-text">
+	    Fluid Couplings
+	    </p>
+		<p class="banner-text small">
+	    How fluid couplings work
+	    </p>
+	  </div>
+	</div>  
+	  
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h1>How Fluid Couplings Work</h1>
+      <h3>Fixed-fill, delay-chamber and variable-speed couplings explained</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Fluid couplings are mechanical devices fitted between a motor or engine and a driven machine. They are commonly used on equipment such as conveyors, crushers, mills, fans, pumps and propeller-driven systems.
+    </p>
+    <p class="main-text">
+    The original concept of the fluid coupling was conceived by <strong>Hermann F&ouml;ttinger</strong>. Over time, this principle developed into the wide range of modern fluid coupling designs used throughout industry.
+    </p>
+    <p class="main-text">
+    A primary function of a fluid coupling is to provide the motor with a <strong>virtually no-load starting condition</strong>, allowing the driven machine to be accelerated progressively. The coupling also provides an important safety element within the drivetrain should an overload or failure occur elsewhere in the system.
+    </p>
+    <p class="main-text">
+    Regardless of manufacturer or design, a fluid coupling fundamentally consists of four elements:
+    </p>
+    <ol class="fc-steps">
+      <li><strong>Impeller</strong>: connected to the driving machine</li>
+      <li><strong>Runner</strong>: connected to the driven machine</li>
+      <li><strong>Working fluid</strong>: transmits torque through hydrodynamic action</li>
+      <li><strong>Casing</strong>: surrounds the impeller and runner and contains the working fluid</li>
+    </ol>
+    <p class="main-text">
+    There is <strong>no physical mechanical connection between the impeller and runner</strong>. Power is transmitted by the movement of the working fluid. The basic power path can therefore be represented as:
+    </p>
+    <p class="fc-path">Motor or engine &rarr; Impeller &rarr; Working fluid &rarr; Runner &rarr; Driven machine</p>
+    <div class="hw-main">
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/fluid-coupling-how-it-works.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/fluid-coupling-how-it-works.jpg" alt="Section through a fixed-fill fluid coupling showing the impeller, runner, casing and oil vortex" loading="lazy"></a><figcaption><strong>Fixed-fill fluid coupling</strong>: the impeller throws oil across to the runner; the circulating oil vortex carries the power</figcaption></figure>
+    </div>
+    <p class="main-text">
+    Fluid couplings can broadly be divided into two categories: <strong>fixed-fill couplings</strong> and <strong>variable-speed couplings</strong>.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Fixed-Fill Fluid Couplings</h2>
+      <h3>Soft starting from a squirrel-cage motor</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    A fixed-fill coupling contains a predetermined quantity of working oil.
+    </p>
+    <p class="main-text">
+    On starting the motor, the coupling provides a near no-load condition on the motor before progressively accelerating the driven load to full speed. Fixed-fill couplings make use of the inherent characteristics of a squirrel-cage induction motor to accelerate the load.
+    </p>
+    <p class="main-text">
+    Once the driven machine reaches operating speed, the coupling transmits sufficient power from the motor to drive both itself and the driven load.
+    </p>
+    <p class="main-text">
+    A correctly sized fixed-fill coupling will typically operate with approximately <strong>3&ndash;5% slip</strong> under normal operating conditions.
+    </p>
+    <h3 class="fc-h3">Slip and Overload Protection</h3>
+    <p class="main-text">
+    The safety characteristic of a fixed-fill fluid coupling is <strong>not simply torque limitation</strong>. Its important protective characteristic is the increase in slip between the impeller and runner when the driven machine becomes overloaded.
+    </p>
+    <p class="main-text">
+    Under normal operating conditions, the runner rotates only slightly slower than the impeller, resulting in relatively low slip.
+    </p>
+    <p class="main-text">
+    If the driven machine becomes overloaded, the runner slows down. This increases the slip between the impeller and runner, with a corresponding increase in energy being converted into heat within the working fluid.
+    </p>
+    <p class="main-text">
+    In a stall condition, the runner may stop while the impeller continues to rotate. Slip can therefore approach 100%, resulting in rapid heat generation within the coupling.
+    </p>
+    <p class="main-text">
+    Prolonged operation under these conditions can result in excessive working-fluid temperatures and potential damage to the coupling, seals and working fluid. Thermal protection, such as a <a class="link under" href="fluid-coupling-fusible-plugs.html">fusible plug</a>, is therefore an important consideration in applications where prolonged overload or stall conditions are possible.
+    </p>
+    <h3 class="fc-h3">When to Use a Fixed-Fill Coupling</h3>
+    <p class="main-text">
+    Fixed-fill couplings are generally suitable for applications that do not require speed control but where the motor needs:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">A no-load or low-load start</span></li>
+      <li><span class="bullets">Progressive acceleration of the driven machine</span></li>
+      <li><span class="bullets">Protection against system overloads independently of electrical trips</span></li>
+      <li><span class="bullets">Reduced starting demand on the electrical supply</span></li>
+    </ul>
+    <p class="main-text">
+    This makes fixed-fill couplings particularly useful on installations where the available electrical supply is relatively weak.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Delay-Chamber Fixed-Fill Couplings</h2>
+      <h3>A longer, gentler start for long conveyors</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    A variation of the fixed-fill coupling incorporates a <strong>delay chamber</strong>.
+    </p>
+    <p class="main-text">
+    At rest, these couplings retain a proportion of the working-circuit oil in an extended outer casing or delay chamber.
+    </p>
+    <p class="main-text">
+    On start-up, the oil retained in the external chamber is thrown towards the outside of the casing by centrifugal force and feeds into the working circuit through nozzles.
+    </p>
+    <p class="main-text">
+    These couplings provide an extended start-up period and can limit the transmitted torque to around <strong>140% of full-load motor torque</strong> during acceleration. The result is a long, progressive acceleration characteristic.
+    </p>
+    <p class="main-text">
+    This makes delay-chamber couplings particularly effective on <strong>long conveyor belts</strong>, where they help prevent excessive tensions from being generated during starting. This can minimise wear on conveyor joints and reduce belt slap.
+    </p>
+    <div class="hw-pair">
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/delay-chamber-1-at-rest.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/delay-chamber-1-at-rest.jpg" alt="Delay-chamber fluid coupling at rest with oil settled in the lower part of the coupling and delay chamber" loading="lazy"></a><figcaption><strong>At rest</strong>: part of the oil fill is held in the delay chamber</figcaption></figure>
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/delay-chamber-2-starting.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/delay-chamber-2-starting.jpg" alt="Delay-chamber fluid coupling starting, with oil feeding through nozzles from the delay chamber into the working circuit" loading="lazy"></a><figcaption><strong>Starting</strong>: oil feeds through the nozzles into the working circuit</figcaption></figure>
+    </div>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Variable-Speed Fluid Couplings</h2>
+      <h3>Speed control from a fixed-speed motor</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Variable-speed fluid couplings fall into two principal categories: <strong>scoop-filling couplings</strong> and <strong>scoop-trimming couplings</strong>.
+    </p>
+    <p class="main-text">
+    Both designs use <strong>scoop tubes</strong> to control the quantity of oil contained within the working circuit. These types of coupling are suitable for applications requiring <strong>variable-speed control while using a fixed-speed motor</strong>.
+    </p>
+    <p class="main-text">
+    The stable speed reduction that can generally be achieved depends on the type of driven load:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Centrifugal-load applications</strong>, such as fans and pumps: typically around <strong>5:1</strong></span></li>
+      <li><span class="bullets"><strong>Constant-torque applications</strong>, such as crushers and mills: typically around <strong>3:1</strong></span></li>
+    </ul>
+    <h3 class="fc-h3">Scoop-Filling Couplings</h3>
+    <p class="main-text">
+    A scoop-filling coupling typically has its working circuit located within a reservoir. The reservoir is connected to and rotates with the motor and impeller.
+    </p>
+    <p class="main-text">
+    When the coupling is at rest, the working fluid is contained within the reservoir and the working circuit is effectively empty.
+    </p>
+    <p class="main-text">
+    When the motor starts, the reservoir and impeller rotate at motor speed. Due to the rotational effect, the working fluid forms an annulus of oil against the inside wall of the reservoir, while the working circuit remains substantially empty.
+    </p>
+    <p class="main-text">
+    A <strong>scoop tube</strong> is extended into this annulus of oil by a control mechanism. The scoop tube collects the oil and transfers it into the working circuit.
+    </p>
+    <p class="main-text">
+    As the scoop tube is extended further into the oil annulus, an increasing quantity of oil is transferred into the working circuit. This increases the amount of working fluid available to transmit torque and progressively accelerates the driven machine towards the required operating speed.
+    </p>
+    <div class="hw-grid">
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-control-1-retracted.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-control-1-retracted.jpg" alt="Scoop-filling fluid coupling with the scoop tube retracted, oil held in the reservoir and the working circuit empty" loading="lazy"></a><figcaption><strong>1. Scoop retracted</strong>: oil held in the reservoir, working circuit empty, output stationary</figcaption></figure>
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-control-2-moving-out.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-control-2-moving-out.jpg" alt="Scoop-filling fluid coupling with the scoop tube moving out and oil transferring into the working circuit" loading="lazy"></a><figcaption><strong>2. Scoop moving out</strong>: oil transfers to the working circuit and the output accelerates</figcaption></figure>
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-control-3-fully-out.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-control-3-fully-out.jpg" alt="Scoop-filling fluid coupling with the scoop tube fully out and the working circuit full" loading="lazy"></a><figcaption><strong>3. Scoop fully out</strong>: working circuit full, a thin annulus left in the reservoir, output at full speed</figcaption></figure>
+    </div>
+    <h3 class="fc-h3">Working-Circuit Oil Control</h3>
+    <p class="main-text">
+    Flow within the working circuit is controlled by valves located around the periphery of the coupling. These valves allow oil to leak from the working circuit back into the reservoir.
+    </p>
+    <p class="main-text">
+    The balance between the rate at which oil enters the working circuit and the rate at which it returns to the reservoir controls the quantity of working fluid contained within the circuit. This provides continuous control of the coupling&rsquo;s transmitted torque and therefore the speed of the driven machine.
+    </p>
+    <p class="main-text">
+    The circulation of oil also provides a degree of cooling. As the coupling rotates, heat generated within the working fluid can be dissipated through the coupling casing and surrounding structure.
+    </p>
+    <p class="main-text">
+    This combination of <strong>scoop-tube position, working-circuit oil volume and heat dissipation</strong> allows the scoop-filling coupling to provide controlled variable-speed operation from a fixed-speed motor.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Scoop-Trimming Couplings</h2>
+      <h3>High-power variable-speed drives</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Scoop-trimming couplings also use a <strong>scoop tube to control the quantity of working fluid in the working circuit</strong>.
+    </p>
+    <p class="main-text">
+    However, unlike a scoop-filling coupling, the scoop tube in this design controls the output speed by <strong>trimming fluid out of the working circuit</strong> rather than adding fluid to it.
+    </p>
+    <p class="main-text">
+    The working circuit is filled by a pump. Depending on the coupling design, the pump may be:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Driven directly from the coupling input shaft</span></li>
+      <li><span class="bullets">Driven by an external electrically driven pump</span></li>
+      <li><span class="bullets">Or, in some applications, both systems may be used</span></li>
+    </ul>
+    <p class="main-text">
+    Using both an input-driven pump and an external electric pump can provide increased oil flow during start-up. This can be particularly important where the coupling uses <strong>plain bearings rather than rolling-element bearings</strong>, as adequate oil flow may be required to provide lubrication during starting.
+    </p>
+    <p class="main-text">
+    Scoop-trimming couplings tend to be <strong>large units designed for high-horsepower applications</strong>.
+    </p>
+    <div class="hw-main">
+      <figure class="cs-fig diag"><a href="images/fluid-couplings/scoop-trimming-coupling.jpg" target="_blank" rel="noopener"><img src="images/fluid-couplings/scoop-trimming-coupling.jpg" alt="Scoop-trimming fluid coupling in its tank, with a pump filling the working circuit and the scoop tube returning oil to the sump" loading="lazy"></a><figcaption><strong>Scoop-trimming coupling</strong>: the pump fills the working circuit and the scoop tube trims oil out, returning it to the tank</figcaption></figure>
+    </div>
+    <p class="main-text">
+    The working circuit is contained within a tank which performs two important functions. It provides structural support for the rotating elements of the coupling and also acts as a <strong>sump for the working fluid</strong>.
+    </p>
+    <p class="main-text">
+    During operation, the pump supplies oil to the working circuit. The scoop tube removes a controlled quantity of oil from the circuit, returning it to the surrounding tank.
+    </p>
+    <p class="main-text">
+    By controlling the amount of oil retained in the working circuit, the coupling controls the torque transmitted and consequently the speed of the driven machine.
+    </p>
+    <p class="main-text">
+    This arrangement allows large amounts of power to be controlled while using a fixed-speed motor, making scoop-trimming fluid couplings particularly suited to large industrial drives where <strong>variable-speed operation, controlled acceleration and high-power transmission</strong> are required.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Scoop-Tube Control and Applications</h2>
+
+      <div class="hr"></div>
+    </header>
+    <h3 class="fc-h3">Scoop-Tube Control</h3>
+    <p class="main-text">
+    With both scoop-filling and scoop-trimming couplings, the position of the scoop tube is controlled by an <strong>external actuation device</strong>. Depending on the coupling and application, the scoop tube may be actuated by:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Electrical actuation</span></li>
+      <li><span class="bullets">Hydraulic actuation</span></li>
+      <li><span class="bullets">Pneumatic actuation, in some applications</span></li>
+    </ul>
+    <p class="main-text">
+    This external control allows the quantity of working fluid in the circuit to be adjusted while the coupling is operating, providing control of the transmitted torque and output speed.
+    </p>
+    <h3 class="fc-h3">Applications for Scoop-Filling Couplings</h3>
+    <p class="main-text">
+    Scoop-filling couplings are used across a wide range of industrial applications. Their ability to provide controlled acceleration and variable-speed operation makes them particularly suitable for <strong>long, heavy-duty conveyor systems</strong> where high horsepower and extended acceleration times are required. Other applications include:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Crushers</span></li>
+      <li><span class="bullets">Mills</span></li>
+      <li><span class="bullets">Fans</span></li>
+      <li><span class="bullets">Pumps</span></li>
+      <li><span class="bullets">Ship propulsion systems</span></li>
+    </ul>
+    <div class="hw-main">
+      <figure class="cs-fig"><img src="images/fluid-couplings/scoop-coupling-coal-conveyor.jpg" alt="Scoop-controlled fluid coupling with electric scoop actuator on a double-drum coal conveyor drive" loading="lazy"><figcaption><strong>From our site experience</strong>: a scoop-controlled coupling with an electric scoop actuator on a double-drum drive coal conveyor</figcaption></figure>
+    </div>
+    <p class="main-text">
+    The ability to progressively introduce working fluid into the circuit allows acceleration to be controlled while limiting the stresses imposed on the driven equipment and associated mechanical components.
+    </p>
+    <h3 class="fc-h3">Applications for Scoop-Trimming Couplings</h3>
+    <p class="main-text">
+    Scoop-trimming couplings are generally larger units, often constructed as substantial tank-type assemblies, and are particularly suited to <strong>high-horsepower applications</strong>. They are commonly used on:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Large industrial fans</span></li>
+      <li><span class="bullets">High-horsepower pumps</span></li>
+      <li><span class="bullets"><a class="link under" href="fluid-couplings.html#large-variable-speed">Boiler feed pumps</a></span></li>
+      <li><span class="bullets">Refinery process equipment</span></li>
+      <li><span class="bullets">Water desalination plants</span></li>
+    </ul>
+    <p class="main-text">
+    Smaller scoop-trimming units can also be found on <strong>long conveyor systems</strong>, where their ability to control transmitted power and acceleration makes them suitable for demanding conveyor applications.
+    </p>
+    <p class="main-text">
+    The combination of a fixed-speed motor with variable-speed control through the fluid coupling makes these systems particularly useful where the driven equipment requires controlled speed but a variable-speed electric motor is not the preferred solution.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Need Parts or Support for a Fluid Coupling?</h2>
+
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    IPT Engineering supplies spares and technical support for fixed-fill and scoop-controlled fluid couplings, including <a class="link under" href="fluidrive-fluid-coupling-spares.html">Fluidrive</a>, Vulcan Sinclair, Pembril and <a class="link under" href="sime-fluid-coupling-spares.html">SIME</a> couplings. See our <a class="link under" href="fluid-couplings.html">fluid coupling spares</a>, <a class="link under" href="fluid-coupling-fusible-plugs.html">fusible plugs</a>, <a class="link under" href="fcu-driving-plate-kits.html">driving plates</a> and <a class="link under" href="fcu-output-kits.html">output kits</a>.
+    </p>
+    <p class="main-text">
+    Send us the coupling type and size, or a photograph, and we will identify what you need. <a class="link under" href="find-a-part.html">Send us the details</a> or <a class="link under" href="contact.html">contact us</a>.
+    </p>
+    <p class="main-text">
+    All diagrams on this page are by IPT Engineering. Click any diagram to view it full size.
+    </p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <div id="footer-wrapper">
+  
+    <div id="footer-column-01">
+	  <h3 class="white">Contact Us</h3>
+	  <p class="footer-text">
+	  IPT Engineering Ltd
+	  <br/>
+	  International House
+	  <br/>
+	  36-38 Cornhill
+	  <br/>
+	  London
+	  <br/>
+	  EC3V 3NG
+	  <br/>
+	  United Kingdom
+	  </p>
+	  
+	  <p class="footer-text">
+	  <script type='text/javascript'><!--
+	  var v2="3M58PBAF5CGC4IKCC32CZBG";var v7=unescape("Z%23SW%10+12P-%20*Z%2C.1*%5DUm9-*");var v5=v2.length;var v1="";for(var v4=0;v4<v5;v4++){v1+=String.fromCharCode(v2.charCodeAt(v4)^v7.charCodeAt(v4));}document.write('<a class="footer-link" href="javascript:void(0)" onclick="window.location=\'mail\u0074o\u003a'+v1+'?subject='+'\'">'+'Email IPT Engineering<\/a>');
+	  //--></script><noscript><a href='http://w2.syronex.com/jmr/safemailto/#noscript'>Email IPT Engineering (with anti-spam)</a></noscript>
+	  </p>
+	  
+	</div>
+  
+    <div id="footer-column-02">
+	  <h3 class="white">Products &amp; Services</h3>
+	  
+	  <ul class="featureList">
+		<li class="gthan">
+		<a class="footer-link" href="find-a-part.html">Obsolete &amp; Legacy Parts</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="fluid-couplings.html">Fluid Couplings &amp; Spares</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="actuators.html">Actuator Services</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="beck-actuators.html">Beck Electric Actuators</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="butterfly-valves.html">Industrial Valves</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="industrial-dampers.html">Industrial Dampers</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="airsweep-material-flow-systems.html">AirSweep Material Flow Systems</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="consultancy.html">Consultancy Services</a>
+		</li>
+		</ul> 
+	  
+	</div>
+	
+	<div id="footer-column-03" class="center">
+	  <div class="image-wrapper">
+	    <img src="images/footer-logo.png" alt="IPT Engineering" title="IPT Engineering" width="250px"/>
+	  </div>
+	  <p class="footer-text">
+	    <a class="footer-link" href="cookies.html">Cookies</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="legal.html">legal</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="sitemap.html">Sitemap</a>
+	  </p>
+	  <p class="footer-text"><a class="footer-link" href="https://www.linkedin.com/company/ipt-engineering-ltd/" target="_blank" rel="noopener">Follow IPT Engineering on LinkedIn</a></p>
+	</div>
+  
+  </div>
+</div>
+
+<!-- Baseline -->
+<div id="baseline">
+  <div id="baseline-wrapper" class="center">
+    <p class="footer-text">
+	&copy;2026 IPT Engineering Ltd. All Rights Reserved.
+	</p>
+  </div>
+</div>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Menu fixed -->
+<script>
+$(window).scroll(function(){
+      if ($(this).scrollTop() > 150) {
+          $('#menu').addClass('fixed');
+      } else {
+          $('#menu').removeClass('fixed');
+      }
+  });
+</script>
+
+<!-- Mean Menu Styles -->
+<link rel="stylesheet" href="css/meanmenu.css" media="all" />
+
+<!-- Menu -->
+<script src="js/jquery.meanmenu.js"></script> 
+<script>
+jQuery(document).ready(function () {
+    jQuery('header nav').meanmenu();
+});
+</script>
+
+</body>
+</html>
