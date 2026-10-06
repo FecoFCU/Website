@@ -26,14 +26,16 @@
   function subject() { return "Butterfly valve quote: " + [val("vq-size"), val("vq-type")].filter(Boolean).join(" ") + (val("vq-qty") ? " x " + val("vq-qty") : ""); }
   document.getElementById("vq-email").addEventListener("click", function (e) {
     e.preventDefault(); if (!ok()) return;
+    if (window.gtag) gtag("event", "generate_lead", {method: "email_form", form: "Butterfly valve quote"});
     location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject()) + "&body=" + encodeURIComponent(build());
   });
   document.getElementById("vq-wa").addEventListener("click", function (e) {
     e.preventDefault(); if (!ok()) return;
+    if (window.gtag) gtag("event", "generate_lead", {method: "whatsapp_form", form: "Butterfly valve quote"});
     window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(build()), "_blank", "noopener");
   });
   document.getElementById("vq-copy").addEventListener("click", function (e) {
-    e.preventDefault(); if (!ok()) return; var b = this;
+    e.preventDefault(); if (!ok()) return; var b = this; if (window.gtag) gtag("event", "generate_lead", {method: "copy_form", form: "Butterfly valve quote"});
     navigator.clipboard.writeText("To: " + EMAIL + "\n\n" + build()).then(function () { b.textContent = "Copied: paste into a new email"; }, function () { b.textContent = "Copy failed"; });
   });
 })();
