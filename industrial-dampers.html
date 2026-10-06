@@ -66,6 +66,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
+<style>
+.dq-table{width:100%;border-collapse:collapse;margin:20px 0;font-family:'Open Sans',sans-serif;font-size:.93em;background:#fff}
+.dq-table th{background:#036;color:#fff;text-align:left;padding:9px 11px;font-weight:bold}
+.dq-table td{border:1px solid #e3e6ea;padding:9px 11px;vertical-align:middle;line-height:1.45;color:#333}
+.dq-table strong{font-weight:bold}
+.dq-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.qq-btn{font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#fff;background:#036;border:0;border-radius:3px;padding:7px 12px;margin:2px 4px 2px 0;cursor:pointer}
+.qq-btn:hover{background:#0a4f94}
+.enq-form fieldset{border:0;padding:0;margin:0}
+.enq-form legend{font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;font-size:1.05em;padding:0;margin:18px 0 0}
+.enq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;margin:14px 0 6px}
+.enq-grid label{display:block;margin-bottom:5px;font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#036}
+.enq-grid label span{color:#b3261e}
+.enq-grid select,.enq-grid input,.enq-grid textarea{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid #c8ced6;border-radius:3px;background:#fff;font-family:'Open Sans',sans-serif;font-size:.95em;color:#222}
+.enq-wide{grid-column:1/-1}
+.enq-actions a{display:inline-block;margin:4px 8px 4px 0;padding:12px 20px;border-radius:3px;color:#fff!important;text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:bold}
+.enq-email{background:#036}.enq-wa{background:#25a35a}.enq-actions a.enq-copy{background:none;color:#036!important;text-decoration:underline;padding:12px 4px}
+.enq-msg{display:none;color:#b3261e;font-family:'Open Sans',sans-serif;margin:8px 0}
+@media (max-width:900px){.enq-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.enq-grid{grid-template-columns:1fr}}
+@media (max-width:700px){.dq-table{font-size:.84em;display:table!important;min-width:520px}.dq-table thead{display:table-header-group!important}
+.dq-table tbody{display:table-row-group!important}.dq-table tr{display:table-row!important}.dq-table thead tr{position:static!important}
+.dq-table th,.dq-table td{display:table-cell!important;position:static!important;padding:7px!important;width:auto!important}
+.dq-table td:before{content:none!important;display:none!important}}
+</style>
 </head>
 
 <body>
@@ -324,14 +349,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		  </li>
 		</ul>
 		<p class="main-text">
-		If you do not have all of this information, contact us with whatever details are available.
+		If you do not have all of this information, use the <a class="link under" href="#damper-quote">quotation form</a> below with whatever details are available.
 		</p>
 		<h3>Need an Industrial Damper or Spare?</h3>
 		<p class="main-text">
 		IPT Engineering can help identify and source industrial dampers and replacement components for new projects and existing installations. Send us your requirements, drawings, photographs or equipment details and we will investigate the available options.
 		</p>
 		<div class="center">
-		<a class="blank" href="find-a-part.html">
+		<a class="blank" href="#damper-quote">
 		  <div class="service-button">
 		  Enquire About an Industrial Damper
 		  </div>
@@ -373,6 +398,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	</div>
   </div>
 </div>
+<div class="main-content-bg" id="damper-quote">
+  <div class="main-content-wrapper">
+
+<header>
+  <h2>Request a Damper Quotation</h2>
+  <h3>Pick a damper type, or fill in what you know</h3>
+  <div class="hr"></div>
+</header>
+
+<p class="main-text">
+Every industrial damper is made to suit its duct and duty, so we quote each one individually. Choose a damper type and duty below to start, and we will fill in the form for you. Fields marked * are needed; anything else you know helps us quote faster. Drawings, nameplate photos and photos of the existing damper can be attached once your email or WhatsApp opens.
+</p>
+<div class="dq-scroll"><table class="dq-table"><thead><tr><th>Damper type</th><th>Typical duty</th><th>Quote for</th></tr></thead><tbody>
+<tr><td><strong>Single-blade (butterfly) damper</strong></td><td>Round or rectangular ducts; isolation or control of air and gas</td><td><button type="button" class="qq-btn" data-type="Single-blade (butterfly) damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="Single-blade (butterfly) damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>Multi-blade louvre damper</strong></td><td>Large rectangular ducts; flow control with parallel or opposed blades</td><td><button type="button" class="qq-btn" data-type="Multi-blade louvre damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="Multi-blade louvre damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>High-temperature damper</strong></td><td>Hot gas, flue gas and furnace duties beyond standard equipment</td><td><button type="button" class="qq-btn" data-type="High-temperature damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="High-temperature damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>Heavy-duty process damper</strong></td><td>Continuous-duty, dusty or abrasive process gas streams</td><td><button type="button" class="qq-btn" data-type="Heavy-duty process damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="Heavy-duty process damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>Triple-offset damper</strong></td><td>Tight shut-off and dependable isolation under demanding conditions</td><td><button type="button" class="qq-btn" data-type="Triple-offset damper" data-duty="Isolation">Isolation</button></td></tr>
+<tr><td><strong>Spare parts for an existing damper</strong></td><td>Blades, shafts, bearings, seals, linkages and actuators</td><td><button type="button" class="qq-btn" data-type="Spare parts for an existing damper" data-duty="Spares">Spares</button></td></tr>
+</tbody></table></div>
+<form class="enq-form" id="dq-form" data-subject="Industrial damper enquiry" onsubmit="return false">
+<fieldset><legend>The damper</legend><div class="enq-grid"><div><label for="dq-type">Damper type</label><select id="dq-type" data-label="Damper type"><option value="">Select&hellip;</option><option>Single-blade (butterfly) damper</option><option>Multi-blade louvre damper</option><option>High-temperature damper</option><option>Heavy-duty process damper</option><option>Triple-offset damper</option><option>Spare parts for an existing damper</option><option>Not sure</option></select></div><div><label for="dq-duty">Duty</label><select id="dq-duty" data-label="Duty"><option value="">Select&hellip;</option><option>Isolation</option><option>Control</option><option>Isolation and control</option><option>Spares</option><option>Not sure</option></select></div><div><label for="dq-new">New or replacement</label><select id="dq-new" data-label="New or replacement"><option value="">Select&hellip;</option><option>New installation</option><option>Replacement for an existing damper</option><option>Spares only</option></select></div><div><label for="dq-qty">Quantity <span>*</span></label><input id="dq-qty" type="text" placeholder="e.g. 2" data-label="Quantity" data-required></div></div></fieldset>
+<fieldset><legend>Size and connection</legend><div class="enq-grid"><div><label for="dq-shape">Duct shape</label><select id="dq-shape" data-label="Duct shape"><option value="">Select&hellip;</option><option>Round</option><option>Rectangular</option><option>Square</option><option>Not sure</option></select></div><div><label for="dq-size">Size <span>*</span></label><input id="dq-size" type="text" placeholder="e.g. 800 mm dia, or 1200 x 800 mm" data-label="Size" data-required></div><div><label for="dq-flange">Flange / connection</label><input id="dq-flange" type="text" placeholder="e.g. flanged, PCD and hole count" data-label="Flange / connection"></div><div><label for="dq-length">Length available</label><input id="dq-length" type="text" placeholder="Face to face in the duct, mm" data-label="Length available"></div></div></fieldset>
+<fieldset><legend>Process conditions</legend><div class="enq-grid"><div><label for="dq-medium">Medium <span>*</span></label><input id="dq-medium" type="text" placeholder="e.g. air, flue gas, process gas" data-label="Medium" data-required></div><div><label for="dq-temp">Normal operating temperature</label><input id="dq-temp" type="text" placeholder="°C" data-label="Normal operating temperature"></div><div><label for="dq-tmax">Maximum temperature</label><input id="dq-tmax" type="text" placeholder="°C, including upsets" data-label="Maximum temperature"></div><div><label for="dq-press">Operating pressure</label><input id="dq-press" type="text" placeholder="e.g. -20 to +50 mbar" data-label="Operating pressure"></div><div><label for="dq-flow">Flow rate</label><input id="dq-flow" type="text" placeholder="e.g. Nm³/h" data-label="Flow rate"></div><div><label for="dq-dust">Dust or particulate</label><select id="dq-dust" data-label="Dust or particulate"><option value="">Select&hellip;</option><option>None</option><option>Light</option><option>Heavy / abrasive</option><option>Not sure</option></select></div><div><label for="dq-leak">Shut-off requirement</label><select id="dq-leak" data-label="Shut-off requirement"><option value="">Select&hellip;</option><option>Tight shut-off</option><option>Low leakage</option><option>Control only</option><option>Not sure</option></select></div><div><label for="dq-mat">Material requirements</label><input id="dq-mat" type="text" placeholder="e.g. carbon steel, 310 stainless" data-label="Material requirements"></div></div></fieldset>
+<fieldset><legend>Operation</legend><div class="enq-grid"><div><label for="dq-act">Actuation</label><select id="dq-act" data-label="Actuation"><option value="">Select&hellip;</option><option>Manual handle</option><option>Gearbox and handwheel</option><option>Pneumatic actuator</option><option>Electric actuator (Beck)</option><option>Electric actuator (other)</option><option>Re-use existing actuator</option><option>Not sure</option></select></div><div><label for="dq-signal">Control signal</label><select id="dq-signal" data-label="Control signal"><option value="">Select&hellip;</option><option>On/off</option><option>4-20 mA modulating</option><option>Other</option><option>Not sure</option></select></div><div><label for="dq-freq">Operating frequency</label><input id="dq-freq" type="text" placeholder="e.g. continuous modulation, daily" data-label="Operating frequency"></div><div><label for="dq-atex">ATEX area?</label><select id="dq-atex" data-label="ATEX area?"><option value="">Select&hellip;</option><option>No</option><option>Yes</option><option>Not sure</option></select></div><div><label for="dq-existing">Existing make / model</label><input id="dq-existing" type="text" placeholder="If replacing a damper" data-label="Existing make / model"></div></div></fieldset>
+<fieldset><legend>Your details</legend><div class="enq-grid"><div><label for="dq-name">Name / company</label><input id="dq-name" type="text" placeholder="Your name and company" data-label="Name / company"></div><div><label for="dq-contact">Email or phone <span>*</span></label><input id="dq-contact" type="text" placeholder="So we can reply" data-label="Email or phone" data-required></div><div><label for="dq-when">Site location / required by</label><input id="dq-when" type="text" placeholder="e.g. Teesside, March" data-label="Site location / required by"></div><div class="enq-wide"><label for="dq-notes">Anything else?</label><textarea id="dq-notes" rows="3" data-label="Anything else?" placeholder="Application, problems with the existing damper, standards or certificates needed"></textarea></div></div></fieldset>
+<p class="enq-msg"></p>
+<div class="enq-actions"><a class="enq-email" href="#">Send by email</a><a class="enq-wa" href="#">Send by WhatsApp</a><a class="enq-copy" href="#">Or copy the details</a></div>
+</form>
+
+  </div>
+</div>
+
 <!-- Footer -->
 <div id="footer">
   <div id="footer-wrapper">
@@ -483,5 +541,9 @@ jQuery(document).ready(function () {
 });
 </script>
 
+<script>
+(function(){function pick(id,v){var el=document.getElementById(id);if(!el)return;for(var i=0;i<el.options.length;i++){if(el.options[i].text===v){el.selectedIndex=i;break;}}}document.querySelectorAll(".qq-btn").forEach(function(b){b.addEventListener("click",function(){var t=b.getAttribute("data-type"),d=b.getAttribute("data-duty");pick("dq-type",t);pick("dq-duty",d);pick("dq-new",d==="Spares"?"Spares only":"");var f=document.getElementById("dq-form");if(f)f.scrollIntoView({behavior:"smooth"});var q=document.getElementById("dq-qty");if(q)setTimeout(function(){q.focus({preventScroll:true});},500);});});})();
+</script>
+<script src="js/enquiry-form.js"></script>
 </body>
 </html>
