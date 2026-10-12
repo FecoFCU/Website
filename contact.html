@@ -223,7 +223,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 		<!-- Contact Form -->
         <div id="contact-form-wrapper">
-		  <form class="cmxform" id="emailForm" method="post" action="https://formspree.io/f/YOUR_FORM_ID">
+		  <form class="cmxform" id="emailForm" method="post" action="https://formspree.io/f/xkjozedr">
 		  <fieldset>
 		  
 		    <!-- Name -->
@@ -231,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  <label for="name">Name</label><span class="requiredfield">*</span>
 			</div>
 			<div class="editor-field">
-			  <input class="contact" id="name" name="name" type="text" value="">
+			  <input class="contact" id="name" name="name" type="text" autocomplete="name" value="">
 			</div>
 			
 			<!-- Email -->
@@ -239,7 +239,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  <label for="email">Email Address</label><span class="requiredfield">*</span>
 			</div>
 			<div class="editor-field">
-			  <input class="contact" id="email" name="email" type="text" value="">
+			  <input class="contact" id="email" name="email" type="email" autocomplete="email" value="">
 			</div>
 			
 			<!-- Telephone -->
@@ -247,7 +247,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  <label for="phone">Telephone</label><span class="requiredfield">*</span>
 			</div>
 			<div class="editor-field">
-			  <input class="contact" id="phone" name="phone" type="text" value="">
+			  <input class="contact" id="phone" name="phone" type="tel" autocomplete="tel" value="">
 			</div>
 			
 			<!-- Message -->
@@ -428,6 +428,7 @@ $().ready(function() {
 				headers: { 'Accept': 'application/json' }
 			}).done(function() {
 				form.reset();
+				if (typeof gtag === 'function') gtag('event', 'generate_lead', {method: 'contact_form'});
 				$resp.html('<p class="main-text silver"><span class="bold">Thank you for contacting IPT Engineering. We will respond to your enquiry as soon as we can.</span></p>');
 			}).fail(function() {
 				$resp.html('<p class="main-text silver"><span class="bold">Sorry, your message could not be sent. Please try again or email us at info@iptengineering.com.</span></p>');
