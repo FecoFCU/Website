@@ -907,5 +907,6 @@ jQuery(document).ready(function () {
 <script>
 document.querySelectorAll(".qq-btn").forEach(function(b){b.addEventListener("click",function(){function pick(id,start){var el=document.getElementById(id);if(!el)return;for(var i=0;i<el.options.length;i++){var t=el.options[i].text;if(t===start||t.indexOf(start+" ")===0){el.selectedIndex=i;break;}}}pick("vq-type",b.getAttribute("data-type"));pick("vq-size",b.getAttribute("data-dn"));var f=document.getElementById("valve-quote");if(f)f.scrollIntoView({behavior:"smooth"});var q=document.getElementById("vq-qty");if(q)setTimeout(function(){q.focus({preventScroll:true});},500);});});
 </script>
+<script data-goatcounter="https://iptengineering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
