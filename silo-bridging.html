@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+
+<!-- Ensure HTMl5 elements display ok in IE below 9 -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Enable Media Queries in IE below 9 -->
+<!--[if lt IE 9]>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="NOODP">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silo Bridging: Causes and Solutions | Blocked Hoppers | IPT</title>
+
+<link rel="canonical" href="https://iptengineering.com/silo-bridging.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IPT Engineering Ltd">
+<meta property="og:title" content="Silo Bridging: Causes and Solutions | Blocked Hoppers | IPT">
+<meta property="og:description" content="Why silos and hoppers bridge and rathole, how to diagnose the cause, and the options to fix it, from vessel changes to flow aids such as AirSweep. UK support.">
+<meta property="og:url" content="https://iptengineering.com/silo-bridging.html">
+<meta property="og:image" content="https://iptengineering.com/images/airsweep/soil-hopper-bridge.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="description" content="Why silos and hoppers bridge and rathole, how to diagnose the cause, and the options to fix it, from vessel changes to flow aids such as AirSweep. UK support." />
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Main Page Styles -->
+<link media="screen" rel="stylesheet" href="css/Styles.css"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T3V1556WY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0T3V1556WY');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m)gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});});
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8CNHXM');</script>
+<!-- End Google Tag Manager -->
+
+
+<style>
+.cs-pair,.cs-grid{display:grid;gap:16px;margin:24px 0 8px}
+.cs-pair{grid-template-columns:1fr 1fr}
+.cs-grid{grid-template-columns:repeat(3,1fr)}
+.cs-fig{margin:0;background:#fff;border:1px solid #e3e6ea}
+.cs-fig img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.cs-grid.wide .cs-fig img,.cs-pair.wide .cs-fig img{aspect-ratio:4/3}
+.cs-fig figcaption,.cs-card p,.cs-card .cs-more,.cs-tag{font-family:'Open Sans',sans-serif}
+.cs-fig figcaption{padding:10px 12px;font-size:.9em;line-height:1.4;color:#44505e}
+.cs-tag{display:inline-block;font-size:.75em;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;margin-right:6px;color:#fff;background:#036}
+.cs-tag.before{background:#7a6a58}
+.cs-results li{margin:.4em 0}
+.cs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
+.cs-card{display:block;background:#fff;border:1px solid #e3e6ea;text-decoration:none;color:inherit}
+.cs-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.cs-card .cs-card-body{padding:16px 18px 20px}
+.cs-card h3{margin:0 0 8px;color:#036}
+.cs-card p{line-height:1.5;color:#44505e}
+.cs-card .cs-more{display:inline-block;margin-top:10px;color:#036;font-weight:bold}
+.cs-card:hover{border-color:#036}
+@media (max-width:700px){.cs-grid{grid-template-columns:1fr 1fr}.cs-pair{gap:10px}}
+@media (max-width:440px){.cs-grid{grid-template-columns:1fr}}
+.as-video{position:relative;width:100%;max-width:760px;margin:24px 0 8px;aspect-ratio:16/9;background:#000;border-radius:3px;overflow:hidden}
+.as-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.as-video-cap{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:0 0 18px}
+</style>
+<style>
+.as-table{width:100%;border-collapse:collapse;margin:20px 0;font-family:'Open Sans',sans-serif;font-size:.95em;background:#fff}
+.as-table th{background:#036;color:#fff;text-align:left;padding:10px 12px;font-weight:bold}
+.as-table td{border:1px solid #e3e6ea;padding:10px 12px;vertical-align:top;line-height:1.5;color:#333}
+.as-table tr.as-hl td{background:#eef4fa}
+.as-faq h3{margin:22px 0 6px;color:#036}
+.enq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;margin:20px 0}
+.enq-grid label{display:block;margin-bottom:5px;font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#036}
+.enq-grid label span{color:#b3261e}
+.enq-grid select,.enq-grid input,.enq-grid textarea{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid #c8ced6;border-radius:3px;background:#fff;font-family:'Open Sans',sans-serif;font-size:.95em;color:#222}
+.enq-wide{grid-column:1/-1}
+.enq-actions a{display:inline-block;margin:4px 8px 4px 0;padding:12px 20px;border-radius:3px;color:#fff!important;text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:bold}
+.enq-email{background:#036}.enq-wa{background:#25a35a}.enq-actions a.enq-copy{background:none;color:#036!important;text-decoration:underline;padding:12px 4px}
+.enq-msg{display:none;color:#b3261e;font-family:'Open Sans',sans-serif;margin:8px 0}
+.as-diagram{max-width:520px;width:100%;height:auto;display:block;margin:10px auto;background:#fff;border:1px solid #e3e6ea}
+.as-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:22px 0}
+.as-case{background:#fff;border:1px solid #e3e6ea;border-top:4px solid #036;padding:18px 20px}
+.as-case h3{margin:0 0 4px;color:#036;font-size:1.15em}
+.as-case .as-ind{font-family:'Open Sans',sans-serif;font-size:.8em;text-transform:uppercase;letter-spacing:.06em;color:#6b7785;margin:0 0 10px}
+.as-case p{font-family:'Open Sans',sans-serif;font-size:.95em;line-height:1.55;color:#333;margin:0 0 8px}
+.as-case .as-res{font-weight:bold;color:#1d6b3a}
+.as-vs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.as-vs h3{color:#036;margin:6px 0}
+.enq-form fieldset{border:0;padding:0;margin:0}
+.enq-form legend{font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;font-size:1.05em;padding:0;margin:18px 0 0}
+.enq-form details{margin:18px 0;border:1px solid #c8ced6;border-radius:3px;background:#fff;padding:4px 18px 10px}
+.enq-form summary{cursor:pointer;font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;padding:12px 0}
+.enq-form details p.enq-note{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:4px 0 0}
+@media (max-width:900px){.enq-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.enq-grid{grid-template-columns:1fr}.as-table{font-size:.85em}.as-vs{grid-template-columns:1fr}}
+@media (max-width:700px){.as-table{display:table!important}.as-table thead{display:table-header-group!important}.as-table tbody{display:table-row-group!important}.as-table tr{display:table-row!important}.as-table thead tr{position:static!important}.as-table th,.as-table td{display:table-cell!important;position:static!important;padding:7px!important;width:auto!important}.as-table td:before{content:none!important;display:none!important}}
+.as-table strong,.as-case strong,.as-vs strong,.as-faq strong{font-weight:bold}
+</style>
+<link media="screen" rel="stylesheet" href="css/menu-dropdown.css"/>
+</head>
+
+<body>
+
+<!-- Header -->
+<div id="header">
+  <div id="header-wrapper">
+  
+    <!-- Logo -->
+	<div id="logo">
+	  <a title="IPT Engineering" href="https://iptengineering.com/">
+	    <img src="images/logo.png" width="250" alt="Electric Actuators" title="Electric Actuators"/>
+	  </a>
+	</div>
+	
+	<!-- Main Menu -->
+	<div id="menu-main">
+	  <nav>
+		<ul class="main">
+		  <li>
+		  <a href="index.html">Home</a>
+		  </li>
+		  <li>
+		  <a href="case-studies.html">Case Studies</a>
+		  </li>
+		  <li>
+		  <a class="last" href="contact.html">Contact</a>
+		  </li>
+		</ul>
+	  </nav>
+	</div>
+	
+	<!-- Contact Details -->
+	<div id="header-contact">
+	  
+	  <p class="header-text">
+	  <span class="light-blue">Need a part? </span><a class="tel" tabIndex="-1" href="find-a-part.html">Send us the details</a>
+	  </p>
+	  
+	</div>
+	
+	
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Sub Menu -->
+<div id="menu">
+  <div id="menu-wrapper">
+    <header>
+      <nav>
+		<ul>
+          <li>
+            <a class="down" href="find-a-part.html">Find a Part</a>
+            <ul>
+              <li class="sub-head"><a href="find-a-part.html">Find a Part</a></li>
+              <li><a href="ex-stock-surplus.html">Ex-Stock: AUMA Gearboxes &amp; Vamein Seats</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="fluid-couplings.html">Fluid Couplings</a>
+            <ul>
+              <li class="sub-head"><a href="fluid-couplings.html">Fluid Couplings &amp; Spares</a></li>
+              <li><a href="how-fluid-couplings-work.html">How Fluid Couplings Work</a></li>
+              <li><a href="fluidrive-fluid-coupling-spares.html">Fluidrive Spares</a></li>
+              <li><a href="sime-fluid-coupling-spares.html">SIME Spares</a></li>
+              <li><a href="fluid-coupling-fusible-plugs.html">Fusible Plugs</a></li>
+              <li><a href="fcu-driving-plate-kits.html">Driving Plate Kits</a></li>
+              <li><a href="fcu-output-kits.html">FCU Output Kits</a></li>
+              <li><a href="sfu-output-kits.html">SFU Output Kits</a></li>
+              <li><a href="scr-output-kits.html">SCR Output Kits</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="actuators.html">Actuator Services</a>
+            <ul class="cols2">
+              <li class="sub-head"><a href="actuators.html">Actuator Services</a></li>
+              <li><a href="beck-actuators.html">Beck Electric Actuators</a></li>
+              <li><a href="beck-actuators-water-wastewater.html">Beck for Water &amp; Wastewater</a></li>
+              <li><a href="about-beck.html">About Beck</a></li>
+              <li><a href="the-beck-motor.html">The Beck Motor</a></li>
+              <li><a href="installations.html">Beck Installations</a></li>
+              <li><a href="biomass-plant-applications.html">Biomass Plant Applications</a></li>
+              <li><a href="group-11-rotary-actuator.html">Group 11 Rotary Damper Drives</a></li>
+              <li><a href="group-11-quarter-turn.html">Group 11 Quarter-Turn Actuators</a></li>
+              <li><a href="group-22-rotary-actuator.html">Group 22 Rotary Actuators</a></li>
+              <li><a href="group-29-specification.html">Group 29 Linear Actuators</a></li>
+              <li><a href="group-31-specification.html">Group 31 Rotary Actuators</a></li>
+              <li><a href="group-42-specification.html">Group 42 Long Stroke Actuators</a></li>
+              <li><a href="group-75.html">Group 75 Compact Actuators</a></li>
+              <li><a href="digital-control-module.html">Digital Control Module</a></li>
+              <li><a href="beck-link-assist.html">Beck Link-Assist</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="butterfly-valves.html">Valves</a>
+            <ul>
+              <li class="sub-head"><a href="butterfly-valves.html">Vamein Butterfly Valves</a></li>
+              <li><a href="butterfly-valve-guide.html">Butterfly Valve Guide</a></li>
+              <li><a href="butterfly-valve-size-chart.html">Butterfly Valve Size Chart</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="industrial-dampers.html">Dampers</a>
+          </li>
+          <li>
+            <a class="down" href="airsweep-material-flow-systems.html">AirSweep</a>
+            <ul>
+              <li class="sub-head"><a href="airsweep-material-flow-systems.html">AirSweep Systems</a></li>
+              <li><a href="silo-bridging.html">Silo Bridging Guide</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="consultancy.html">Consultancy</a>
+          </li>
+        </ul>
+	  </nav>
+	</header>
+  </div>
+</div>
+
+<!-- Banner -->
+<div id="banner-short">
+  <div id="banner-short-wrapper">
+    
+	<div id="banner-text">
+	  <div id="banner-text01" class="slideUp">
+	    <p class="banner-text">
+	    Silo Bridging
+	    </p>
+		<p class="banner-text small">
+	    Causes and solutions for blocked silos and hoppers
+	    </p>
+	  </div>
+	</div>  
+	  
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h1>Silo Bridging: Causes and Solutions</h1>
+      <h3>How to stop bridging, ratholing and blocked hoppers</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    A silo or hopper that will not discharge stops everything downstream. Operators end up hammering the vessel or rodding it from above, production waits, and the problem comes back the next time the material settles.
+    </p>
+    <p class="main-text">
+    This guide explains why bulk materials bridge and rathole, how to work out what is happening in your vessel, and the options for fixing it, from changes to the vessel itself to flow aids fitted from outside. IPT Engineering helps UK sites cure blocked silos and hoppers, and is the UK agent for AirSweep&reg; flow aids from Control Concepts.
+    </p>
+    <p class="main-text">
+    Already know what you have? <a class="link under" href="#silo-enquiry">Tell us about your silo or hopper</a>.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>What Is Silo Bridging?</h2>
+      <h3>The common flow problems in silos and hoppers</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    <strong>Bridging</strong>, also called arching, is when material forms a stable arch across the hopper outlet. The vessel can be full, but nothing comes out. There are two kinds:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Cohesive arch:</strong> fine, damp or sticky particles bind together strongly enough to span the outlet. Common with soil, clay, damp sand, compost, fine powders and filter cake.</span></li>
+      <li><span class="bullets"><strong>Mechanical (interlocking) arch:</strong> large, flat or fibrous particles lock together over the opening. Common with wood chip, biomass, shredded material and lump products when the outlet is too small for the particle size.</span></li>
+    </ul>
+    <p class="main-text">
+    Other flow problems often appear alongside bridging, or are mistaken for it:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Ratholing:</strong> material flows only through a narrow channel above the outlet, leaving stagnant material packed around the walls. Once the channel empties, flow stops, even though most of the vessel is still full.</span></li>
+      <li><span class="bullets"><strong>Erratic flow:</strong> discharge swings between a trickle and a surge as arches and ratholes form and collapse.</span></li>
+      <li><span class="bullets"><strong>Flooding:</strong> a fine powder that has been aerated, often after a rathole collapses, rushes out uncontrollably like a liquid.</span></li>
+      <li><span class="bullets"><strong>Wall build-up:</strong> material sticks to the walls and cone and hardens over time, reducing usable capacity and eventually narrowing the outlet.</span></li>
+    </ul>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Mass Flow and Funnel Flow</h2>
+      <h3>Why some vessels rathole and others do not</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    How material moves inside a vessel decides which problems you are likely to get.
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Mass flow:</strong> all the material moves whenever any is drawn off. It needs a hopper with walls steep and smooth enough for the material to slide on them. Mass flow vessels discharge first-in, first-out and do not rathole, though a cohesive material can still bridge if the outlet is too small.</span></li>
+      <li><span class="bullets"><strong>Funnel flow (core flow):</strong> material moves down a central channel while material near the walls stays put. Funnel flow is common because shallower cones are cheaper and take less headroom, but it leads to ratholes, stale material that sits in the vessel for weeks, and segregation of mixed products.</span></li>
+    </ul>
+    <p class="main-text">
+    Many existing silos and hoppers were designed for a different material, or for no particular material at all, so they run in funnel flow. The fix is either to change the vessel so it runs closer to mass flow, or to keep the material near the walls moving by other means.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Common Causes of Silo Bridging</h2>
+      <h3>The material, the vessel and how it is used</h3>
+      <div class="hr"></div>
+    </header>
+    <table class="as-table">
+      <thead><tr><th>Cause</th><th>Why it stops flow</th><th>Typical signs</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Moisture</strong></td><td>Water between particles makes them stick together and to the walls.</td><td>Problems worse in wet or cold weather, or with fresh deliveries.</td></tr>
+        <tr><td><strong>Fine or cohesive particles</strong></td><td>Fine powders pack tightly and develop enough strength to arch.</td><td>Powder hangs up even when apparently dry.</td></tr>
+        <tr><td><strong>Time at rest</strong></td><td>Material settles and gains strength while it stands, under the weight of material above.</td><td>Flows during the shift, blocks after a weekend or overnight stop.</td></tr>
+        <tr><td><strong>Shallow hopper or rough walls</strong></td><td>Material cannot slide on the cone wall, so it funnel-flows and leaves stagnant zones.</td><td>Ratholes, build-up on the cone, old material in the vessel.</td></tr>
+        <tr><td><strong>Outlet too small</strong></td><td>Arches can span a small outlet that they could not span a larger one.</td><td>Bridging right at the outlet or gate.</td></tr>
+        <tr><td><strong>Particle shape and size</strong></td><td>Flat, long or fibrous particles interlock.</td><td>Wood chip, biomass and shredded material hanging up over the outlet.</td></tr>
+        <tr><td><strong>Temperature changes</strong></td><td>Condensation, caking or softening as the vessel heats and cools.</td><td>Crusts on the walls, lumps in the discharge.</td></tr>
+      </tbody>
+    </table>
+    <p class="main-text">
+    Most real problems combine several of these. A damp, fine material standing overnight in a shallow cone is far more likely to bridge than any one of those factors alone.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Working Out What Is Happening</h2>
+      <h3>Questions to ask before choosing a fix</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    The right silo bridging solution depends on what is actually going on in the vessel. Before spending money, it helps to answer these questions:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>When does it happen?</strong> After a stop, in certain weather, with a particular supplier's material, or all the time?</span></li>
+      <li><span class="bullets"><strong>Where does it hang up?</strong> An arch at the outlet, a hole down the middle with material on the walls, or build-up on the cone?</span></li>
+      <li><span class="bullets"><strong>What has changed?</strong> A new material, a different moisture content, a larger fill level, or a new feeder or gate?</span></li>
+      <li><span class="bullets"><strong>What has been tried?</strong> Vibrators, air cannons, aeration pads or hammering, and what happened when they were used?</span></li>
+      <li><span class="bullets"><strong>What are the constraints?</strong> Headroom, budget, downtime, food hygiene, ATEX zones and the compressed air available.</span></li>
+    </ul>
+    <p class="main-text">
+    For a new vessel, laboratory flow-property testing of the material (shear cell testing) gives the hopper angle and outlet size needed for reliable flow. For an existing vessel, the answers above, a drawing of the vessel and a few photos are usually enough to identify the cause and the options.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Silo Bridging Solutions</h2>
+      <h3>The main ways to fix a blocked silo or hopper</h3>
+      <div class="hr"></div>
+    </header>
+    <table class="as-table">
+      <thead><tr><th>Solution</th><th>What it involves</th><th>Points to consider</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Change the vessel</strong></td><td>Steepen the cone, enlarge the outlet, or fit an insert to convert funnel flow towards mass flow.</td><td>Tackles the root cause, but means fabrication, downtime and often lost capacity or headroom.</td></tr>
+        <tr><td><strong>Low-friction liners</strong></td><td>Line the cone with UHMW polyethylene or polished stainless steel so material slides more easily.</td><td>Helps where wall friction is the problem; less effective on very damp or sticky material, and liners wear.</td></tr>
+        <tr><td><strong>Change how the vessel is run</strong></td><td>Control moisture, keep fill levels lower, or avoid storing material for long periods.</td><td>Low cost where it is possible, but often limited by the process.</td></tr>
+        <tr><td><strong>Vibrators</strong></td><td>Shake the vessel wall to dislodge material.</td><td>Simple to fit, but noisy, can fatigue the vessel, and can compact damp or cohesive material, making bridging worse.</td></tr>
+        <tr><td><strong>Air cannons</strong></td><td>Fire a large blast of air at intervals to break heavy build-ups.</td><td>Effective on heavy accumulations in large vessels; loud, and each blast is localised.</td></tr>
+        <tr><td><strong>Aeration pads and fluidisers</strong></td><td>Low-pressure air through pads or discs aerates powder near the wall.</td><td>Suits light, dry powders; many units may be needed, and it can cause flooding.</td></tr>
+        <tr><td><strong>Mechanical dischargers</strong></td><td>Bin activators, live-bottom screws or agitators drive material out of the base.</td><td>Positive discharge, but a larger investment with moving parts and changes to the vessel.</td></tr>
+        <tr class="as-hl"><td><strong>AirSweep</strong></td><td>Nozzles in the vessel wall fire short 360-degree air pulses that sweep material off the wall and back into the flow.</td><td>No vibration or wall stress, quiet, low air use; works on damp, sticky and heavy materials as well as powders; serviced from outside the vessel.</td></tr>
+      </tbody>
+    </table>
+    <p class="main-text">
+    <strong>Hammering and rodding</strong> are the most common short-term fixes, and the most costly over time. Hammering dents the vessel, which creates ledges where material builds up and makes the problem worse. Rodding from above often means working at height or over moving plant.
+    </p>
+    <p class="main-text">
+    <strong>Never enter a silo or hopper to clear a blockage.</strong> A bridge or rathole can collapse without warning and bury anyone inside or on top of the material. Silos are confined spaces, and clearing should always be done from outside the vessel.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Fixing Bridging Without Rebuilding the Vessel</h2>
+      <h3>Where AirSweep fits</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Changing a vessel's geometry is the textbook answer, but on a working plant it is often impractical. A flow aid fitted to the existing vessel keeps the material near the walls moving, so arches and ratholes cannot form, without major fabrication or long shutdowns.
+    </p>
+    <p class="main-text">
+    AirSweep is our usual recommendation where vibrators have failed or made things worse, where noise is a problem, or where the material is damp, sticky or heavy rather than a light dry powder. With Control Concepts, we work out the number and position of nozzles, the air supply and the controls for your vessel and material. See <a class="link under" href="airsweep-material-flow-systems.html">AirSweep material flow systems</a> for how it works and how it compares with other flow aids.
+    </p>
+    <div class="cs-pair">
+      <figure class="cs-fig">
+        <img src="images/airsweep/soil-hopper-bridge.jpg" alt="Soil bridging over the outlet of a bagging plant hopper" loading="lazy">
+        <figcaption><span class="cs-tag before">Before</span>Damp soil bridged over the hopper outlet</figcaption>
+      </figure>
+      <figure class="cs-fig">
+        <img src="images/airsweep/soil-hopper-after.jpg" style="object-position:center 80%" alt="Soil hopper with clean walls and material flowing after AirSweep" loading="lazy">
+        <figcaption><span class="cs-tag">After</span>Walls swept clean and the soil flowing to the outlet</figcaption>
+      </figure>
+    </div>
+    <p class="main-text">
+    <strong>Case study:</strong> a compost and soil bagging plant had a hopper that bridged repeatedly, especially in cold, wet weather. Vibrators had already been fitted but did not cure it, and the loader operator was still hammering and rodding the hopper above a moving conveyor. Four AirSweep nozzles, designed by IPT with Control Concepts, now keep the soil flowing. <a class="link under" href="case-study-airsweep-soil-hopper.html">Read the soil hopper case study</a>.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Silo Bridging Questions</h2>
+
+      <div class="hr"></div>
+    </header>
+    <div class="as-faq">
+      <h3>How do you stop silo bridging?</h3>
+      <p class="main-text">Either change the vessel so material can flow freely, by steepening the cone, enlarging the outlet or lining the walls, or keep the material near the walls moving so an arch cannot form, using a flow aid such as AirSweep. Which is right depends on the material, the vessel and how it is used.</p>
+      <h3>What is the difference between bridging and ratholing?</h3>
+      <p class="main-text">Bridging is an arch of material across the outlet, so nothing flows. Ratholing is a narrow flow channel above the outlet with stagnant material left around the walls, so flow stops once the channel empties.</p>
+      <h3>Can vibrators make silo bridging worse?</h3>
+      <p class="main-text">Yes. Vibration can compact damp or cohesive materials such as soil, clay and some powders, making the bridge stronger. It can also fatigue welds and the vessel wall over time.</p>
+      <h3>Is it safe to enter a silo to clear a blockage?</h3>
+      <p class="main-text">No. A bridge or rathole can collapse without warning and bury anyone inside or on top of the material. Silos are confined spaces, and blockages should be cleared from outside the vessel.</p>
+      <h3>Can bridging be fixed without modifying the silo?</h3>
+      <p class="main-text">Often, yes. Flow aids such as AirSweep are fitted through the vessel wall and keep material moving without changing the vessel's shape. Nozzles can be fitted to steel, concrete, fibreglass and wooden vessels.</p>
+      <h3>Which materials are most likely to bridge?</h3>
+      <p class="main-text">Damp, sticky or fine materials such as soil, clay, compost, damp sand, filter cake and fine powders form cohesive arches. Flat, long or fibrous materials such as wood chip and biomass form interlocking arches over small outlets.</p>
+    </div>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you stop silo bridging?", "acceptedAnswer": {"@type": "Answer", "text": "Either change the vessel so material can flow freely, by steepening the cone, enlarging the outlet or lining the walls, or keep the material near the walls moving so an arch cannot form, using a flow aid such as AirSweep. Which is right depends on the material, the vessel and how it is used."}}, {"@type": "Question", "name": "What is the difference between bridging and ratholing?", "acceptedAnswer": {"@type": "Answer", "text": "Bridging is an arch of material across the outlet, so nothing flows. Ratholing is a narrow flow channel above the outlet with stagnant material left around the walls, so flow stops once the channel empties."}}, {"@type": "Question", "name": "Can vibrators make silo bridging worse?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Vibration can compact damp or cohesive materials such as soil, clay and some powders, making the bridge stronger. It can also fatigue welds and the vessel wall over time."}}, {"@type": "Question", "name": "Is it safe to enter a silo to clear a blockage?", "acceptedAnswer": {"@type": "Answer", "text": "No. A bridge or rathole can collapse without warning and bury anyone inside or on top of the material. Silos are confined spaces, and blockages should be cleared from outside the vessel."}}, {"@type": "Question", "name": "Can bridging be fixed without modifying the silo?", "acceptedAnswer": {"@type": "Answer", "text": "Often, yes. Flow aids such as AirSweep are fitted through the vessel wall and keep material moving without changing the vessel's shape. Nozzles can be fitted to steel, concrete, fibreglass and wooden vessels."}}, {"@type": "Question", "name": "Which materials are most likely to bridge?", "acceptedAnswer": {"@type": "Answer", "text": "Damp, sticky or fine materials such as soil, clay, compost, damp sand, filter cake and fine powders form cohesive arches. Flat, long or fibrous materials such as wood chip and biomass form interlocking arches over small outlets."}}]}
+</script>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+<div id="silo-enquiry"></div>
+    <header>
+      <h2>Tell Us About Your Silo or Hopper</h2>
+      <h3>We will come back with the options</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Fill in what you know. Fields marked * are needed. For a full proposal, open the application details as well. A drawing or sketch of the vessel with dimensions, and photos, help most: attach them once your email or WhatsApp opens.
+    </p>
+    <form class="enq-form" data-subject="Silo bridging enquiry" onsubmit="return false">
+      <fieldset><legend>The problem</legend><div class="enq-grid"><div><label for="as-problem">Problem <span>*</span></label><select id="as-problem" data-label="Problem" data-required><option value="">Select…</option><option>Bridging / material blocked</option><option>Ratholing</option><option>Erratic or slow flow</option><option>Build-up on vessel walls</option><option>Batch cleaning between materials</option><option>Other</option></select></div><div><label for="as-vessel">Vessel</label><select id="as-vessel" data-label="Vessel"><option value="">Select…</option><option>Silo</option><option>Hopper</option><option>Bin</option><option>Chute</option><option>Blender</option><option>Other</option></select></div><div><label for="as-material">Material handled <span>*</span></label><input id="as-material" type="text" placeholder="e.g. sand, malt, compost, powder" data-label="Material handled" data-required></div><div class="enq-wide"><label for="as-notes">Describe the problem</label><textarea id="as-notes" rows="3" data-label="Description" placeholder="What happens, where in the vessel, how often"></textarea></div></div></fieldset>
+      <fieldset><legend>Your details</legend><div class="enq-grid"><div><label for="as-name">Name / company</label><input id="as-name" type="text" placeholder="Your name and company" data-label="Name / company"></div><div><label for="as-contact">Email or phone <span>*</span></label><input id="as-contact" type="text" placeholder="So we can reply" data-label="Email or phone" data-required></div><div><label for="as-location">Site location</label><input id="as-location" type="text" placeholder="e.g. Derbyshire" data-label="Site location"></div></div></fieldset>
+      <details>
+        <summary>Full application details (optional, helps us quote)</summary>
+        <p class="enq-note">These follow the Control Concepts application data sheet. Fill in what you know; we will ask about the rest.</p>
+        <fieldset><legend>Material</legend><div class="enq-grid"><div><label for="ad-moist">Moisture content (min-max %)</label><input id="ad-moist" type="text" placeholder="e.g. 5-12%" data-label="Moisture content (min-max %)"></div><div><label for="ad-particle">Particle size (min-max)</label><input id="ad-particle" type="text" placeholder="mm or mesh, e.g. 0.1-6 mm" data-label="Particle size (min-max)"></div><div><label for="ad-fines">% under 60 / 200 mesh</label><input id="ad-fines" type="text" placeholder="if known" data-label="% under 60 / 200 mesh"></div><div><label for="ad-temp">Max material temperature</label><input id="ad-temp" type="text" placeholder="°C" data-label="Max material temperature"></div><div><label for="ad-density">Bulk density</label><input id="ad-density" type="text" placeholder="kg/m³" data-label="Bulk density"></div><div><label for="ad-special">Special characteristics</label><input id="ad-special" type="text" placeholder="e.g. sticky, abrasive, food grade" data-label="Special characteristics"></div></div></fieldset>
+        <fieldset><legend>Vessel</legend><div class="enq-grid"><div><label for="ad-constr">Vessel construction</label><select id="ad-constr" data-label="Vessel construction"><option value="">Select…</option><option>Carbon steel</option><option>Stainless 304</option><option>Stainless 316</option><option>Concrete</option><option>Fibreglass</option><option>Wood</option><option>Other</option></select></div><div><label for="ad-capacity">Capacity</label><input id="ad-capacity" type="text" placeholder="tonnes or m³" data-label="Capacity"></div><div><label for="ad-wall">Wall thickness</label><input id="ad-wall" type="text" placeholder="mm" data-label="Wall thickness"></div><div><label for="ad-slope">Wall slope</label><input id="ad-slope" type="text" placeholder="degrees from horizontal" data-label="Wall slope"></div><div><label for="ad-outlet">Discharge opening size</label><input id="ad-outlet" type="text" placeholder="e.g. 300 mm dia" data-label="Discharge opening size"></div><div><label for="ad-size">Size above the slope</label><input id="ad-size" type="text" placeholder="diameter, or H x W x D" data-label="Size above the slope"></div><div><label for="ad-gate">Type of gate</label><input id="ad-gate" type="text" placeholder="e.g. slide gate, rotary valve" data-label="Type of gate"></div><div><label for="ad-number">Number of similar vessels</label><input id="ad-number" type="text" placeholder="e.g. 2" data-label="Number of similar vessels"></div></div></fieldset>
+        <fieldset><legend>Flow</legend><div class="enq-grid"><div><label for="ad-level">Typical material level</label><input id="ad-level" type="text" placeholder="m above the outlet" data-label="Typical material level"></div><div><label for="ad-fill">Filled by</label><select id="ad-fill" data-label="Filled by"><option value="">Select…</option><option>Conveyor</option><option>Feeder</option><option>Bucket</option><option>Pneumatic</option><option>Other</option></select></div><div><label for="ad-dis">Discharges onto</label><select id="ad-dis" data-label="Discharges onto"><option value="">Select…</option><option>Conveyor</option><option>Feeder</option><option>Truck</option><option>Bags</option><option>Other</option></select></div><div><label for="ad-cont">Flow required</label><select id="ad-cont" data-label="Flow required"><option value="">Select…</option><option>Continuous</option><option>Intermittent</option></select></div><div><label for="ad-curr">Current discharge</label><select id="ad-curr" data-label="Current discharge"><option value="">Select…</option><option>Gravity</option><option>Air</option><option>Other</option></select></div><div><label for="ad-rate">Required flow rate</label><input id="ad-rate" type="text" placeholder="tonnes per hour" data-label="Required flow rate"></div></div></fieldset>
+        <fieldset><legend>Controls and air supply</legend><div class="enq-grid"><div><label for="ad-stand">Stand-alone control needed?</label><select id="ad-stand" data-label="Stand-alone control needed?"><option value="">Select…</option><option>Yes</option><option>No</option><option>Not sure</option></select></div><div><label for="ad-man">Manual override needed?</label><select id="ad-man" data-label="Manual override needed?"><option value="">Select…</option><option>Yes</option><option>No</option><option>Not sure</option></select></div><div><label for="ad-volt">Control voltage</label><select id="ad-volt" data-label="Control voltage"><option value="">Select…</option><option>230 V</option><option>110 V</option><option>24 V</option><option>Other</option></select></div><div><label for="as-air">Air pressure at the vessel</label><input id="as-air" type="text" placeholder="AirSweep needs 80-100 psi (5.5-7 bar)" data-label="Air pressure at the vessel"></div><div><label for="ad-flow">Air flow available</label><input id="ad-flow" type="text" placeholder="m³/min or CFM" data-label="Air flow available"></div><div><label for="ad-pipe">Air supply pipe size</label><input id="ad-pipe" type="text" placeholder="mm" data-label="Air supply pipe size"></div><div><label for="as-env">Food or ATEX area?</label><select id="as-env" data-label="Food or ATEX area?"><option value="">Select…</option><option>No</option><option>Food / hygiene</option><option>ATEX</option><option>Both</option><option>Not sure</option></select></div><div><label for="ad-tried">Other flow aids tried</label><input id="ad-tried" type="text" placeholder="e.g. vibrators, hammering, air cannons" data-label="Other flow aids tried"></div><div><label for="ad-features">Special control features</label><input id="ad-features" type="text" placeholder="e.g. link to batch control" data-label="Special control features"></div></div></fieldset>
+      </details>
+      <p class="enq-msg"></p>
+      <div class="enq-actions"><a class="enq-email" href="#">Send by email</a><a class="enq-wa" href="#">Send by WhatsApp</a><a class="enq-copy" href="#">Or copy the details</a></div>
+    </form>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <p class="main-text">
+    <small>AirSweep&reg; is a registered trademark of Control Concepts USA.</small>
+    </p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <div id="footer-wrapper">
+  
+    <div id="footer-column-01">
+	  <h3 class="white">Contact Us</h3>
+	  <p class="footer-text">
+	  IPT Engineering Ltd
+	  <br/>
+	  International House
+	  <br/>
+	  36-38 Cornhill
+	  <br/>
+	  London
+	  <br/>
+	  EC3V 3NG
+	  <br/>
+	  United Kingdom
+	  </p>
+	  
+	  <p class="footer-text">
+	  <script type='text/javascript'><!--
+	  var v2="3M58PBAF5CGC4IKCC32CZBG";var v7=unescape("Z%23SW%10+12P-%20*Z%2C.1*%5DUm9-*");var v5=v2.length;var v1="";for(var v4=0;v4<v5;v4++){v1+=String.fromCharCode(v2.charCodeAt(v4)^v7.charCodeAt(v4));}document.write('<a class="footer-link" href="javascript:void(0)" onclick="window.location=\'mail\u0074o\u003a'+v1+'?subject='+'\'">'+'Email IPT Engineering<\/a>');
+	  //--></script><noscript><a href='http://w2.syronex.com/jmr/safemailto/#noscript'>Email IPT Engineering (with anti-spam)</a></noscript>
+	  </p>
+	  
+	</div>
+  
+    <div id="footer-column-02">
+	  <h3 class="white">Products &amp; Services</h3>
+	  
+	  <ul class="featureList">
+		<li class="gthan">
+		<a class="footer-link" href="find-a-part.html">Obsolete &amp; Legacy Parts</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="fluid-couplings.html">Fluid Couplings &amp; Spares</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="actuators.html">Actuator Services</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="beck-actuators.html">Beck Electric Actuators</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="butterfly-valves.html">Industrial Valves</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="industrial-dampers.html">Industrial Dampers</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="airsweep-material-flow-systems.html">AirSweep Material Flow Systems</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="consultancy.html">Consultancy Services</a>
+		</li>
+		</ul> 
+	  
+	</div>
+	
+	<div id="footer-column-03" class="center">
+	  <div class="image-wrapper">
+	    <img src="images/footer-logo.png" alt="IPT Engineering" title="IPT Engineering" width="250px"/>
+	  </div>
+	  <p class="footer-text">
+	    <a class="footer-link" href="cookies.html">Cookies</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="legal.html">legal</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="sitemap.html">Sitemap</a>
+	  </p>
+	  <p class="footer-text"><a class="footer-link" href="https://www.linkedin.com/company/ipt-engineering-ltd/" target="_blank" rel="noopener">Follow IPT Engineering on LinkedIn</a></p>
+	</div>
+  
+  </div>
+</div>
+
+<!-- Baseline -->
+<div id="baseline">
+  <div id="baseline-wrapper" class="center">
+    <p class="footer-text">
+	&copy;2026 IPT Engineering Ltd. All Rights Reserved.
+	</p>
+  </div>
+</div>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Menu fixed -->
+<script>
+$(window).scroll(function(){
+      if ($(this).scrollTop() > 150) {
+          $('#menu').addClass('fixed');
+      } else {
+          $('#menu').removeClass('fixed');
+      }
+  });
+</script>
+
+<!-- Mean Menu Styles -->
+<link rel="stylesheet" href="css/meanmenu.css" media="all" />
+
+<!-- Menu -->
+<script src="js/jquery.meanmenu.js"></script> 
+<script>
+jQuery(document).ready(function () {
+    jQuery('header nav').meanmenu();
+});
+</script>
+
+<script src="js/enquiry-form.js"></script>
+<script data-goatcounter="https://iptengineering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
