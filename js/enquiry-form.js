@@ -26,7 +26,7 @@
     }
     f.querySelector(".enq-email").addEventListener("click", function (e) {
       e.preventDefault(); if (!ok()) return;
-      if (window.gtag) gtag("event", "generate_lead", {method: "email_form", form: f.getAttribute("data-subject")});
+      if (window.gtag) gtag("event", "generate_lead", {method: "email_form", form: f.getAttribute("data-subject")}); if (window.iptLead) iptLead("email_form");
       var text = build(), subj = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(f.getAttribute("data-subject"));
       if (encodeURIComponent(text).length < 1800) { location.href = subj + "&body=" + encodeURIComponent(text); return; }
       // Long enquiries can be cut off by some email programs: copy the full text and ask for it to be pasted.
@@ -41,11 +41,11 @@
     });
     f.querySelector(".enq-wa").addEventListener("click", function (e) {
       e.preventDefault(); if (!ok()) return;
-      if (window.gtag) gtag("event", "generate_lead", {method: "whatsapp_form", form: f.getAttribute("data-subject")});
+      if (window.gtag) gtag("event", "generate_lead", {method: "whatsapp_form", form: f.getAttribute("data-subject")}); if (window.iptLead) iptLead("whatsapp_form");
       window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(build()), "_blank", "noopener");
     });
     f.querySelector(".enq-copy").addEventListener("click", function (e) {
-      e.preventDefault(); if (!ok()) return; var b = this; if (window.gtag) gtag("event", "generate_lead", {method: "copy_form", form: f.getAttribute("data-subject")});
+      e.preventDefault(); if (!ok()) return; var b = this; if (window.gtag) gtag("event", "generate_lead", {method: "copy_form", form: f.getAttribute("data-subject")}); if (window.iptLead) iptLead("copy_form");
       navigator.clipboard.writeText("To: " + EMAIL + "\n\n" + build()).then(function () { b.textContent = "Copied: paste into a new email"; }, function () { b.textContent = "Copy failed"; });
     });
   });

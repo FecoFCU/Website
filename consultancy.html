@@ -70,7 +70,8 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-0T3V1556WY');
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m)gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});});
+function iptLead(m){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'Enquiry: '+m+' '+location.pathname,title:'Enquiry ('+m+') from '+location.pathname,event:true});}catch(x){}}
+document.addEventListener('click',function(e){if(e.defaultPrevented)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m){gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});iptLead(m);}});
 </script>
 
 <!-- Google Tag Manager -->
