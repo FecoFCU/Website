@@ -58,7 +58,8 @@
   gtag('js', new Date());
 
   gtag('config', 'G-0T3V1556WY');
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m)gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});});
+function iptLead(m){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'Enquiry: '+m+' '+location.pathname,title:'Enquiry ('+m+') from '+location.pathname,event:true});}catch(x){}}
+document.addEventListener('click',function(e){if(e.defaultPrevented)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m){gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});iptLead(m);}});
 </script>
 
 <!-- Google Tag Manager -->
@@ -432,7 +433,7 @@ $().ready(function() {
 				headers: { 'Accept': 'application/json' }
 			}).done(function() {
 				form.reset();
-				if (typeof gtag === 'function') gtag('event', 'generate_lead', {method: 'contact_form'});
+				if (typeof gtag === 'function') gtag('event', 'generate_lead', {method: 'contact_form'}); if (window.iptLead) iptLead('contact_form');
 				$resp.html('<p class="main-text silver"><span class="bold">Thank you for contacting IPT Engineering. We will respond to your enquiry as soon as we can.</span></p>');
 			}).fail(function() {
 				$resp.html('<p class="main-text silver"><span class="bold">Sorry, your message could not be sent. Please try again or email us at info@iptengineering.com.</span></p>');
