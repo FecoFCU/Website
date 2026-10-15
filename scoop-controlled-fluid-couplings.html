@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+
+<!-- Ensure HTMl5 elements display ok in IE below 9 -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Enable Media Queries in IE below 9 -->
+<!--[if lt IE 9]>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="NOODP">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scoop Coupling Fault Finding, Control &amp; Spares | SCR | IPT</title>
+
+<link rel="canonical" href="https://iptengineering.com/scoop-controlled-fluid-couplings.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IPT Engineering Ltd">
+<meta property="og:title" content="Scoop Coupling Fault Finding, Control &amp; Spares | SCR | IPT">
+<meta property="og:description" content="Fault finding for Fluidrive SCR scoop-controlled fluid couplings: speed, overheating and oil leak problems, plus scoop actuator upgrades and spares. UK support.">
+<meta property="og:url" content="https://iptengineering.com/scoop-controlled-fluid-couplings.html">
+<meta property="og:image" content="https://iptengineering.com/images/fluid-couplings/fluidrive-bfp-scoop-coupling.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="description" content="Fault finding for Fluidrive SCR scoop-controlled fluid couplings: speed, overheating and oil leak problems, plus scoop actuator upgrades and spares. UK support." />
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Main Page Styles -->
+<link media="screen" rel="stylesheet" href="css/Styles.css"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T3V1556WY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0T3V1556WY');
+function iptLead(m){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'Enquiry: '+m+' '+location.pathname,title:'Enquiry ('+m+') from '+location.pathname,event:true});}catch(x){}}
+document.addEventListener('click',function(e){if(e.defaultPrevented)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m){gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});iptLead(m);}});
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8CNHXM');</script>
+<!-- End Google Tag Manager -->
+
+
+<style>
+.cs-pair,.cs-grid{display:grid;gap:16px;margin:24px 0 8px}
+.cs-pair{grid-template-columns:1fr 1fr}
+.cs-grid{grid-template-columns:repeat(3,1fr)}
+.cs-fig{margin:0;background:#fff;border:1px solid #e3e6ea}
+.cs-fig img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.cs-grid.wide .cs-fig img,.cs-pair.wide .cs-fig img{aspect-ratio:4/3}
+.cs-fig figcaption,.cs-card p,.cs-card .cs-more,.cs-tag{font-family:'Open Sans',sans-serif}
+.cs-fig figcaption{padding:10px 12px;font-size:.9em;line-height:1.4;color:#44505e}
+.cs-tag{display:inline-block;font-size:.75em;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;margin-right:6px;color:#fff;background:#036}
+.cs-tag.before{background:#7a6a58}
+.cs-results li{margin:.4em 0}
+.cs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
+.cs-card{display:block;background:#fff;border:1px solid #e3e6ea;text-decoration:none;color:inherit}
+.cs-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.cs-card .cs-card-body{padding:16px 18px 20px}
+.cs-card h3{margin:0 0 8px;color:#036}
+.cs-card p{line-height:1.5;color:#44505e}
+.cs-card .cs-more{display:inline-block;margin-top:10px;color:#036;font-weight:bold}
+.cs-card:hover{border-color:#036}
+@media (max-width:700px){.cs-grid{grid-template-columns:1fr 1fr}.cs-pair{gap:10px}}
+@media (max-width:440px){.cs-grid{grid-template-columns:1fr}}
+.as-video{position:relative;width:100%;max-width:760px;margin:24px 0 8px;aspect-ratio:16/9;background:#000;border-radius:3px;overflow:hidden}
+.as-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.as-video-cap{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:0 0 18px}
+</style>
+<style>
+.as-table{width:100%;border-collapse:collapse;margin:20px 0;font-family:'Open Sans',sans-serif;font-size:.95em;background:#fff}
+.as-table th{background:#036;color:#fff;text-align:left;padding:10px 12px;font-weight:bold}
+.as-table td{border:1px solid #e3e6ea;padding:10px 12px;vertical-align:top;line-height:1.5;color:#333}
+.as-table tr.as-hl td{background:#eef4fa}
+.as-faq h3{margin:22px 0 6px;color:#036}
+.enq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;margin:20px 0}
+.enq-grid label{display:block;margin-bottom:5px;font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#036}
+.enq-grid label span{color:#b3261e}
+.enq-grid select,.enq-grid input,.enq-grid textarea{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid #c8ced6;border-radius:3px;background:#fff;font-family:'Open Sans',sans-serif;font-size:.95em;color:#222}
+.enq-wide{grid-column:1/-1}
+.enq-actions a{display:inline-block;margin:4px 8px 4px 0;padding:12px 20px;border-radius:3px;color:#fff!important;text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:bold}
+.enq-email{background:#036}.enq-wa{background:#25a35a}.enq-actions a.enq-copy{background:none;color:#036!important;text-decoration:underline;padding:12px 4px}
+.enq-msg{display:none;color:#b3261e;font-family:'Open Sans',sans-serif;margin:8px 0}
+.as-diagram{max-width:520px;width:100%;height:auto;display:block;margin:10px auto;background:#fff;border:1px solid #e3e6ea}
+.as-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:22px 0}
+.as-case{background:#fff;border:1px solid #e3e6ea;border-top:4px solid #036;padding:18px 20px}
+.as-case h3{margin:0 0 4px;color:#036;font-size:1.15em}
+.as-case .as-ind{font-family:'Open Sans',sans-serif;font-size:.8em;text-transform:uppercase;letter-spacing:.06em;color:#6b7785;margin:0 0 10px}
+.as-case p{font-family:'Open Sans',sans-serif;font-size:.95em;line-height:1.55;color:#333;margin:0 0 8px}
+.as-case .as-res{font-weight:bold;color:#1d6b3a}
+.as-vs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.as-vs h3{color:#036;margin:6px 0}
+.enq-form fieldset{border:0;padding:0;margin:0}
+.enq-form legend{font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;font-size:1.05em;padding:0;margin:18px 0 0}
+.enq-form details{margin:18px 0;border:1px solid #c8ced6;border-radius:3px;background:#fff;padding:4px 18px 10px}
+.enq-form summary{cursor:pointer;font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;padding:12px 0}
+.enq-form details p.enq-note{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:4px 0 0}
+@media (max-width:900px){.enq-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.enq-grid{grid-template-columns:1fr}.as-table{font-size:.85em}.as-vs{grid-template-columns:1fr}}
+@media (max-width:700px){.as-table{display:table!important}.as-table thead{display:table-header-group!important}.as-table tbody{display:table-row-group!important}.as-table tr{display:table-row!important}.as-table thead tr{position:static!important}.as-table th,.as-table td{display:table-cell!important;position:static!important;padding:7px!important;width:auto!important}.as-table td:before{content:none!important;display:none!important}}
+.as-table strong,.as-case strong,.as-vs strong,.as-faq strong{font-weight:bold}
+</style>
+<link media="screen" rel="stylesheet" href="css/menu-dropdown.css"/>
+</head>
+
+<body>
+
+<!-- Header -->
+<div id="header">
+  <div id="header-wrapper">
+  
+    <!-- Logo -->
+	<div id="logo">
+	  <a title="IPT Engineering" href="https://iptengineering.com/">
+	    <img src="images/logo.png" width="250" alt="Electric Actuators" title="Electric Actuators"/>
+	  </a>
+	</div>
+	
+	<!-- Main Menu -->
+	<div id="menu-main">
+	  <nav>
+		<ul class="main">
+		  <li>
+		  <a href="index.html">Home</a>
+		  </li>
+		  <li>
+		  <a href="case-studies.html">Case Studies</a>
+		  </li>
+		  <li>
+		  <a class="last" href="contact.html">Contact</a>
+		  </li>
+		</ul>
+	  </nav>
+	</div>
+	
+	<!-- Contact Details -->
+	<div id="header-contact">
+	  
+	  <p class="header-text">
+	  <span class="light-blue">Need a part? </span><a class="tel" tabIndex="-1" href="find-a-part.html">Send us the details</a>
+	  </p>
+	  
+	</div>
+	
+	
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Sub Menu -->
+<div id="menu">
+  <div id="menu-wrapper">
+    <header>
+      <nav>
+		<ul>
+          <li>
+            <a class="down" href="find-a-part.html">Find a Part</a>
+            <ul>
+              <li class="sub-head"><a href="find-a-part.html">Find a Part</a></li>
+              <li><a href="ex-stock-surplus.html">Ex-Stock: AUMA Gearboxes &amp; Vamein Seats</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="fluid-couplings.html">Fluid Couplings</a>
+            <ul>
+              <li class="sub-head"><a href="fluid-couplings.html">Fluid Couplings &amp; Spares</a></li>
+              <li><a href="how-fluid-couplings-work.html">How Fluid Couplings Work</a></li>
+              <li><a href="scoop-controlled-fluid-couplings.html">Scoop-Controlled Couplings</a></li>
+              <li><a href="fluidrive-fluid-coupling-spares.html">Fluidrive Spares</a></li>
+              <li><a href="sime-fluid-coupling-spares.html">SIME Spares</a></li>
+              <li><a href="fluid-coupling-fusible-plugs.html">Fusible Plugs</a></li>
+              <li><a href="fcu-driving-plate-kits.html">Driving Plate Kits</a></li>
+              <li><a href="fcu-output-kits.html">FCU Output Kits</a></li>
+              <li><a href="sfu-output-kits.html">SFU Output Kits</a></li>
+              <li><a href="scr-output-kits.html">SCR Output Kits</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="actuators.html">Actuator Services</a>
+            <ul class="cols2">
+              <li class="sub-head"><a href="actuators.html">Actuator Services</a></li>
+              <li><a href="beck-actuators.html">Beck Electric Actuators</a></li>
+              <li><a href="beck-actuators-water-wastewater.html">Beck for Water &amp; Wastewater</a></li>
+              <li><a href="about-beck.html">About Beck</a></li>
+              <li><a href="the-beck-motor.html">The Beck Motor</a></li>
+              <li><a href="installations.html">Beck Installations</a></li>
+              <li><a href="biomass-plant-applications.html">Biomass Plant Applications</a></li>
+              <li><a href="group-11-rotary-actuator.html">Group 11 Rotary Damper Drives</a></li>
+              <li><a href="group-11-quarter-turn.html">Group 11 Quarter-Turn Actuators</a></li>
+              <li><a href="group-22-rotary-actuator.html">Group 22 Rotary Actuators</a></li>
+              <li><a href="group-29-specification.html">Group 29 Linear Actuators</a></li>
+              <li><a href="group-31-specification.html">Group 31 Rotary Actuators</a></li>
+              <li><a href="group-42-specification.html">Group 42 Long Stroke Actuators</a></li>
+              <li><a href="group-75.html">Group 75 Compact Actuators</a></li>
+              <li><a href="digital-control-module.html">Digital Control Module</a></li>
+              <li><a href="beck-link-assist.html">Beck Link-Assist</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="butterfly-valves.html">Valves</a>
+            <ul>
+              <li class="sub-head"><a href="butterfly-valves.html">Vamein Butterfly Valves</a></li>
+              <li><a href="butterfly-valve-guide.html">Butterfly Valve Guide</a></li>
+              <li><a href="butterfly-valve-size-chart.html">Butterfly Valve Size Chart</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="industrial-dampers.html">Dampers</a>
+          </li>
+          <li>
+            <a class="down" href="airsweep-material-flow-systems.html">AirSweep</a>
+            <ul>
+              <li class="sub-head"><a href="airsweep-material-flow-systems.html">AirSweep Systems</a></li>
+              <li><a href="silo-bridging.html">Silo &amp; Hopper Bridging Guide</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="consultancy.html">Consultancy</a>
+          </li>
+        </ul>
+	  </nav>
+	</header>
+  </div>
+</div>
+
+<!-- Banner -->
+<div id="banner-short">
+  <div id="banner-short-wrapper">
+    
+	<div id="banner-text">
+	  <div id="banner-text01" class="slideUp">
+	    <p class="banner-text">
+	    Scoop-Controlled Couplings
+	    </p>
+		<p class="banner-text small">
+	    Variable speed fluid coupling support
+	    </p>
+	  </div>
+	</div>  
+	  
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h1>Scoop-Controlled Fluid Couplings</h1>
+      <h3>Faults, scoop control upgrades and spares</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Scoop-controlled fluid couplings give variable speed from a constant-speed motor, and many have been running on boiler feed pumps, fans, mills and conveyors for decades. Keeping them running means knowing what the common faults look like, keeping the scoop control reliable, and finding spares for couplings that are no longer supported by their original manufacturer.
+    </p>
+    <p class="main-text">
+    IPT Engineering supports scoop-controlled couplings from Fluidrive, Vulcan Sinclair, Pembril and others. Our experience of these machines goes back to working for Fluidrive and Voith, and includes the set-up and recommissioning of a large Fluidrive scoop coupling driving a power station boiler feed pump.
+    </p>
+    <p class="main-text">
+    New to how they work? Our guide to <a class="link under" href="how-fluid-couplings-work.html">how fluid couplings work</a> explains scoop-filling and scoop-trimming couplings step by step. This page is about keeping them in service.
+    </p>
+    <div class="cs-pair wide">
+      <figure class="cs-fig">
+        <img src="images/fluid-couplings/fluidrive-bfp-scoop-coupling.jpg" alt="Fluidrive scoop-controlled variable speed fluid coupling on a power station boiler feed pump" loading="lazy">
+        <figcaption>Fluidrive scoop-controlled coupling and gearbox on a power station boiler feed pump</figcaption>
+      </figure>
+      <figure class="cs-fig">
+        <img src="images/fluid-couplings/scoop-coupling-coal-conveyor.jpg" alt="Scoop-controlled fluid coupling with electric scoop actuator on a coal conveyor drive" loading="lazy">
+        <figcaption>Scoop-controlled coupling with an electric scoop actuator on a coal conveyor drive</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Where Scoop Couplings Are Used</h2>
+      <h3>Variable speed from a fixed-speed motor</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Moving the scoop tube changes how much oil is in the coupling's working circuit, and so the output speed, while the motor runs at constant speed. That gives a soft, no-load motor start and stepless speed control. Typical applications include:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Power stations:</strong> boiler feed pumps, and ID and FD fans</span></li>
+      <li><span class="bullets"><strong>Steel works:</strong> large fans such as BOS and Kish extraction fans</span></li>
+      <li><span class="bullets"><strong>Refineries and process plant:</strong> pumps, including hot charge pumps</span></li>
+      <li><span class="bullets"><strong>Minerals and building materials:</strong> mills and crushers</span></li>
+      <li><span class="bullets"><strong>Bulk handling:</strong> long and heavily loaded conveyors</span></li>
+    </ul>
+    <p class="main-text">
+    On fans and pumps, a scoop coupling typically gives stable speed control down to around 20% of full speed; on constant-torque loads such as mills and crushers, down to around a third.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>SCR Scoop Coupling Fault Finding</h2>
+      <h3>Symptoms, possible causes and what to do</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    These notes cover Fluidrive SCR scoop-filling couplings (SCR24R and SCR25W sizes 18 to 41, and SCR25 and SCR25K sizes 46 and 52), drawn from the original maintenance documentation and our own experience. The older SCR 4 and SCR 5, and Vulcan Sinclair, Pembril and other scoop-filling couplings, work on the same principle, so most of it applies to them too.
+    </p>
+    <p class="main-text">
+    Many faults come back to three things: the oil fill, whether the oil is circulating freely, and the valves and nozzles that control flow out of the working circuit. Always isolate the drive before opening the coupling, and check the oil fill with the scoop fully out.
+    </p>
+    <table class="as-table">
+      <thead><tr><th>Symptom</th><th>Possible causes</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Will not reach full speed</strong></td><td>Coupling underfilled; oil not circulating because of blocked pipe connections, blanking plates left in the cooler flanges or wrong direction of rotation; emptying valves dirty, worn or not seating, or their feed pipes blocked; a leak-off nozzle or valve missing; emptying valve spring rating too high for the motor speed; worn scoop tip ball seating or a failed key in the scoop operating rod; filling tundish nut loose or tundish valve not closing; low motor speed, an under-rated motor, or extra resistance in the driven machine.</td><td>Check the oil fill with the scoop fully out. Check pipework and coolers for blanks and blockages, and confirm rotation. Remove and clean the valves and check their seatings. Check the scoop tip, operating rod and tundish. Check motor speed and the driven machine.</td></tr>
+        <tr><td><strong>Will not come down in speed</strong></td><td>Scoop not moving because of a control or actuator fault; coupling overfilled; leak-off nozzles or holes blocked, or valves dirty; diaphragm emptying valves jammed during assembly.</td><td>Check the scoop control first: is the scoop actually moving? Then check the fill, and remove and clean the leak-off nozzles and valves.</td></tr>
+        <tr><td><strong>Overheating</strong> (oil continuously above 88&deg;C / 190&deg;F)</td><td>Cooling water supply off, drains blocked, cooler choked on the water side, or cooler water boxes wrongly assembled; on air-cooled units, dirty radiator fins or a fan not working; incorrect oil fill; oil not circulating or only partly circulating because of blanks or unpierced joints in the pipework, pipework bore too small or too many 90&deg; bends, leak-off nozzles choked or burred over, or dirty valves; filling tundish nut loose or spindle broken; coupling internals choked with carbon.</td><td>Check cooling water flow, drains and cooler, or the radiator and fan. Check the fill carefully. Check the pipework, and remove and clean the leak-off nozzles. Examine the centrifugal flow valves, if fitted, for blockage.</td></tr>
+        <tr><td><strong>Oil leaks from the casing</strong></td><td>Joints in the cooler pipework; plugs in the reservoir casing; the centre spigot or reservoir casing joint.</td><td>Examine flange faces and joints. Check sealing washers on casing plugs, taking particular care when removing plugs that carry centrifugal flow or diaphragm valves. Oil thrown off a rotating casing can land well away from the leak, so trace it back carefully with the drive stopped.</td></tr>
+        <tr><td><strong>Oil leaking around the output shaft</strong></td><td>Coupling overfilled, including by water leaking from the cooler into the oil; damaged scoop housing or oil retaining ring joint; scoop housing shroud damaged or not fitted; on the SCR25, outboard bearing oil feed nozzle missing or drilled oversize, or bearing drain ports blocked; a large-diameter half coupling fitted. Leaking only on shutdown points to a damaged oil retaining ring, or braking applied to the reservoir casing.</td><td>Check the fill and look for water in the oil. Remove the scoop housing bracket and remake the joint. Check the shroud, the bearing oil feed nozzle and the drain ports.</td></tr>
+        <tr><td><strong>Noise from the coupling</strong></td><td>Should never happen, so treat it as a warning. The usual cause is misalignment of the scoop housing bracket.</td><td>Stop and check the alignment of the scoop housing bracket.</td></tr>
+        <tr><td><strong>Broken resilient driving plate</strong></td><td>Incorrect alignment between the coupling and the motor.</td><td>Check and correct the alignment, then fit a new <a class="link under" href="fcu-driving-plate-kits.html">driving plate</a>. Fitting a new plate without correcting the alignment means it will fail again.</td></tr>
+      </tbody>
+    </table>
+    <p class="main-text">
+    <strong>A note on heat:</strong> slip losses in the coupling become heat in the oil. On fan and pump drives they are greatest at around two-thirds of full speed, at roughly 15% of rated power, so a coupling that now spends most of its time in that range, perhaps because the plant runs at part load, will run hotter than when it was specified. It is worth knowing before chasing the cooler or the oil.
+    </p>
+    <p class="main-text">
+    Need help with a fault? <a class="link under" href="#coupling-enquiry">Send us the symptoms</a> with the coupling type and size, and we will help you work through it.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Scoop Control Upgrades</h2>
+      <h3>Replacing obsolete and unreliable scoop actuators</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    The scoop actuator sets the speed of the whole drive, so a worn, obsolete or unreliable actuator shows up straight away as poor speed control or a drive that will not respond. Many original scoop actuators, both pneumatic and electric, are now obsolete, with no spares available.
+    </p>
+    <p class="main-text">
+    As UK agent for Beck electric actuators, IPT has re-engineered scoop control on fluid couplings including:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Boiler feed pump fluid coupling control at power stations</span></li>
+      <li><span class="bullets">BOS and Kish fan fluid coupling control at a steel works</span></li>
+      <li><span class="bullets">A hot charge pump fluid coupling at a refinery</span></li>
+      <li><span class="bullets">A mill fluid coupling at a plasterboard plant, where the original actuator failed repeatedly under heavy vibration (<a class="link under" href="case-study-plasterboard-scoop-actuator.html">read the case study</a>)</span></li>
+    </ul>
+    <p class="main-text">
+    Beck actuators are built for continuous modulation, with a no-burnout motor and spur gearing that virtually eliminates wear-induced backlash, which suits a scoop that is adjusted constantly. We review the existing linkage and mounting, the control signal and the stroke, and design the installation so the new actuator fits the existing scoop lever. See our <a class="link under" href="actuators.html">actuator services</a> for more.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Scoop Coupling Spares</h2>
+      <h3>Parts for Fluidrive, Vulcan Sinclair and Pembril couplings</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    We supply spares for scoop-controlled couplings, including older units no longer supported by the original manufacturer:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Scoop tubes and motor bosses</span></li>
+      <li><span class="bullets">Centre spigots and diaphragm gland assemblies</span></li>
+      <li><span class="bullets">Seal kits</span></li>
+      <li><span class="bullets"><a class="link under" href="fcu-driving-plate-kits.html">Driving plates</a> and <a class="link under" href="scr-output-kits.html">SCR multi disc output kits</a></span></li>
+      <li><span class="bullets"><a class="link under" href="fluid-coupling-fusible-plugs.html">Fusible plugs</a></span></li>
+      <li><span class="bullets">Reconditioned couplings</span></li>
+    </ul>
+    <div class="cs-pair wide">
+      <figure class="cs-fig">
+        <img src="images/fluid-couplings/scoop-tube-kit.jpg" alt="Scoop tube and motor boss for a Fluidrive SCR coupling" loading="lazy">
+        <figcaption>Scoop tube and motor boss for an SCR coupling</figcaption>
+      </figure>
+      <figure class="cs-fig">
+        <img src="images/fluid-couplings/fluidrive-scr24r.jpg" alt="Fluidrive SCR24R scoop-controlled fluid coupling on its pedestal" loading="lazy">
+        <figcaption>Fluidrive SCR24R scoop-controlled coupling on its pedestal</figcaption>
+      </figure>
+    </div>
+    <p class="main-text">
+    To identify the parts you need, use the section drawings on our <a class="link under" href="fluidrive-fluid-coupling-spares.html">Fluidrive coupling spares</a> page, or send us the coupling type and size, the serial number and a photograph.
+    </p>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Older Units: SCR 4 and SCR 5</h2>
+      <h3>The back story, and why the contract number matters</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Many scoop couplings still running today are Fluidrive SCR 4 and SCR 5 units, the imperial predecessors of the SCR 24 and SCR 25. Production started around contract number C8000, in the mid-1950s, and carried on alongside the newer metric range until the early 1970s. Knowing which version you have is the key to getting the right parts.
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>SCR 4 or SCR 5?</strong> On an even-numbered type such as the SCR 4, the coupling is supported by the motor and the driven machine. On an odd-numbered type such as the SCR 5, the scoop housing bracket carries an outboard bearing, used where the driven shaft cannot carry the coupling's weight or on extended gearbox shafts carrying brake drums.</span></li>
+      <li><span class="bullets"><strong>Imperial build:</strong> SCR 4 and 5 units use BSF threads and fasteners, and a taper shaft for the runner half coupling.</span></li>
+      <li><span class="bullets"><strong>Higher-torque versions:</strong> the SCR 4K and SCR 5K have twin keyways in the runner shaft half coupling and double the number of runner bolts.</span></li>
+      <li><span class="bullets"><strong>Scoop housing bracket:</strong> fabricated steel on early units, changed to cast iron from around C18500, and from around C19500 to the cast iron design with alignment lugs on its front face that carried on into the SCR 24.</span></li>
+      <li><span class="bullets"><strong>Scoop tubes:</strong> early tubes were shorter and made for one direction of rotation. Longer dual-rotation tubes, with a spring-assisted return to circuit empty as a fail-safe, became standard from around C24000, and can generally replace the older types.</span></li>
+      <li><span class="bullets"><strong>Emptying valves:</strong> each SCR 4 or 5 was built for one valve type (diaphragm quick-emptying valves, centrifugal quick-emptying valves or leak-off nozzles), and the back casing only accepts that type. The diaphragm valve was redesigned around C20000, and the two designs are not interchangeable.</span></li>
+    </ul>
+    <p class="main-text">
+    In the late 1960s the range was redesigned to metric as the SCR 24 and SCR 25, with a one-piece cast aluminium impeller, revised valves, metric bearings and a stiffer reservoir casing. The back casing now accepts any of the three valve types. The higher-torque SCR 24R and 25R, with double the runner bolts and a parallel runner half coupling, became the standard units. Shaft ends and the input and output mountings were kept the same, so an SCR 24 or 25 can replace an SCR 4 or 5 without disturbing the motor or the driven machine.
+    </p>
+    <p class="main-text">
+    <strong>The contract number is the key.</strong> Design changes were phased in rather than made at a single cut-off, and units of different ages do not always share parts. The contract number on the nameplate (for example C12345A, with a letter for each unit on the same order) identifies the original build, and gives a good idea of the coupling's age:
+    </p>
+    <table class="as-table">
+      <thead><tr><th>Contract number</th><th>Approx. year</th><th>Contract number</th><th>Approx. year</th></tr></thead>
+      <tbody>
+        <tr><td>C4000</td><td>1952</td><td>C30000</td><td>1970</td></tr>
+        <tr><td>C8000</td><td>1955&ndash;56</td><td>C36000</td><td>1972</td></tr>
+        <tr><td>C12000</td><td>1958</td><td>C40000</td><td>1973</td></tr>
+        <tr><td>C16000</td><td>1960</td><td>C45000</td><td>1975</td></tr>
+        <tr><td>C18000</td><td>1961</td><td>C48000</td><td>1978</td></tr>
+        <tr><td>C20000</td><td>1963</td><td>C50000</td><td>1980</td></tr>
+        <tr><td>C22000</td><td>1965</td><td>C55000</td><td>1985</td></tr>
+        <tr><td>C24000</td><td>1967</td><td>C59000</td><td>1989</td></tr>
+        <tr><td>C27000</td><td>1969</td><td>BRC10001</td><td>1990</td></tr>
+      </tbody>
+    </table>
+    <p class="main-text">
+    Send us the contract number and a photograph of the nameplate, and we can identify the build and the parts that fit it.
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Scoop Coupling Questions</h2>
+
+      <div class="hr"></div>
+    </header>
+    <div class="as-faq">
+      <h3>How does a scoop-controlled fluid coupling vary speed?</h3>
+      <p class="main-text">A movable scoop tube controls how much oil is in the coupling's working circuit. More oil transmits more torque and the output speeds up; less oil increases slip and the output slows, while the motor runs at constant speed.</p>
+      <h3>What is the difference between scoop-filling and scoop-trimming couplings?</h3>
+      <p class="main-text">In a scoop-filling coupling, the scoop tube picks up oil from a rotating reservoir and feeds it into the working circuit. In a scoop-trimming coupling, a pump fills the working circuit and the scoop tube trims oil out of it. Scoop-trimming couplings are usually the larger, higher-power units.</p>
+      <h3>Why does my scoop coupling run hot?</h3>
+      <p class="main-text">The most common causes are poor cooling water flow or a choked cooler, an incorrect oil fill, and oil not circulating freely because of blockages, blanks left in the pipework, or choked leak-off nozzles and valves. Long running at around two-thirds of full speed, where slip losses are highest on fan and pump drives, also raises the oil temperature. On an SCR, oil running continuously above 88&deg;C (190&deg;F) should be investigated.</p>
+      <h3>Why won't my scoop coupling reach full speed?</h3>
+      <p class="main-text">Usually because the coupling is underfilled, the oil is not circulating, or the emptying valves are dirty, worn or not seating, so oil escapes from the working circuit. Check the fill with the scoop fully out, then the pipework, the valves and the scoop itself. A low motor speed or extra load from the driven machine can have the same effect.</p>
+      <h3>Why won't my scoop coupling come down in speed?</h3>
+      <p class="main-text">Check first that the scoop is actually moving: a failed actuator or control signal is a common cause. After that, look for an overfilled coupling or blocked leak-off nozzles that stop oil leaving the working circuit.</p>
+      <h3>How old is my Fluidrive scoop coupling?</h3>
+      <p class="main-text">The contract number on the nameplate gives a good guide. As examples, C8000 is around 1955 to 1956, C20000 around 1963, C30000 around 1970, C50000 around 1980, and numbers starting BRC are from 1990 onwards. The contract number also identifies the original build specification.</p>
+      <h3>Can an SCR 24 or 25 replace an old SCR 4 or 5?</h3>
+      <p class="main-text">Generally yes. Fluidrive kept the shaft ends and the input and output mountings the same when it introduced the metric SCR 24 and 25, so a newer unit can replace an SCR 4 or 5 without changes to the motor or driven machine. Internal parts are a different matter, so check the contract number before ordering spares.</p>
+      <h3>Can an obsolete scoop actuator be replaced?</h3>
+      <p class="main-text">Yes. IPT replaces obsolete and unreliable scoop actuators with Beck electric actuators, designing the mounting and linkage to suit the existing scoop lever and control signal.</p>
+      <h3>Can you still get spares for Fluidrive scoop couplings?</h3>
+      <p class="main-text">Yes. IPT supplies scoop tubes, motor bosses, centre spigots, gland assemblies, seal kits, driving plates and multi disc kits for Fluidrive, Vulcan Sinclair and Pembril couplings, including older units such as the SCR24R and SCR25W.</p>
+    </div>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a scoop-controlled fluid coupling vary speed?", "acceptedAnswer": {"@type": "Answer", "text": "A movable scoop tube controls how much oil is in the coupling's working circuit. More oil transmits more torque and the output speeds up; less oil increases slip and the output slows, while the motor runs at constant speed."}}, {"@type": "Question", "name": "What is the difference between scoop-filling and scoop-trimming couplings?", "acceptedAnswer": {"@type": "Answer", "text": "In a scoop-filling coupling, the scoop tube picks up oil from a rotating reservoir and feeds it into the working circuit. In a scoop-trimming coupling, a pump fills the working circuit and the scoop tube trims oil out of it. Scoop-trimming couplings are usually the larger, higher-power units."}}, {"@type": "Question", "name": "Why does my scoop coupling run hot?", "acceptedAnswer": {"@type": "Answer", "text": "The most common causes are poor cooling water flow or a choked cooler, an incorrect oil fill, and oil not circulating freely because of blockages, blanks left in the pipework, or choked leak-off nozzles and valves. Long running at around two-thirds of full speed, where slip losses are highest on fan and pump drives, also raises the oil temperature. On an SCR, oil running continuously above 88°C (190°F) should be investigated."}}, {"@type": "Question", "name": "Why won't my scoop coupling reach full speed?", "acceptedAnswer": {"@type": "Answer", "text": "Usually because the coupling is underfilled, the oil is not circulating, or the emptying valves are dirty, worn or not seating, so oil escapes from the working circuit. Check the fill with the scoop fully out, then the pipework, the valves and the scoop itself. A low motor speed or extra load from the driven machine can have the same effect."}}, {"@type": "Question", "name": "Why won't my scoop coupling come down in speed?", "acceptedAnswer": {"@type": "Answer", "text": "Check first that the scoop is actually moving: a failed actuator or control signal is a common cause. After that, look for an overfilled coupling or blocked leak-off nozzles that stop oil leaving the working circuit."}}, {"@type": "Question", "name": "How old is my Fluidrive scoop coupling?", "acceptedAnswer": {"@type": "Answer", "text": "The contract number on the nameplate gives a good guide. As examples, C8000 is around 1955 to 1956, C20000 around 1963, C30000 around 1970, C50000 around 1980, and numbers starting BRC are from 1990 onwards. The contract number also identifies the original build specification."}}, {"@type": "Question", "name": "Can an SCR 24 or 25 replace an old SCR 4 or 5?", "acceptedAnswer": {"@type": "Answer", "text": "Generally yes. Fluidrive kept the shaft ends and the input and output mountings the same when it introduced the metric SCR 24 and 25, so a newer unit can replace an SCR 4 or 5 without changes to the motor or driven machine. Internal parts are a different matter, so check the contract number before ordering spares."}}, {"@type": "Question", "name": "Can an obsolete scoop actuator be replaced?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. IPT replaces obsolete and unreliable scoop actuators with Beck electric actuators, designing the mounting and linkage to suit the existing scoop lever and control signal."}}, {"@type": "Question", "name": "Can you still get spares for Fluidrive scoop couplings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. IPT supplies scoop tubes, motor bosses, centre spigots, gland assemblies, seal kits, driving plates and multi disc kits for Fluidrive, Vulcan Sinclair and Pembril couplings, including older units such as the SCR24R and SCR25W."}}]}
+</script>
+  </div>
+</div>
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+<div id="coupling-enquiry"></div>
+    <header>
+      <h2>Tell Us About Your Coupling</h2>
+      <h3>Faults, scoop control or spares</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Fill in what you know. Fields marked * are needed. The coupling nameplate, a photograph and the serial number help most: attach them once your email or WhatsApp opens.
+    </p>
+    <form class="enq-form" data-subject="Scoop coupling enquiry" onsubmit="return false">
+      <fieldset><legend>The coupling</legend><div class="enq-grid"><div><label for="sc-need">I need <span>*</span></label><select id="sc-need" data-label="Enquiry type" data-required><option value="">Select…</option><option>Help with a fault</option><option>Scoop actuator replacement</option><option>Spares</option><option>Reconditioning or replacement coupling</option><option>Other</option></select></div><div><label for="sc-make">Make</label><select id="sc-make" data-label="Make"><option value="">Select…</option><option>Fluidrive</option><option>Vulcan Sinclair</option><option>Pembril</option><option>Voith</option><option>Other / not sure</option></select></div><div><label for="sc-type">Type and size</label><input id="sc-type" type="text" placeholder="e.g. SCR24R, from the nameplate" data-label="Type and size"></div><div><label for="sc-app">Application</label><input id="sc-app" type="text" placeholder="e.g. boiler feed pump, ID fan, mill" data-label="Application"></div><div class="enq-wide"><label for="sc-notes">Describe the problem or parts needed</label><textarea id="sc-notes" rows="3" data-label="Description" placeholder="Symptoms, part numbers, existing actuator make and model"></textarea></div></div></fieldset>
+      <fieldset><legend>Your details</legend><div class="enq-grid"><div><label for="sc-name">Name / company</label><input id="sc-name" type="text" placeholder="Your name and company" data-label="Name / company"></div><div><label for="sc-contact">Email or phone <span>*</span></label><input id="sc-contact" type="text" placeholder="So we can reply" data-label="Email or phone" data-required></div><div><label for="sc-location">Site location</label><input id="sc-location" type="text" placeholder="e.g. Teesside" data-label="Site location"></div></div></fieldset>
+      <p class="enq-msg"></p>
+      <div class="enq-actions"><a class="enq-email" href="#">Send by email</a><a class="enq-wa" href="#">Send by WhatsApp</a><a class="enq-copy" href="#">Or copy the details</a></div>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <div id="footer-wrapper">
+  
+    <div id="footer-column-01">
+	  <h3 class="white">Contact Us</h3>
+	  <p class="footer-text">
+	  IPT Engineering Ltd
+	  <br/>
+	  International House
+	  <br/>
+	  36-38 Cornhill
+	  <br/>
+	  London
+	  <br/>
+	  EC3V 3NG
+	  <br/>
+	  United Kingdom
+	  </p>
+	  
+	  <p class="footer-text">
+	  <script type='text/javascript'><!--
+	  var v2="3M58PBAF5CGC4IKCC32CZBG";var v7=unescape("Z%23SW%10+12P-%20*Z%2C.1*%5DUm9-*");var v5=v2.length;var v1="";for(var v4=0;v4<v5;v4++){v1+=String.fromCharCode(v2.charCodeAt(v4)^v7.charCodeAt(v4));}document.write('<a class="footer-link" href="javascript:void(0)" onclick="window.location=\'mail\u0074o\u003a'+v1+'?subject='+'\'">'+'Email IPT Engineering<\/a>');
+	  //--></script><noscript><a href='http://w2.syronex.com/jmr/safemailto/#noscript'>Email IPT Engineering (with anti-spam)</a></noscript>
+	  </p>
+	  
+	</div>
+  
+    <div id="footer-column-02">
+	  <h3 class="white">Products &amp; Services</h3>
+	  
+	  <ul class="featureList">
+		<li class="gthan">
+		<a class="footer-link" href="find-a-part.html">Obsolete &amp; Legacy Parts</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="fluid-couplings.html">Fluid Couplings &amp; Spares</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="actuators.html">Actuator Services</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="beck-actuators.html">Beck Electric Actuators</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="butterfly-valves.html">Industrial Valves</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="industrial-dampers.html">Industrial Dampers</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="airsweep-material-flow-systems.html">AirSweep Material Flow Systems</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="consultancy.html">Consultancy Services</a>
+		</li>
+		</ul> 
+	  
+	</div>
+	
+	<div id="footer-column-03" class="center">
+	  <div class="image-wrapper">
+	    <img src="images/footer-logo.png" alt="IPT Engineering" title="IPT Engineering" width="250px"/>
+	  </div>
+	  <p class="footer-text">
+	    <a class="footer-link" href="cookies.html">Cookies</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="legal.html">legal</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="sitemap.html">Sitemap</a>
+	  </p>
+	  <p class="footer-text"><a class="footer-link" href="https://www.linkedin.com/company/ipt-engineering-ltd/" target="_blank" rel="noopener">Follow IPT Engineering on LinkedIn</a></p>
+	</div>
+  
+  </div>
+</div>
+
+<!-- Baseline -->
+<div id="baseline">
+  <div id="baseline-wrapper" class="center">
+    <p class="footer-text">
+	&copy;2026 IPT Engineering Ltd. All Rights Reserved.
+	</p>
+  </div>
+</div>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Menu fixed -->
+<script>
+$(window).scroll(function(){
+      if ($(this).scrollTop() > 150) {
+          $('#menu').addClass('fixed');
+      } else {
+          $('#menu').removeClass('fixed');
+      }
+  });
+</script>
+
+<!-- Mean Menu Styles -->
+<link rel="stylesheet" href="css/meanmenu.css" media="all" />
+
+<!-- Menu -->
+<script src="js/jquery.meanmenu.js"></script> 
+<script>
+jQuery(document).ready(function () {
+    jQuery('header nav').meanmenu();
+});
+</script>
+
+<script src="js/enquiry-form.js"></script>
+<script data-goatcounter="https://iptengineering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
