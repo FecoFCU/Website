@@ -55,7 +55,7 @@
 
   gtag('config', 'G-0T3V1556WY');
 function iptLead(m){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'Enquiry: '+m+' '+location.pathname,title:'Enquiry ('+m+') from '+location.pathname,event:true});}catch(x){}}
-document.addEventListener('click',function(e){if(e.defaultPrevented)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m){gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});iptLead(m);}});
+document.addEventListener('click',function(e){if(e.defaultPrevented)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m){gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});iptLead(m);}else if(/#valve-quote/.test(h)){iptLead('quote link');}});
 </script>
 
 <!-- Google Tag Manager -->
@@ -263,6 +263,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="main-text">
     Use the chart below to convert between DN and inches, check your pipe size and see how much space a wafer valve needs between the flanges.
     </p>
+    <p class="main-text"><strong>Need a valve in one of these sizes?</strong> We supply Vamein butterfly valves from DN50 to DN2000. <a class="link under" href="butterfly-valves.html#valve-quote">Request a quotation</a>.</p>
     <div class="bv-scroll"><table class="bv-table" style="min-width:560px">
       <thead><tr><th>DN (mm)</th><th>Inches (NPS)</th><th>Steel pipe OD (mm)</th><th>Wafer valve face-to-face (mm)</th><th>Delivery</th></tr></thead>
       <tbody>
