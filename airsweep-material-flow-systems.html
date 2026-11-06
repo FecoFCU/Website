@@ -121,6 +121,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .enq-form details{margin:18px 0;border:1px solid #c8ced6;border-radius:3px;background:#fff;padding:4px 18px 10px}
 .enq-form summary{cursor:pointer;font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;padding:12px 0}
 .enq-form details p.enq-note{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:4px 0 0}
+.mat-check{margin:14px 0 0}
+.mat-check summary{cursor:pointer;list-style:none;font-family:Arial,Helvetica,sans-serif}
+.mat-check summary::-webkit-details-marker{display:none}
+.mat-check summary::after{content:" \25BE"}
+.mat-check[open] summary::after{content:" \25B4"}
+.mat-check-body{margin-top:10px;padding:4px 16px 6px;background:#fff;border:1px solid #c8ced6;border-left:4px solid #036;border-radius:3px}
 .quick-quote-title{margin:0;color:#036;font-size:1.15em}
 .quick-quote .enq-grid{margin:12px 0}
 .quick-quote .enq-grid label span{display:inline;margin:0;font-size:1em;color:#b3261e}
@@ -291,6 +297,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <li><span class="bullets"><strong>Material not flowing:</strong> erratic or slow discharge, or material building up on the vessel walls</span></li>
       <li><span class="bullets"><strong>Batch cleaning:</strong> clearing a vessel between different materials or product runs, with less flushing and manual cleaning</span></li>
     </ul>
+    <details class="mat-check">
+  <summary class="price-cta-btn" onclick="try{goatcounter.count({path:'CTA: check-material '+location.pathname,title:'Check material click',event:true})}catch(x){}">Check if AirSweep works with your material</summary>
+  <div class="mat-check-body">
+    <p class="main-text">AirSweep has already cured flow problems with materials including:</p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Alumina-based minerals, from fine powder to small pebbles</span></li>
+      <li><span class="bullets">Meat meal, ground grain and mineral blend (about 7% moisture), and pet food kibble fines</span></li>
+      <li><span class="bullets">Lithium carbonate at 10 to 25% moisture</span></li>
+      <li><span class="bullets">Damp sand for ready-mix concrete</span></li>
+      <li><span class="bullets">Spice and seasoning blends, and flour</span></li>
+      <li><span class="bullets">Soil and compost in bagging plants (<a class="link under" href="case-study-airsweep-soil-hopper.html">soil hopper case study</a>)</span></li>
+      <li><span class="bullets">Quarry material in hoppers</span></li>
+      <li><span class="bullets">Materials in brewing and carpet tile manufacturing</span></li>
+    </ul>
+    <p class="main-text"><strong>Not listed?</strong> <a class="link under" href="#qq-material" onclick="var m=document.getElementById('qq-material');if(m){m.focus();}">Tell us your material</a> in the quick quote box below and we will check it with Control Concepts.</p>
+  </div>
+</details>
     <div class="price-cta quick-quote">
   <h3 class="quick-quote-title">Get a quick AirSweep quote</h3>
   <span>Three details are enough to start. We will come back with a proposed system and ask for anything else we need.</span>
