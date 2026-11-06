@@ -121,6 +121,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .enq-form details{margin:18px 0;border:1px solid #c8ced6;border-radius:3px;background:#fff;padding:4px 18px 10px}
 .enq-form summary{cursor:pointer;font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;padding:12px 0}
 .enq-form details p.enq-note{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:4px 0 0}
+.quick-quote-title{margin:0;color:#036;font-size:1.15em}
+.quick-quote .enq-grid{margin:12px 0}
+.quick-quote .enq-grid label span{display:inline;margin:0;font-size:1em;color:#b3261e}
+.quick-quote form legend{position:absolute;left:-9999px}
 @media (max-width:900px){.enq-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.enq-grid{grid-template-columns:1fr}.as-table{font-size:.85em}.as-vs{grid-template-columns:1fr}}
 @media (max-width:700px){.as-table{display:table!important}.as-table thead{display:table-header-group!important}.as-table tbody{display:table-row-group!important}.as-table tr{display:table-row!important}.as-table thead tr{position:static!important}.as-table th,.as-table td{display:table-cell!important;position:static!important;padding:7px!important;width:auto!important}.as-table td:before{content:none!important;display:none!important}}
@@ -287,9 +291,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <li><span class="bullets"><strong>Material not flowing:</strong> erratic or slow discharge, or material building up on the vessel walls</span></li>
       <li><span class="bullets"><strong>Batch cleaning:</strong> clearing a vessel between different materials or product runs, with less flushing and manual cleaning</span></li>
     </ul>
-    <div class="price-cta">
-  <a class="price-cta-btn" href="#silo-enquiry" onclick="try{goatcounter.count({path:'CTA: ask-price '+location.pathname,title:'Ask for a price click',event:true})}catch(x){}">Ask for a price &rarr;</a>
-  <span>Tell us about your silo or hopper and we will come back with a proposed system.</span>
+    <div class="price-cta quick-quote">
+  <h3 class="quick-quote-title">Get a quick AirSweep quote</h3>
+  <span>Three details are enough to start. We will come back with a proposed system and ask for anything else we need.</span>
+  <form class="enq-form" data-subject="AirSweep quick quote" onsubmit="return false">
+    <fieldset><legend>Quick quote</legend><div class="enq-grid"><div><label for="qq-problem">Problem <span>*</span></label><select id="qq-problem" data-label="Problem" data-required><option value="">Select…</option><option>Bridging / material blocked</option><option>Ratholing</option><option>Erratic or slow flow</option><option>Build-up on vessel walls</option><option>Batch cleaning between materials</option><option>Other</option></select></div><div><label for="qq-material">Material handled <span>*</span></label><input id="qq-material" type="text" placeholder="e.g. sand, malt, powder" data-label="Material handled" data-required></div><div><label for="qq-contact">Email or phone <span>*</span></label><input id="qq-contact" type="text" placeholder="So we can reply" data-label="Email or phone" data-required></div></div></fieldset>
+    <p class="enq-msg"></p>
+    <div class="enq-actions"><a class="enq-email" href="#">Send by email</a><a class="enq-wa" href="#">Send by WhatsApp</a><a class="enq-copy" href="#">Or copy the details</a></div>
+  </form>
+  <span>Have drawings or full details? Use the <a class="link under" href="#silo-enquiry" onclick="try{goatcounter.count({path:'CTA: ask-price '+location.pathname,title:'Ask for a price click',event:true})}catch(x){}">full enquiry form</a> further down.</span>
 </div>
   </div>
 </div>
