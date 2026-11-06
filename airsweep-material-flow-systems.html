@@ -127,6 +127,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .mat-check summary::after{content:" \25BE"}
 .mat-check[open] summary::after{content:" \25B4"}
 .mat-check-body{margin-top:10px;padding:4px 16px 6px;background:#fff;border:1px solid #c8ced6;border-left:4px solid #036;border-radius:3px}
+.mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 20px;font-family:'Open Sans',sans-serif;font-size:.92em;color:#333}
+.mat-grid h4{margin:6px 0 4px;color:#036;font-size:1em}
+.mat-grid ul{margin:0;padding-left:18px;line-height:1.6}
+@media (max-width:640px){.mat-grid{grid-template-columns:1fr 1fr}}
 .quick-quote-title{margin:0;color:#036;font-size:1.15em}
 .quick-quote .enq-grid{margin:12px 0}
 .quick-quote .enq-grid label span{display:inline;margin:0;font-size:1em;color:#b3261e}
@@ -300,17 +304,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <details class="mat-check">
   <summary class="price-cta-btn" onclick="try{goatcounter.count({path:'CTA: check-material '+location.pathname,title:'Check material click',event:true})}catch(x){}">Check if AirSweep works with your material</summary>
   <div class="mat-check-body">
-    <p class="main-text">AirSweep has already cured flow problems with materials including:</p>
-    <ul class="bullets cs-results">
-      <li><span class="bullets">Alumina-based minerals, from fine powder to small pebbles</span></li>
-      <li><span class="bullets">Meat meal, ground grain and mineral blend (about 7% moisture), and pet food kibble fines</span></li>
-      <li><span class="bullets">Lithium carbonate at 10 to 25% moisture</span></li>
-      <li><span class="bullets">Damp sand for ready-mix concrete</span></li>
-      <li><span class="bullets">Spice and seasoning blends, and flour</span></li>
-      <li><span class="bullets">Soil and compost in bagging plants (<a class="link under" href="case-study-airsweep-soil-hopper.html">soil hopper case study</a>)</span></li>
-      <li><span class="bullets">Quarry material in hoppers</span></li>
-      <li><span class="bullets">Materials in brewing and carpet tile manufacturing</span></li>
-    </ul>
+    <p class="main-text">Control Concepts lists these among the materials AirSweep has handled successfully, together with those from the case studies on this page:</p>
+    <div class="mat-grid"><div><h4>Foods</h4><ul><li>Animal feeds</li><li>Brewers' grain</li><li>Chocolate and cocoa powder</li><li>Flour</li><li>Grains</li><li>Ground flax</li><li>Hops</li><li>Meal (including meat meal)</li><li>Oat hulls</li><li>Rice bran</li><li>Salts</li><li>Spices and seasonings</li><li>Starch</li><li>Sugar</li><li>Whey protein</li></ul></div><div><h4>Mined</h4><ul><li>Alumina-based minerals</li><li>Borax</li><li>Coal</li><li>Copper</li><li>Gypsum</li><li>Lead</li><li>Limestone</li><li>Magnetite</li><li>Phosphate</li><li>Sand, including damp sand</li><li>Shale</li><li>Soda ash</li><li>Trona</li><li>Uranium</li></ul></div><div><h4>Chemicals</h4><ul><li>Adipic acid</li><li>Boric acid</li><li>Calcine</li><li>Calcium carbonate</li><li>Herbicides</li><li>Hydrated lime</li><li>Iron oxide</li><li>Lead chromate</li><li>Lithium carbonate</li><li>Polyacrylamide</li><li>Sodium sulphite</li><li>Titanium dioxide</li><li>Zinc</li></ul></div><div><h4>Other</h4><ul><li>Acetate</li><li>Asphalt aggregates</li><li>Cements</li><li>Chalk</li><li>Compost and soil</li><li>Detergents</li><li>Fertiliser</li><li>Fly ash</li><li>Pharmaceuticals</li><li>Plastics</li><li>Resins</li><li>Sludge</li><li>Tobacco</li><li>Wax flakes and pellets</li></ul></div></div>
     <p class="main-text"><strong>Not listed?</strong> <a class="link under" href="#qq-material" onclick="var m=document.getElementById('qq-material');if(m){m.focus();}">Tell us your material</a> in the quick quote box below and we will check it with Control Concepts.</p>
   </div>
 </details>
@@ -474,6 +469,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p><strong>Problem:</strong> Damp sand bridged above the bin outlets, delaying truck filling. Vibrators and jogging the gates did not cure it.</p>
         <p><strong>AirSweep:</strong> One 2 inch VA-51 nozzle above the outlets, pulsed by the batch control each time the gate opens.</p>
         <p class="as-res">Sand flows on demand, trucks leave on schedule, and nobody climbs the ladder to poke it out.</p>
+      </div>
+      <div class="as-case">
+        <h3>Oily ingredients at a bakery</h3>
+        <p class="as-ind">Food manufacturing</p>
+        <p><strong>Problem:</strong> Ground flax and cocoa powder, oily and poor-flowing, bridged above the discharge and caked the receiver walls up to the filter bags. Vibrators packed the flax solid, fluidisers did not help, and up to 40 lb of mix was thrown away each day.</p>
+        <p><strong>AirSweep:</strong> Six VA-06 nozzles, in pairs at the top, middle and bottom of the hopper.</p>
+        <p class="as-res">90% of the material retention problems solved, less waste, faster production, and no more climbing in to clean the receiver.</p>
+      </div>
+      <div class="as-case">
+        <h3>Asphalt aggregate silos</h3>
+        <p class="as-ind">Construction materials</p>
+        <p><strong>Problem:</strong> Aggregates and sand settled and compacted in the silos, especially over weekends. Vibrators packed the material harder, and workers had to hammer the silos or climb 7 m down inside to clear them.</p>
+        <p><strong>AirSweep:</strong> Eight 2 inch VA-51 nozzles for first-in, first-out flow, after a free trial. A metal sheet was added to the concrete cones.</p>
+        <p class="as-res">A four-year problem solved in two weeks. Less build-up, noise and energy use, and no more hammering.</p>
+      </div>
+      <div class="as-case">
+        <h3>Sticky whey powder</h3>
+        <p class="as-ind">Dairy and food processing</p>
+        <p><strong>Problem:</strong> Whey protein concentrate, high in moisture and fat, bridged over the discharge. Caked material had started a fire in a baghouse, and the fix had to meet USDA food standards.</p>
+        <p><strong>AirSweep:</strong> Six USDA-accepted AirSweep USDA 135 units in the baghouse hopper and drop tube, mounted on couplings.</p>
+        <p class="as-res">No bridging since installation, and the company is fitting AirSweep at its other US factories.</p>
       </div>
     </div>
     <p class="main-text">
