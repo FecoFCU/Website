@@ -131,6 +131,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .mat-grid h4{margin:6px 0 4px;color:#036;font-size:1em}
 .mat-grid ul{margin:0;padding-left:18px;line-height:1.6}
 @media (max-width:640px){.mat-grid{grid-template-columns:1fr 1fr}}
+.as-more{margin:0 0 18px}
+.as-more summary{cursor:pointer;display:inline-block;font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;border:2px solid #036;border-radius:3px;padding:10px 18px;background:#fff}
+.as-more[open] summary{margin-bottom:4px}
 .quick-quote-title{margin:0;color:#036;font-size:1.15em}
 .quick-quote .enq-grid{margin:12px 0}
 .quick-quote .enq-grid label span{display:inline;margin:0;font-size:1em;color:#b3261e}
@@ -305,7 +308,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <summary class="price-cta-btn" onclick="try{goatcounter.count({path:'CTA: check-material '+location.pathname,title:'Check material click',event:true})}catch(x){}">Check if AirSweep works with your material</summary>
   <div class="mat-check-body">
     <p class="main-text">Control Concepts lists these among the materials AirSweep has handled successfully, together with those from the case studies on this page:</p>
-    <div class="mat-grid"><div><h4>Foods</h4><ul><li>Animal feeds</li><li>Brewers' grain</li><li>Brine (dust)</li><li>Chocolate and cocoa powder</li><li>Coffee</li><li>Flour</li><li>Grains</li><li>Ground flax</li><li>Hops</li><li>Maize (corn)</li><li>Meal (including meat meal)</li><li>Oat hulls</li><li>Rice bran</li><li>Salts</li><li>Spices and seasonings</li><li>Starch</li><li>Sugar</li><li>Whey protein</li></ul></div><div><h4>Mined</h4><ul><li>Alumina-based minerals</li><li>Aluminium</li><li>Barite</li><li>Bentonite</li><li>Borax</li><li>Coal (coke, mine run, silt, pulverised)</li><li>Copper</li><li>Diatomaceous earth</li><li>Gypsum</li><li>Lead</li><li>Limestone</li><li>Magnetite</li><li>Phosphate</li><li>Sand, including damp sand</li><li>Shale</li><li>Soda ash</li><li>Trona</li><li>Uranium</li></ul></div><div><h4>Chemicals</h4><ul><li>Activated carbon</li><li>Adipic acid</li><li>Aluminium chloride</li><li>Boric acid</li><li>Calcine</li><li>Calcined gypsum</li><li>Calcium carbonate</li><li>Chlorine</li><li>Herbicides</li><li>Hydrated lime</li><li>Iron oxide</li><li>Lead chromate</li><li>Lithium carbonate</li><li>Polyacrylamide</li><li>Sodium sulphite</li><li>Titanium dioxide</li><li>Zinc</li></ul></div><div><h4>Other</h4><ul><li>Acetate</li><li>Asphalt aggregates</li><li>Cements</li><li>Chalk</li><li>Compost and soil</li><li>Cork</li><li>Detergents</li><li>Fertiliser</li><li>Fly ash</li><li>Foundry sand</li><li>Pharmaceuticals</li><li>Plastics</li><li>Resins</li><li>Sludge</li><li>Tobacco</li><li>Wax flakes and pellets</li></ul></div></div>
+    <div class="mat-grid"><div><h4>Foods</h4><ul><li>Animal feeds</li><li>Brewers' grain</li><li>Brine (dust)</li><li>Chocolate and cocoa powder</li><li>Coffee</li><li>Flour</li><li>Grains</li><li>Ground flax</li><li>Hops</li><li>Infant formula blends</li><li>Maize (corn)</li><li>Masa flour</li><li>Meal (including meat meal)</li><li>Oat hulls</li><li>Rice bran</li><li>Salts</li><li>Spices and seasonings</li><li>Starch</li><li>Sugar</li><li>Whey protein</li></ul></div><div><h4>Mined</h4><ul><li>Alumina-based minerals</li><li>Aluminium</li><li>Barite</li><li>Bentonite</li><li>Borax</li><li>Coal (coke, mine run, silt, pulverised)</li><li>Copper</li><li>Copper concentrate</li><li>Diatomaceous earth</li><li>Gypsum</li><li>Lead</li><li>Limestone</li><li>Magnetite</li><li>Phosphate</li><li>Sand, including damp sand</li><li>Shale</li><li>Soda ash</li><li>Trona</li><li>Uranium</li></ul></div><div><h4>Chemicals</h4><ul><li>Activated carbon</li><li>Adipic acid</li><li>Aluminium chloride</li><li>Boric acid</li><li>Calcine</li><li>Calcined gypsum</li><li>Calcium carbonate</li><li>Carbon black</li><li>Chlorine</li><li>Herbicides</li><li>Hydrated lime</li><li>Iron oxide</li><li>Lead chromate</li><li>Lithium carbonate</li><li>Polyacrylamide</li><li>Sodium sulphite</li><li>Titanium dioxide</li><li>Zinc</li></ul></div><div><h4>Other</h4><ul><li>Acetate</li><li>Asphalt aggregates</li><li>Cement clinker</li><li>Cements</li><li>Chalk</li><li>Compost and soil</li><li>Cork</li><li>Deicing salt pellets</li><li>Detergents</li><li>Fertiliser</li><li>Fly ash</li><li>Foundry sand</li><li>Pharmaceuticals</li><li>Plastics</li><li>Resins</li><li>Sludge</li><li>Tobacco</li><li>Wax flakes and pellets</li></ul></div></div>
     <p class="main-text"><strong>Not listed?</strong> <a class="link under" href="#qq-material" onclick="var m=document.getElementById('qq-material');if(m){m.focus();}">Tell us your material</a> in the quick quote box below and we will check it with Control Concepts.</p>
   </div>
 </details>
@@ -492,6 +495,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p class="as-res">No bridging since installation, and the company is fitting AirSweep at its other US factories.</p>
       </div>
     </div>
+    <details class="as-more">
+      <summary>Show 7 more AirSweep results</summary>
+    <div class="as-cases">
+      <div class="as-case">
+        <h3>Deicing pellets</h3>
+        <p class="as-ind">Aviation services</p>
+        <p><strong>Problem:</strong> Salt blended with binder and additives into deicing pellets for airports. The materials are hygroscopic, so they clumped and hardened in the bins. Gentle vibration was not going to shift them.</p>
+        <p><strong>AirSweep:</strong> VA-06 nozzles on the surge, receiving and other bins and a cyclone, and VA-12 nozzles on the baghouse, each placed to suit the vessel size and angle.</p>
+        <p class="as-res">&ldquo;A 100% difference to our materials flowing.&rdquo; More units ordered for other sites.</p>
+      </div>
+      <div class="as-case">
+        <h3>Rice bran for bulk bags</h3>
+        <p class="as-ind">Food ingredients</p>
+        <p><strong>Problem:</strong> Rice bran clumped in the hoppers and silos. Workers hammered the vessels, which was noisy, dented the equipment and risked injury, and a new bulk bag filling station needed reliable flow.</p>
+        <p><strong>AirSweep:</strong> Four VA-06 nozzles, 90 degrees apart on the sloped walls, screwed into ready-fitted couplings and connected to the existing air and power.</p>
+        <p class="as-res">No clumping, no dents and no hammering. The same system has since cured a masa flour cyclone.</p>
+      </div>
+      <div class="as-case">
+        <h3>Carbon black weigh hoppers</h3>
+        <p class="as-ind">Carbon black manufacturing</p>
+        <p><strong>Problem:</strong> Carbon black bridged over the outlets of critical weigh hoppers, starving the downstream machines and shutting down production. Vibrators did not work.</p>
+        <p><strong>AirSweep:</strong> Three VA-51 nozzles on a weigh hopper, retrofitted in under 48 hours.</p>
+        <p class="as-res">On-demand flow in less than a week, and more AirSweep units being fitted across the plant.</p>
+      </div>
+      <div class="as-case">
+        <h3>Infant formula clean-down</h3>
+        <p class="as-ind">Infant nutrition</p>
+        <p><strong>Problem:</strong> Formula blends high in fat, sugars and proteins clung to vessel walls, risking cross-contamination between batches. Cleaning relied on long flushing and manual work.</p>
+        <p><strong>AirSweep:</strong> AirSweep USDA 135 and 185 units and Straight Shooters in blenders, vacuum receivers, sifters and packaging vessels, pulsed during and after each run.</p>
+        <p class="as-res">Cleaning cut from 40 hours to 10, better blend uniformity, and the system rolled out to four more plants worldwide.</p>
+      </div>
+      <div class="as-case">
+        <h3>Hot cement clinker</h3>
+        <p class="as-ind">Cement production, Spain</p>
+        <p><strong>Problem:</strong> Hot, sticky, abrasive clinker clung to a tube and chute. Two air cannons had not cured it, and operators were still breaking the material with a bar.</p>
+        <p><strong>AirSweep:</strong> Two 2 inch VA-51 nozzles in place of the air cannons, fitted in one day with no changes to the vessel.</p>
+        <p class="as-res">&ldquo;The AirSweeps worked perfectly.&rdquo; 13 more units ordered for the company's other plants.</p>
+      </div>
+      <div class="as-case">
+        <h3>Shale in a humid climate</h3>
+        <p class="as-ind">Cement production, Philippines</p>
+        <p><strong>Problem:</strong> High humidity made shale hang on the wall of a 5.6 m silo that needed 25 to 30 tonnes an hour. Knockers, vibrators and constant hammering had not cured it, with downtime estimated at $12,000 an hour.</p>
+        <p><strong>AirSweep:</strong> Twelve 2 inch VA-51 nozzles around the silo. Fitting and testing took under 8 hours.</p>
+        <p class="as-res">A years-old problem solved in four days. Faster, steadier flow, less noise, and an estimated half the energy of knockers and vibrators.</p>
+      </div>
+      <div class="as-case">
+        <h3>Copper concentrate chutes</h3>
+        <p class="as-ind">Mining, Africa</p>
+        <p><strong>Problem:</strong> Fine copper concentrate (copper, sulphur and silica) clogged the chutes from the storage bins to the furnace. Vibrators damaged the walls, and workers spent two hours a day clearing the chutes. Air cannons were judged too loud and unsafe.</p>
+        <p><strong>AirSweep:</strong> An AirSweep system on the chutes, with simple installation.</p>
+        <p class="as-res">Performance exceeded expectations, and the company plans to fit more chutes.</p>
+      </div>
+    </div>
+    </details>
     <p class="main-text">
     Have a similar problem? <a class="link under" href="#silo-enquiry">Tell us about your vessel</a>.
     </p>
