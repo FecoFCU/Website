@@ -2,10 +2,15 @@
 (function () {
   var EMAIL = "info@iptengineering.com";
   var WA = "447912023945";
+  /* Stripe Payment Links, keyed by kit part number. Rows with a link get a "Buy now" button. */
+  var K1416 = "https://buy.stripe.com/fZu4gydmA7OddhXf8vco000";
+  var BUY = {
+    HOFKFCU14: K1416, HOFKFCU16: K1416, HIFKSFU390: K1416, HIFK14SCR6: K1416, HIFK16SCR6: K1416
+  };
   var css = ".kit-enq{white-space:nowrap}" +
     ".kit-enq a{display:inline-block;margin:2px 4px 2px 0;padding:6px 12px;border-radius:3px;color:#fff!important;" +
     "font-family:'Open Sans',sans-serif;font-size:.85em;font-weight:bold;text-decoration:none;line-height:1.2}" +
-    ".kit-enq a.kit-email{background:#036}.kit-enq a.kit-wa{background:#25a35a}" +
+    ".kit-enq a.kit-email{background:#036}.kit-enq a.kit-wa{background:#25a35a}.kit-enq a.kit-buy{background:#c45500}" +
     ".kit-enq a:hover{opacity:.85}" +
     "@media screen and (max-width:768px){td.kit-enq{white-space:normal}td.kit-enq:before{content:'Enquire'!important}" +
     "table[data-price-col] td.kit-enq:before{content:'Order / Enquire'!important}}";
@@ -41,6 +46,13 @@
       wa.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
       wa.target = "_blank"; wa.rel = "noopener";
       wa.setAttribute("aria-label", "WhatsApp an enquiry for " + title);
+      if (price && BUY[part]) {
+        var buy = document.createElement("a"); buy.className = "kit-buy"; buy.textContent = "Buy now";
+        buy.href = BUY[part]; buy.target = "_blank"; buy.rel = "noopener";
+        buy.setAttribute("aria-label", "Buy now: " + title + " at " + price + " + VAT");
+        buy.addEventListener("click", function () { if (window.iptLead) window.iptLead("stripe"); });
+        td.appendChild(buy);
+      }
       td.appendChild(em); td.appendChild(wa); tr.appendChild(td);
     });
   });
