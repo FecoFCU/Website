@@ -28,6 +28,7 @@
       var prod = table.getAttribute("data-product") || product;
       var title = prod + ", size " + size + (part && !/ask|^[–-]$/i.test(part) ? " (" + part + ")" : "");
       var price = priceCol >= 0 && cells[priceCol] ? cells[priceCol].textContent.trim() : "";
+      if (price.indexOf("£") !== 0) price = ""; /* e.g. "Request a quote" rows send a normal enquiry */
       var kind = price ? "Order" : "Enquiry";
       var msg = price
         ? "Order: " + title + " at " + price + " + VAT each, UK delivered\n\nQuantity required:\nCoupling serial number:\nName / company:\nDelivery address:\nContact number:\n\nSent from " + location.href
