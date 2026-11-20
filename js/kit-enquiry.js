@@ -7,7 +7,8 @@
     "font-family:'Open Sans',sans-serif;font-size:.85em;font-weight:bold;text-decoration:none;line-height:1.2}" +
     ".kit-enq a.kit-email{background:#036}.kit-enq a.kit-wa{background:#25a35a}" +
     ".kit-enq a:hover{opacity:.85}" +
-    "@media screen and (max-width:768px){td.kit-enq{white-space:normal}td.kit-enq:before{content:'Enquire'!important}}";
+    "@media screen and (max-width:768px){td.kit-enq{white-space:normal}td.kit-enq:before{content:'Enquire'!important}" +
+    "table[data-price-col] td.kit-enq:before{content:'Order / Enquire'!important}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   var h1 = document.querySelector("h1");
@@ -16,7 +17,9 @@
   document.querySelectorAll("table").forEach(function (table) {
     var headRow = table.querySelector("thead tr");
     if (!headRow) return;
-    var th = document.createElement("th"); th.textContent = "Enquire"; headRow.appendChild(th);
+    /* Tables with data-price-col="N" show a UK price in column N (0-based): buttons send an order instead of an enquiry */
+    var priceCol = table.hasAttribute("data-price-col") ? parseInt(table.getAttribute("data-price-col"), 10) : -1;
+    var th = document.createElement("th"); th.textContent = priceCol >= 0 ? "Order / Enquire" : "Enquire"; headRow.appendChild(th);
     table.querySelectorAll("tbody tr").forEach(function (tr) {
       var cells = tr.querySelectorAll("td");
       if (cells.length < 2) return;
@@ -24,10 +27,14 @@
       var part = table.hasAttribute("data-no-part") ? "" : cells[1].textContent.trim();
       var prod = table.getAttribute("data-product") || product;
       var title = prod + ", size " + size + (part && !/ask|^[–-]$/i.test(part) ? " (" + part + ")" : "");
-      var msg = "Enquiry: " + title + "\n\nQuantity required:\nName / company:\nContact number:\n\nSent from " + location.href;
+      var price = priceCol >= 0 && cells[priceCol] ? cells[priceCol].textContent.trim() : "";
+      var kind = price ? "Order" : "Enquiry";
+      var msg = price
+        ? "Order: " + title + " at " + price + " + VAT each, UK delivered\n\nQuantity required:\nCoupling serial number:\nName / company:\nDelivery address:\nContact number:\n\nSent from " + location.href
+        : "Enquiry: " + title + "\n\nQuantity required:\nName / company:\nContact number:\n\nSent from " + location.href;
       var td = document.createElement("td"); td.className = "kit-enq";
       var em = document.createElement("a"); em.className = "kit-email"; em.textContent = "Email";
-      em.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Enquiry: " + title) + "&body=" + encodeURIComponent(msg);
+      em.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(kind + ": " + title) + "&body=" + encodeURIComponent(msg);
       em.setAttribute("aria-label", "Email an enquiry for " + title);
       var wa = document.createElement("a"); wa.className = "kit-wa"; wa.textContent = "WhatsApp";
       wa.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
