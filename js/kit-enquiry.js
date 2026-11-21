@@ -3,7 +3,7 @@
   var EMAIL = "info@iptengineering.com";
   var WA = "447912023945";
   /* Stripe Payment Links, keyed by kit part number. Rows with a link get a "Buy now" button. */
-  var K1416 = "https://buy.stripe.com/fZu4gydmA7OddhXf8vco000";
+  var K1416 = "https://buy.stripe.com/cNibJ096k6K93HnbWjco001";
   var BUY = {
     HOFKFCU14: K1416, HOFKFCU16: K1416, HIFKSFU390: K1416, HIFK14SCR6: K1416, HIFK16SCR6: K1416
   };
