@@ -10,7 +10,7 @@
      Kit prices (GBP, ex VAT, delivered UK mainland), keyed by part number.
      pay = Stripe Payment Link for that kit (leave "" until made: the UK option then offers an email order). */
   var KITS = {
-    k78:   { name: "7/8",   price: 130, pay: "" },
+    k78:   { name: "7/8",   price: 130, pay: "https://buy.stripe.com/28EcN482g3xXa5L1hFco003" },
     k910:  { name: "9/10",  price: 160, pay: "" },
     k1112: { name: "11/12", price: 235, pay: "" },
     k1416: { name: "14/16", price: 265, pay: "https://buy.stripe.com/4gM7sKeqE7Od0vb4tRco002" },
