@@ -15,15 +15,24 @@
     k1112: { name: "11/12", price: 245, pay: "https://buy.stripe.com/dRm4gyfuId8x5Pv4tRco007" },
     k1416: { name: "14/16", price: 280, pay: "https://buy.stripe.com/9B6aEWdmAb0p6Tz7G3co00a" },
     k1720: { name: "17/20", price: 435, pay: "https://buy.stripe.com/aFabJ02HWc4ta5Le4rco008" },
-    k2326: { name: "23/26", price: 460, pay: "https://buy.stripe.com/8x2fZgbesb0pgu92lJco009" }
+    k2326: { name: "23/26", price: 460, pay: "https://buy.stripe.com/8x2fZgbesb0pgu92lJco009" },
+    /* SFU kits have their own Stripe products */
+    s300:  { name: "SFU 300", price: 245, pay: "https://buy.stripe.com/fZubJ03M00lLgu9d0nco00b" },
+    s350:  { name: "SFU 350", price: 245, pay: "https://buy.stripe.com/6oU00i82gc4t5PvaSfco00c" },
+    s390:  { name: "SFU 390", price: 280, pay: "https://buy.stripe.com/6oU4gy1DS9Wl91H7G3co00d" },
+    s450:  { name: "SFU 450", price: 435, pay: "https://buy.stripe.com/5kQ28q6Ycd8xb9Pe4rco00e" },
+    s475:  { name: "SFU 475", price: 435, pay: "https://buy.stripe.com/dRmaEWgyM7Od7XD4tRco00f" },
+    s500:  { name: "SFU 500", price: 435, pay: "https://buy.stripe.com/cNiaEW5U8b0p7XDf8vco00g" },
+    s550:  { name: "SFU 550/550K", price: 460, pay: "https://buy.stripe.com/3cIeVcaao8Sh91H0dBco00h" },
+    s600:  { name: "SFU 600/600K", price: 460, pay: "https://buy.stripe.com/14A6oGaaofgFcdT2lJco00i" }
   };
   var PART = {
     HOFKFCU7: "k78", HOFKFCU8: "k78", HOFK8SCR6: "k78",
     HOFKFCU9: "k910", HOFKFCU10: "k910", HOFK9SCR6: "k910", HOFK10SCR6: "k910",
-    HOFKFCU11: "k1112", HOFKFCU12: "k1112", HOFKSFU300: "k1112", HOFKSFU350: "k1112", HOFK11SCR6: "k1112", HOFK12SCR6: "k1112",
-    HOFKFCU14: "k1416", HOFKFCU16: "k1416", HOFKSFU390: "k1416", HOFK14SCR6: "k1416", HOFK16SCR6: "k1416",
-    HOFKFCU17: "k1720", HOFKFCU20: "k1720", HOFKSFU450: "k1720", HOFKSFU475: "k1720", HOFKSFU500: "k1720", "HOFK18SCR4/24": "k1720", "HOFK20SCR4/24": "k1720",
-    HOFKFCU23: "k2326", HOFKFCU26: "k2326", HOFKSFU550: "k2326", HOFKSFU600: "k2326", "HOFK23SCR4/24": "k2326", "HOFK26SCR4/24": "k2326"
+    HOFKFCU11: "k1112", HOFKFCU12: "k1112", HOFKSFU300: "s300", HOFKSFU350: "s350", HOFK11SCR6: "k1112", HOFK12SCR6: "k1112",
+    HOFKFCU14: "k1416", HOFKFCU16: "k1416", HOFKSFU390: "s390", HOFK14SCR6: "k1416", HOFK16SCR6: "k1416",
+    HOFKFCU17: "k1720", HOFKFCU20: "k1720", HOFKSFU450: "s450", HOFKSFU475: "s475", HOFKSFU500: "s500", "HOFK18SCR4/24": "k1720", "HOFK20SCR4/24": "k1720",
+    HOFKFCU23: "k2326", HOFKFCU26: "k2326", HOFKSFU550: "s550", HOFKSFU600: "s600", "HOFK23SCR4/24": "k2326", "HOFK26SCR4/24": "k2326"
   };
 
   var css = ".kit-enq{white-space:nowrap}" +
