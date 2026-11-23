@@ -13,7 +13,7 @@
     k78:   { name: "7/8",   price: 130, pay: "https://buy.stripe.com/5kQcN42HWc4tb9Pf8vco004" },
     k910:  { name: "9/10",  price: 160, pay: "https://buy.stripe.com/fZu7sK96k5G5dhXf8vco006" },
     k1112: { name: "11/12", price: 235, pay: "https://buy.stripe.com/dRm4gyfuId8x5Pv4tRco007" },
-    k1416: { name: "14/16", price: 265, pay: "https://buy.stripe.com/4gM7sKeqE7Od0vb4tRco002" },
+    k1416: { name: "14/16", price: 265, pay: "https://buy.stripe.com/9B6aEWdmAb0p6Tz7G3co00a" },
     k1720: { name: "17/20", price: 420, pay: "https://buy.stripe.com/aFabJ02HWc4ta5Le4rco008" },
     k2326: { name: "23/26", price: 445, pay: "https://buy.stripe.com/8x2fZgbesb0pgu92lJco009" }
   };
