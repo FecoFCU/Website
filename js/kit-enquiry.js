@@ -142,7 +142,9 @@
       var part = table.hasAttribute("data-no-part") ? "" : cells[1].textContent.trim();
       var prod = table.getAttribute("data-product") || product;
       var title = prod + ", size " + size + (part && !/ask|^[–-]$/i.test(part) ? " (" + part + ")" : "");
-      var msg = "Enquiry: " + title + "\n\nQuantity required:\nName / company:\nContact number:\n\nSent from " + location.href;
+      /* data-ask on a table adds extra questions to the enquiry, separated by | */
+      var ask = table.getAttribute("data-ask") ? table.getAttribute("data-ask").split("|").join(":\n") + ":\n" : "";
+      var msg = "Enquiry: " + title + "\n\nQuantity required:\n" + ask + "Name / company:\nContact number:\n\nSent from " + location.href;
       var td = document.createElement("td"); td.className = "kit-enq";
       var kit = table.hasAttribute("data-buy") ? KITS[PART[part]] : null;
       if (kit) {
@@ -160,6 +162,6 @@
       wa.setAttribute("aria-label", "WhatsApp an enquiry for " + title);
       td.appendChild(em); td.appendChild(wa); tr.appendChild(td);
     });
-    th.textContent = anyBuy ? "Buy / Enquire" : "Enquire";
+    th.textContent = anyBuy ? "Buy / Enquire" : (table.getAttribute("data-enq-label") || "Enquire");
   });
 })();
