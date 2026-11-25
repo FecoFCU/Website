@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+
+<!-- Ensure HTMl5 elements display ok in IE below 9 -->
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
+
+<!-- Enable Media Queries in IE below 9 -->
+<!--[if lt IE 9]>
+	<script src="css3-mediaqueries.js"></script>
+<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="NOODP">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Damper Problems: Sticking, Leaking &amp; Actuator Faults | IPT</title>
+
+<link rel="canonical" href="https://iptengineering.com/damper-problems.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IPT Engineering Ltd">
+<meta property="og:title" content="Industrial Damper Problems: Sticking, Leaking &amp; Actuator Faults | IPT">
+<meta property="og:description" content="Why industrial dampers stick, leak, warp or hunt, and how to fix them. Practical fault finding for EfW, biomass and boiler fan dampers and their actuators.">
+<meta property="og:url" content="https://iptengineering.com/damper-problems.html">
+<meta property="og:image" content="https://iptengineering.com/images/share/dampers.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_GB">
+<meta name="keywords" content="damper problems, damper sticking, seized damper, damper leaking, damper passing, warped damper blades, damper actuator failure, damper hunting, damper linkage, industrial damper repair" />
+<meta name="description" content="Why industrial dampers stick, leak, warp or hunt, and how to fix them. Practical fault finding for EfW, biomass and boiler fan dampers and their actuators." />
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Main Page Styles -->
+<link media="screen" rel="stylesheet" href="styles.css"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T3V1556WY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0T3V1556WY');
+function iptLead(m){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'Enquiry: '+m+' '+location.pathname,title:'Enquiry ('+m+') from '+location.pathname,event:true});}catch(x){}}
+document.addEventListener('click',function(e){if(e.defaultPrevented)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var m=/^mailto:/i.test(h)?'email':/^tel:/i.test(h)?'phone':/wa\.me\//i.test(h)?'whatsapp':'';if(m){gtag('event','generate_lead',{method:m,link_text:(a.textContent||'').trim().slice(0,60)});iptLead(m);}});
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8CNHXM');</script>
+<!-- End Google Tag Manager -->
+
+
+<style>
+.dm-faq h3{margin:22px 0 6px;color:#036}
+.dq-table{width:100%;border-collapse:collapse;margin:20px 0;font-family:'Open Sans',sans-serif;font-size:.93em;background:#fff}
+.dq-table th{background:#036;color:#fff;text-align:left;padding:9px 11px;font-weight:bold}
+.dq-table td{border:1px solid #e3e6ea;padding:9px 11px;vertical-align:middle;line-height:1.45;color:#333}
+.dq-table strong{font-weight:bold}
+.dq-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.qq-btn{font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#fff;background:#036;border:0;border-radius:3px;padding:7px 12px;margin:2px 4px 2px 0;cursor:pointer}
+.qq-btn:hover{background:#0a4f94}
+.enq-form fieldset{border:0;padding:0;margin:0}
+.enq-form legend{font-family:'Open Sans',sans-serif;font-weight:bold;color:#036;font-size:1.05em;padding:0;margin:18px 0 0}
+.enq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;margin:14px 0 6px}
+.enq-grid label{display:block;margin-bottom:5px;font-family:'Open Sans',sans-serif;font-size:.9em;font-weight:bold;color:#036}
+.enq-grid label span{color:#b3261e}
+.enq-grid select,.enq-grid input,.enq-grid textarea{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid #c8ced6;border-radius:3px;background:#fff;font-family:'Open Sans',sans-serif;font-size:.95em;color:#222}
+.enq-wide{grid-column:1/-1}
+.enq-actions a{display:inline-block;margin:4px 8px 4px 0;padding:12px 20px;border-radius:3px;color:#fff!important;text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:bold}
+.enq-email{background:#036}.enq-wa{background:#25a35a}.enq-actions a.enq-copy{background:none;color:#036!important;text-decoration:underline;padding:12px 4px}
+.enq-msg{display:none;color:#b3261e;font-family:'Open Sans',sans-serif;margin:8px 0}
+@media (max-width:900px){.enq-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.enq-grid{grid-template-columns:1fr}}
+@media (max-width:700px){.dq-table{font-size:.84em;display:table!important;min-width:520px}.dq-table thead{display:table-header-group!important}
+.dq-table tbody{display:table-row-group!important}.dq-table tr{display:table-row!important}.dq-table thead tr{position:static!important}
+.dq-table th,.dq-table td{display:table-cell!important;position:static!important;padding:7px!important;width:auto!important}
+.dq-table td:before{content:none!important;display:none!important}}
+.as-table{width:100%;border-collapse:collapse;margin:20px 0;font-family:'Open Sans',sans-serif;font-size:.95em;background:#fff}
+.as-table th{background:#036;color:#fff;text-align:left;padding:10px 12px;font-weight:bold}
+.as-table td{border:1px solid #e3e6ea;padding:10px 12px;vertical-align:top;line-height:1.5;color:#333}
+.dp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.as-table strong,.main-text strong,.cs-results strong{font-weight:bold}
+.dp-swipe{display:none;font-family:'Open Sans',sans-serif;font-size:.85em;color:#555;margin:0 0 6px}
+@media (max-width:700px){.dp-swipe{display:block}}
+@media (max-width:700px){.dp-scroll .as-table{font-size:.84em;display:table!important;min-width:560px}.dp-scroll .as-table thead{display:table-header-group!important}
+.dp-scroll .as-table tbody{display:table-row-group!important}.dp-scroll .as-table tr{display:table-row!important}.dp-scroll .as-table thead tr{position:static!important}
+.dp-scroll .as-table th,.dp-scroll .as-table td{display:table-cell!important;position:static!important;padding:7px!important;width:auto!important}
+.dp-scroll .as-table td:before{content:none!important;display:none!important}}
+</style>
+<style>
+.cs-pair,.cs-grid{display:grid;gap:16px;margin:24px 0 8px}
+.cs-pair{grid-template-columns:1fr 1fr}
+.cs-grid{grid-template-columns:repeat(3,1fr)}
+.cs-fig{margin:0;background:#fff;border:1px solid #e3e6ea}
+.cs-fig img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.cs-grid.wide .cs-fig img,.cs-pair.wide .cs-fig img{aspect-ratio:4/3}
+.cs-fig figcaption,.cs-card p,.cs-card .cs-more,.cs-tag{font-family:'Open Sans',sans-serif}
+.cs-fig figcaption{padding:10px 12px;font-size:.9em;line-height:1.4;color:#44505e}
+.cs-tag{display:inline-block;font-size:.75em;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;margin-right:6px;color:#fff;background:#036}
+.cs-tag.before{background:#7a6a58}
+.cs-results li{margin:.4em 0}
+.cs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
+.cs-card{display:block;background:#fff;border:1px solid #e3e6ea;text-decoration:none;color:inherit}
+.cs-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.cs-card .cs-card-body{padding:16px 18px 20px}
+.cs-card h3{margin:0 0 8px;color:#036}
+.cs-card p{line-height:1.5;color:#44505e}
+.cs-card .cs-more{display:inline-block;margin-top:10px;color:#036;font-weight:bold}
+.cs-card:hover{border-color:#036}
+@media (max-width:700px){.cs-grid{grid-template-columns:1fr 1fr}.cs-pair{gap:10px}}
+@media (max-width:440px){.cs-grid{grid-template-columns:1fr}}
+.as-video{position:relative;width:100%;max-width:760px;margin:24px 0 8px;aspect-ratio:16/9;background:#000;border-radius:3px;overflow:hidden}
+.as-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.as-video-cap{font-family:'Open Sans',sans-serif;font-size:.9em;color:#555;margin:0 0 18px}
+</style>
+<link media="screen" rel="stylesheet" href="css/menu-dropdown.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://iptengineering.com/"}, {"@type": "ListItem", "position": 2, "name": "Industrial Dampers", "item": "https://iptengineering.com/industrial-dampers.html"}, {"@type": "ListItem", "position": 3, "name": "Damper Problems Guide", "item": "https://iptengineering.com/damper-problems.html"}]}</script>
+</head>
+
+<body>
+
+<!-- Header -->
+<div id="header">
+  <div id="header-wrapper">
+  
+    <!-- Logo -->
+	<div id="logo">
+	  <a title="IPT Engineering" href="https://iptengineering.com/">
+	    <img src="images/logo.png" width="250" alt="Fluid Couplings" title="Fluid Couplings"/>
+	  </a>
+	</div>
+	
+	<!-- Main Menu -->
+	<div id="menu-main">
+	  <nav>
+		<ul class="main">
+		  <li>
+		  <a href="index.html">Home</a>
+		  </li>
+		  <li>
+		  <a href="case-studies.html">Case Studies</a>
+		  </li>
+		  <li>
+		  <a class="last" href="contact.html">Contact</a>
+		  </li>
+		</ul>
+	  </nav>
+	</div>
+	
+	<!-- Contact Details -->
+	<div id="header-contact">
+	  
+	  <p class="header-text">
+	  <span class="light-blue">Need a part? </span><a class="tel" tabIndex="-1" href="find-a-part.html">Send us the details</a>
+	  </p>
+	  
+	</div>
+	
+	
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Sub Menu -->
+<div id="menu">
+  <div id="menu-wrapper">
+    <header>
+      <nav>
+		<ul>
+          <li>
+            <a class="down" href="find-a-part.html">Find a Part</a>
+            <ul>
+              <li class="sub-head"><a href="find-a-part.html">Find a Part</a></li>
+              <li><a href="ex-stock-surplus.html">Ex-Stock: AUMA Gearboxes &amp; Vamein Seats</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="fluid-couplings.html">Fluid Couplings</a>
+            <ul>
+              <li class="sub-head"><a href="fluid-couplings.html">Fluid Couplings &amp; Spares</a></li>
+              <li><a href="how-fluid-couplings-work.html">How Fluid Couplings Work</a></li>
+              <li><a href="scoop-controlled-fluid-couplings.html">Scoop-Controlled Couplings</a></li>
+              <li><a href="fluid-coupling-fault-finding.html">Fault Finding</a></li>
+              <li><a href="fluidrive-fluid-coupling-spares.html">Fluidrive Spares</a></li>
+              <li><a href="sime-fluid-coupling-spares.html">SIME Spares</a></li>
+              <li><a href="fluid-coupling-fusible-plugs.html">Fusible Plugs</a></li>
+              <li><a href="fcu-driving-plate-kits.html">Driving Plate Kits</a></li>
+              <li><a href="fcu-output-kits.html">FCU Output Kits</a></li>
+              <li><a href="sfu-output-kits.html">SFU Output Kits</a></li>
+              <li><a href="scr-output-kits.html">SCR Output Kits</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="actuators.html">Actuator Services</a>
+            <ul class="cols2">
+              <li class="sub-head"><a href="actuators.html">Actuator Services</a></li>
+              <li><a href="beck-actuators.html">Beck Electric Actuators</a></li>
+              <li><a href="beck-actuators-water-wastewater.html">Beck for Water &amp; Wastewater</a></li>
+              <li><a href="about-beck.html">About Beck</a></li>
+              <li><a href="the-beck-motor.html">The Beck Motor</a></li>
+              <li><a href="installations.html">Beck Installations</a></li>
+              <li><a href="biomass-plant-applications.html">Biomass Plant Applications</a></li>
+              <li><a href="group-11-rotary-actuator.html">Group 11 Rotary Damper Drives</a></li>
+              <li><a href="group-11-quarter-turn.html">Group 11 Quarter-Turn Actuators</a></li>
+              <li><a href="group-22-rotary-actuator.html">Group 22 Rotary Actuators</a></li>
+              <li><a href="group-29-specification.html">Group 29 Linear Actuators</a></li>
+              <li><a href="group-31-specification.html">Group 31 Rotary Actuators</a></li>
+              <li><a href="group-42-specification.html">Group 42 Long Stroke Actuators</a></li>
+              <li><a href="group-75.html">Group 75 Compact Actuators</a></li>
+              <li><a href="digital-control-module.html">Digital Control Module</a></li>
+              <li><a href="beck-link-assist.html">Beck Link-Assist</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="butterfly-valves.html">Valves</a>
+            <ul>
+              <li class="sub-head"><a href="butterfly-valves.html">Vamein Butterfly Valves</a></li>
+              <li><a href="butterfly-valve-guide.html">Butterfly Valve Guide</a></li>
+              <li><a href="butterfly-valve-size-chart.html">Butterfly Valve Size Chart</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="industrial-dampers.html">Dampers</a>
+            <ul>
+              <li class="sub-head"><a href="industrial-dampers.html">Industrial Dampers</a></li>
+              <li><a href="damper-problems.html">Damper Problems Guide</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="down" href="airsweep-material-flow-systems.html">AirSweep</a>
+            <ul>
+              <li class="sub-head"><a href="airsweep-material-flow-systems.html">AirSweep Systems</a></li>
+              <li><a href="silo-bridging.html">Silo &amp; Hopper Bridging Guide</a></li>
+              <li><a href="airsweep-vs-vibrators.html">AirSweep vs Vibrators</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="consultancy.html">Consultancy</a>
+          </li>
+        </ul>
+	  </nav>
+	</header>
+  </div>
+</div>
+
+<!-- Banner -->
+<div id="banner-short">
+  <div id="banner-short-wrapper">
+    
+	<div id="banner-text">
+	  <div id="banner-text01" class="slideUp">
+	    <p class="banner-text">
+	    Damper Problems
+	    </p>
+		<p class="banner-text small">
+	    Fault finding for industrial dampers and drives
+	    </p>
+	  </div>
+	</div>  
+	  
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h1>Industrial Damper Problems</h1>
+      <h3>Why dampers stick, leak, warp and hunt, and what to do about it</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Most industrial damper problems come down to one of four complaints: it won't move, it won't close, it won't hold position, or the actuator keeps failing. On energy from waste, biomass and boiler plant the cause is nearly always heat, ash and dust, or the way the damper and its drive have been linked together.
+    </p>
+    <p class="main-text">
+    This guide sets out what we see on site, what to check first and when it is time to replace the damper rather than keep repairing it. It covers multi-blade louvre dampers, butterfly dampers on furnace and exhaust lines, fan inlet vanes and the actuators that drive them.
+    </p>
+    <p class="main-text">
+    <strong>Always isolate the actuator and make the duct safe before working on a damper.</strong> A damper can move without warning when its drive is energised or the gas flow changes.
+    </p>
+    <div class="price-cta">
+      <a class="price-cta-btn" href="#damper-quote" onclick="try{goatcounter.count({path:'CTA: ask-price '+location.pathname,title:'Ask for a price click',event:true})}catch(x){}">Ask about a damper &rarr;</a>
+      <span>Send a photo, a size or the old maker's details and we will take a look.</span>
+    </div>
+  </div>
+</div>
+
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Quick Diagnosis</h2>
+      <h3>Symptom, likely cause and what to check first</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="dp-swipe">Swipe the table sideways to see more &rarr;</p>
+    <div class="dp-scroll">
+    <table class="as-table">
+      <thead><tr><th>Symptom</th><th>Likely causes</th><th>What to check first</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Damper stiff or seized</strong></td><td>Ash or dust in the bearings; corroded or galled shafts; blades binding in the frame when hot; glands packed too tight.</td><td>Disconnect the actuator and try the damper by hand. If it is stiff on its own, the fault is in the damper, not the drive.</td></tr>
+        <tr><td><strong>Exhaust damper seizing</strong></td><td>Condensation in the exhaust line during heat-up and cool-down, mixing with dust; cast iron parts corroding.</td><td>Check when it seizes. If it sticks after a shutdown or start-up, moisture is the likely cause.</td></tr>
+        <tr><td><strong>Seat or disc damaged on a fast-cycling damper</strong></td><td>A heavy disc slamming onto a metal seat many times an hour; actuator much bigger than the damper needs.</td><td>Count the cycles per hour and compare the actuator's torque with what the damper actually needs.</td></tr>
+        <tr><td><strong>Damper passing when shut</strong></td><td>Worn or burnt seals; warped or eroded blades; linkage or end position set so the blades never reach closed.</td><td>Compare the actuator's closed position with where the blades actually are. Inspect the seals and blade edges at the next shutdown.</td></tr>
+        <tr><td><strong>Blades or frame distorted</strong></td><td>Running hotter than the damper was designed for; materials or blade sections not suited to the duty; uneven heating.</td><td>Compare the real gas temperature, including upsets, with the damper's design rating.</td></tr>
+        <tr><td><strong>Poor control or hunting</strong></td><td>Slack in the linkage; damper only using part of the actuator stroke; linkage geometry wrong for the damper.</td><td>Watch the damper and actuator together through a full stroke and look for lost movement at the rod ends and crank arms.</td></tr>
+        <tr><td><strong>Actuator stalling or tripping</strong></td><td>Damper seized or binding; actuator too small for the torque at temperature; heat radiated from the duct.</td><td>Free the damper first. Then check the actuator's torque rating against the damper and the temperature at the drive.</td></tr>
+        <tr><td><strong>Problems straight after an outage</strong></td><td>Linkage, stroke or end positions not reset after the damper was worked on.</td><td>Recommission the actuator against the damper: set the end positions, check the stroke and check the control signal.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Damper Stiff or Seized</h2>
+      <h3>The most common problem we see</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Ash and dust find their way into shaft bearings and glands, and on hot duties shafts and bearings corrode or gall. Thermal growth can also close up the clearance between blades and frame, so a damper that moves freely when cold binds once it is up to temperature. Gland packing that has been over-tightened to stop a leak does the same.
+    </p>
+    <p class="main-text">
+    The first check is always the same: disconnect the actuator and move the damper by hand. If the damper is stiff on its own, the problem is the damper. Fitting a bigger actuator to a seized damper just moves the failure somewhere else, usually a sheared key, a bent linkage or a twisted shaft.
+    </p>
+    <p class="main-text">
+    <strong>Condensation is a big one on exhaust lines.</strong> We were asked to look at a six-zone furnace where the exhaust valves kept seizing. Each zone had a modulating air valve and exhaust valve, and the exhaust valves were cast iron body and disc, with a maker's data sheet that said no moisture allowed. During heat-up and cool-down the exhaust gas condenses, mixes with the dust and the valve locks up. The answer there is stainless parts and a swing-through disc that does not need a tight seat. Most exhaust duties do not need tight shut-off, and a disc that swings through has nothing to stick against.
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Clean out and free the bearings, or fit new ones. Bearings mounted outboard, away from the heat, last much longer.</span></li>
+      <li><span class="bullets">Repack glands to the right tightness, and look at seal air or purged glands on dusty duties.</span></li>
+      <li><span class="bullets">If the damper binds only when hot, check blade clearances against the operating temperature, not the cold setting.</span></li>
+      <li><span class="bullets">If it keeps seizing after repair, the damper is probably not suited to the duty (see repair or replace, below).</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Warped Blades and Frames</h2>
+      <h3>When the damper isn't built for the heat</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Heat is the hardest thing on a damper. Blades that are too thin, the wrong material, or not free to expand will distort, and once they distort the damper binds, passes and breaks its linkages. Temperature cycling makes it worse, as does running above the design temperature during upsets.
+    </p>
+    <p class="main-text">
+    Materials matter just as much. On one furnace, aluminium-bodied butterfly valves had been fitted on an exhaust duty up to 350&deg;C, with dust and some moisture at start-up. They had been repaired several times. An aluminium valve on that duty is always going to be living on borrowed time; a stainless swing-through damper built for the temperature is the better fit.
+    </p>
+    <p class="main-text">
+    <strong>A real example.</strong> At a number of UK biomass and energy from waste plants, the original overfire air dampers supplied with the plant failed in the harsh conditions they worked in. They were replaced with <a class="link under" href="industrial-dampers.html">AMMTech dampers</a> designed as drop-in replacements, fitting the same ductwork and drives. They have now run for three to four years without any maintenance. The full story is in our <a class="link under" href="case-study-biomass-damper-recommissioning.html">biomass damper recommissioning case study</a>.
+    </p>
+    <div class="cs-pair wide">
+      <figure class="cs-fig">
+        <img src="images/case-studies/biomass-overfire-air-damper.jpg" alt="Replacement AMMTech overfire air damper at a UK biomass plant" loading="lazy">
+        <figcaption>Replacement AMMTech overfire air damper</figcaption>
+      </figure>
+      <figure class="cs-fig">
+        <img src="images/valve-failed-inspection.jpg" alt="Inspection of a failed high-temperature butterfly valve" loading="lazy">
+        <figcaption>Inspecting a failed high-temperature valve</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Damper Passing When Shut</h2>
+      <h3>Leaking past the blades</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    A damper that passes when it should be shut is either worn or not actually closing. Seals burn or wear, blade edges erode on dusty gas, and warped blades no longer meet. Just as often the damper is fine, but the linkage or end position has been set so the blades stop short of closed. If the actuator says 0% and the damper indicator does not, start with the linkage.
+    </p>
+    <p class="main-text">
+    It is also worth remembering that a control louvre damper is not an isolation damper. If you need positive isolation, for example to make a duct safe for entry, it needs a damper designed for it, such as a double-seal damper with seal air or a triple-offset design.
+    </p>
+  </div>
+</div>
+
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Fast-Cycling Dampers</h2>
+      <h3>When the seat takes a hammering</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Some furnace air and exhaust dampers open and close every 45 seconds or so, switching between cold air and dusty flue gas at 400&deg;C or more. That is over a thousand cycles a day, and it is very hard on the seat.
+    </p>
+    <p class="main-text">
+    On one job the existing dampers were metal ledge-seat valves with a heavy ductile iron disc, driven by a large spring-return actuator. The disc has real momentum when it hits the seat, and the seats were getting damaged. The heavier disc also needs more torque, so the actuator gets bigger, which makes the slam worse.
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Lighter disc.</strong> A 316 stainless disc is lighter than ductile iron, so it hits the seat with less force.</span></li>
+      <li><span class="bullets"><strong>Soft seat.</strong> A braided or elastomer seat, where the temperature allows, absorbs the closing force instead of the metal taking it.</span></li>
+      <li><span class="bullets"><strong>Right-sized actuator.</strong> The proposed DN200 replacement needed only about 30&nbsp;Nm to operate. A smaller pneumatic actuator costs less, uses less air on every stroke and slams the disc less.</span></li>
+      <li><span class="bullets"><strong>Can be stripped for cleaning.</strong> On dusty gas, a damper that comes apart for cleaning is worth a lot at the next outage.</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Poor Control and Hunting</h2>
+      <h3>Usually the linkage, not the actuator</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Poor control is rarely the actuator's fault. The usual causes are:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Slack in the linkage.</strong> Worn rod ends and loose crank arms give lost movement, and the control loop chases it. Hunting wears out the drive and the damper.</span></li>
+      <li><span class="bullets"><strong>Part-stroke use.</strong> If the actuator turns through 90&deg; but the linkage only uses a third of that, you have thrown away two thirds of the control resolution.</span></li>
+      <li><span class="bullets"><strong>Wrong geometry.</strong> A typical damper does most of its flow change in the first part of its opening. The right linkage geometry evens that out so the loop can control across the whole range.</span></li>
+    </ul>
+    <p class="main-text">
+    Beck's <a class="link under" href="beck-link-assist.html">Link-Assist&trade;</a> program works out the crank arm lengths and angles for a linkage, so the drive uses its full stroke and the damper responds evenly. At one oil refinery, two <a class="link under" href="case-study-refinery-fan-dampers.html">Beck 11-209 drives on the FD fan vane and ID fan damper</a> were set up this way in about 2011 and are still running, around 15 years later.
+    </p>
+    <div class="cs-pair wide">
+      <figure class="cs-fig">
+        <img src="images/case-studies/refinery-fan-actuator-linkage.jpg" alt="Beck 11-209 actuator and linkage on a refinery boiler fan" loading="lazy">
+        <figcaption>Beck 11-209 and linkage on a refinery boiler fan</figcaption>
+      </figure>
+      <figure class="cs-fig">
+        <img src="images/case-studies/biomass-underfire-air-damper.jpg" alt="Beck actuator and linkage on an underfire air damper" loading="lazy">
+        <figcaption>Actuator and linkage on an underfire air damper</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Actuator Failures</h2>
+      <h3>Why damper drives burn out</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    When a damper actuator keeps failing, look at what it is being asked to do before replacing it like for like. The common causes are a damper that is binding or seized, an actuator that was too small for the torque at temperature in the first place, heat radiated from the duct, and constant hunting on a drive whose motor was never meant for continuous modulation.
+    </p>
+    <p class="main-text">
+    Beck electric drives are built for exactly this duty. The low-speed, no-burnout motor will not overheat even when stalled or modulating continuously, and the drives are often fitted and forgotten. At several UK biomass plants, every Beck actuator we inspected during damper maintenance was in good condition and went straight back into service. See our <a class="link under" href="group-11-rotary-actuator.html">Group 11 rotary damper drives</a> and <a class="link under" href="actuators.html">actuator replacement</a> pages.
+    </p>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>After a Damper Overhaul</h2>
+      <h3>Recommission the drive, don't just bolt it back on</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    When a damper is overhauled the actuator has to come off and go back on, and that is where a lot of new problems start. Before the plant returns to service:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets">Reconnect the linkage and crank arms to the original settings, or set them again properly.</span></li>
+      <li><span class="bullets">Set the closed and open end positions against the damper itself, not the old marks.</span></li>
+      <li><span class="bullets">Run the damper through its full stroke and check nothing binds or overruns.</span></li>
+      <li><span class="bullets">Check the control signal and position feedback match what the damper is actually doing.</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content-bg">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Repair or Replace?</h2>
+      <h3>When to stop patching an old damper</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Repair makes sense when the frame and blades are sound and the problem is bearings, seals or linkage. We can supply <a class="link under" href="industrial-dampers.html">damper spares</a>, including parts for older makes, from drawings, samples or photographs.
+    </p>
+    <p class="main-text">
+    Replacement is usually the better answer when blades or frames are distorted, when the same damper fails every outage, or when the original maker no longer supports it. A drop-in replacement built to the existing flange and duct dimensions avoids changing the ductwork, and the existing actuator can often be reused.
+    </p>
+    <p class="main-text">
+    <strong>Check the fit before you order.</strong> Older plant is full of non-standard sizes, and these are the things that catch people out:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Face to face.</strong> Old valves were often thicker than today's standard wafer pattern. We have seen 63&nbsp;mm and 100&nbsp;mm bodies, and spool pieces fitted to fill the gap when a thinner valve went in.</span></li>
+      <li><span class="bullets"><strong>Body outside diameter.</strong> A wafer valve centres itself on the flange bolts. A standard PN body between ANSI flanges can be too small to centre properly, so measure the old one.</span></li>
+      <li><span class="bullets"><strong>Shaft and actuator drive.</strong> Square, star and double-D drives are not interchangeable, and a big actuator may not fit a smaller replacement shaft. Note the mounting flange (e.g. F07/F12) and drive size.</span></li>
+      <li><span class="bullets"><strong>Limit switches and positioners.</strong> Sites often want to keep the limit box or actuator they already stock, so check what can be carried over.</span></li>
+    </ul>
+    <p class="main-text">
+    Send us photos of the old damper, its nameplate and the measurements above and we will check what fits.
+    </p>
+  </div>
+</div>
+
+<div class="main-content dm-faq">
+  <div class="main-content-wrapper">
+    <header>
+      <h2>Frequently Asked Questions</h2>
+      <div class="hr"></div>
+    </header>
+    <h3>Why does my damper stick?</h3>
+    <p class="main-text">Usually ash or dust in the shaft bearings, corrosion on hot duties, or blades binding in the frame as they expand with heat. Over-tight glands are another common cause. Disconnect the actuator and move the damper by hand to confirm the damper is the problem.</p>
+    <h3>Why is my damper leaking when it is closed?</h3>
+    <p class="main-text">Worn or burnt seals, warped or eroded blades, or a linkage and end position set so the blades never reach fully closed. Check the actuator's closed position against the blades first.</p>
+    <h3>Why does my exhaust damper keep seizing?</h3>
+    <p class="main-text">Often condensation. During heat-up and cool-down the exhaust gas condenses and mixes with dust, and cast iron parts corrode and lock up. Stainless parts and a swing-through disc that does not need a tight seat are usually the cure.</p>
+    <h3>Why does the damper actuator keep failing?</h3>
+    <p class="main-text">Most often because the damper is binding, the actuator is too small for the torque at temperature, it is exposed to heat from the duct, or it is hunting continuously on a motor not rated for modulating duty.</p>
+    <h3>Can you replace an obsolete damper without changing the ductwork?</h3>
+    <p class="main-text">Yes. AMMTech dampers can be built as drop-in replacements to the existing flange and duct dimensions, and the existing actuator can often be reused.</p>
+    <h3>Do you supply damper spares?</h3>
+    <p class="main-text">Yes. Blades, shafts, bearings, seals, linkages and actuators, including parts for older dampers where the original maker no longer supports them.</p>
+  </div>
+</div>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+{"@type": "Question", "name": "Why does my damper stick?", "acceptedAnswer": {"@type": "Answer", "text": "Usually ash or dust in the shaft bearings, corrosion on hot duties, or blades binding in the frame as they expand with heat. Over-tight glands are another common cause. Disconnect the actuator and move the damper by hand to confirm the damper is the problem."}},
+{"@type": "Question", "name": "Why is my damper leaking when it is closed?", "acceptedAnswer": {"@type": "Answer", "text": "Worn or burnt seals, warped or eroded blades, or a linkage and end position set so the blades never reach fully closed. Check the actuator's closed position against the blades first."}},
+{"@type": "Question", "name": "Why does my exhaust damper keep seizing?", "acceptedAnswer": {"@type": "Answer", "text": "Often condensation. During heat-up and cool-down the exhaust gas condenses and mixes with dust, and cast iron parts corrode and lock up. Stainless parts and a swing-through disc that does not need a tight seat are usually the cure."}},
+{"@type": "Question", "name": "Why does the damper actuator keep failing?", "acceptedAnswer": {"@type": "Answer", "text": "Most often because the damper is binding, the actuator is too small for the torque at temperature, it is exposed to heat from the duct, or it is hunting continuously on a motor not rated for modulating duty."}},
+{"@type": "Question", "name": "Can you replace an obsolete damper without changing the ductwork?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. AMMTech dampers can be built as drop-in replacements to the existing flange and duct dimensions, and the existing actuator can often be reused."}},
+{"@type": "Question", "name": "Do you supply damper spares?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Blades, shafts, bearings, seals, linkages and actuators, including parts for older dampers where the original maker no longer supports them."}}
+]}
+</script>
+
+<div class="main-content-bg" id="damper-quote">
+  <div class="main-content-wrapper">
+
+<header>
+  <h2>Request a Damper Quotation</h2>
+  <h3>Pick a damper type, or fill in what you know</h3>
+  <div class="hr"></div>
+</header>
+
+<p class="main-text">
+Every industrial damper is made to suit its duct and duty, so we quote each one individually. Choose a damper type and duty below to start, and we will fill in the form for you. Fields marked * are needed; anything else you know helps us quote faster. Drawings, nameplate photos and photos of the existing damper can be attached once your email or WhatsApp opens.
+</p>
+<div class="dq-scroll"><table class="dq-table"><thead><tr><th>Damper type</th><th>Typical duty</th><th>Quote for</th></tr></thead><tbody>
+<tr><td><strong>Single-blade (butterfly) damper</strong></td><td>Round or rectangular ducts; isolation or control of air and gas</td><td><button type="button" class="qq-btn" data-type="Single-blade (butterfly) damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="Single-blade (butterfly) damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>Multi-blade louvre damper</strong></td><td>Large rectangular ducts; flow control with parallel or opposed blades</td><td><button type="button" class="qq-btn" data-type="Multi-blade louvre damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="Multi-blade louvre damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>High-temperature damper</strong></td><td>Hot gas, flue gas and furnace duties beyond standard equipment</td><td><button type="button" class="qq-btn" data-type="High-temperature damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="High-temperature damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>Heavy-duty process damper</strong></td><td>Continuous-duty, dusty or abrasive process gas streams</td><td><button type="button" class="qq-btn" data-type="Heavy-duty process damper" data-duty="Isolation">Isolation</button> <button type="button" class="qq-btn" data-type="Heavy-duty process damper" data-duty="Control">Control</button></td></tr>
+<tr><td><strong>Triple-offset damper</strong></td><td>Tight shut-off and dependable isolation under demanding conditions</td><td><button type="button" class="qq-btn" data-type="Triple-offset damper" data-duty="Isolation">Isolation</button></td></tr>
+<tr><td><strong>Spare parts for an existing damper</strong></td><td>Blades, shafts, bearings, seals, linkages and actuators</td><td><button type="button" class="qq-btn" data-type="Spare parts for an existing damper" data-duty="Spares">Spares</button></td></tr>
+</tbody></table></div>
+<form class="enq-form" id="dq-form" data-subject="Industrial damper enquiry" onsubmit="return false">
+<fieldset><legend>The damper</legend><div class="enq-grid"><div><label for="dq-type">Damper type</label><select id="dq-type" data-label="Damper type"><option value="">Select&hellip;</option><option>Single-blade (butterfly) damper</option><option>Multi-blade louvre damper</option><option>High-temperature damper</option><option>Heavy-duty process damper</option><option>Triple-offset damper</option><option>Spare parts for an existing damper</option><option>Not sure</option></select></div><div><label for="dq-duty">Duty</label><select id="dq-duty" data-label="Duty"><option value="">Select&hellip;</option><option>Isolation</option><option>Control</option><option>Isolation and control</option><option>Spares</option><option>Not sure</option></select></div><div><label for="dq-new">New or replacement</label><select id="dq-new" data-label="New or replacement"><option value="">Select&hellip;</option><option>New installation</option><option>Replacement for an existing damper</option><option>Spares only</option></select></div><div><label for="dq-qty">Quantity <span>*</span></label><input id="dq-qty" type="text" placeholder="e.g. 2" data-label="Quantity" data-required></div></div></fieldset>
+<fieldset><legend>Size and connection</legend><div class="enq-grid"><div><label for="dq-shape">Duct shape</label><select id="dq-shape" data-label="Duct shape"><option value="">Select&hellip;</option><option>Round</option><option>Rectangular</option><option>Square</option><option>Not sure</option></select></div><div><label for="dq-size">Size <span>*</span></label><input id="dq-size" type="text" placeholder="e.g. 800 mm dia, or 1200 x 800 mm" data-label="Size" data-required></div><div><label for="dq-flange">Flange / connection</label><input id="dq-flange" type="text" placeholder="e.g. flanged, PCD and hole count" data-label="Flange / connection"></div><div><label for="dq-length">Length available</label><input id="dq-length" type="text" placeholder="Face to face in the duct, mm" data-label="Length available"></div></div></fieldset>
+<fieldset><legend>Process conditions</legend><div class="enq-grid"><div><label for="dq-medium">Medium <span>*</span></label><input id="dq-medium" type="text" placeholder="e.g. air, flue gas, process gas" data-label="Medium" data-required></div><div><label for="dq-temp">Normal operating temperature</label><input id="dq-temp" type="text" placeholder="°C" data-label="Normal operating temperature"></div><div><label for="dq-tmax">Maximum temperature</label><input id="dq-tmax" type="text" placeholder="°C, including upsets" data-label="Maximum temperature"></div><div><label for="dq-press">Operating pressure</label><input id="dq-press" type="text" placeholder="e.g. -20 to +50 mbar" data-label="Operating pressure"></div><div><label for="dq-flow">Flow rate</label><input id="dq-flow" type="text" placeholder="e.g. Nm³/h" data-label="Flow rate"></div><div><label for="dq-dust">Dust or particulate</label><select id="dq-dust" data-label="Dust or particulate"><option value="">Select&hellip;</option><option>None</option><option>Light</option><option>Heavy / abrasive</option><option>Not sure</option></select></div><div><label for="dq-leak">Shut-off requirement</label><select id="dq-leak" data-label="Shut-off requirement"><option value="">Select&hellip;</option><option>Tight shut-off</option><option>Low leakage</option><option>Control only</option><option>Not sure</option></select></div><div><label for="dq-mat">Material requirements</label><input id="dq-mat" type="text" placeholder="e.g. carbon steel, 310 stainless" data-label="Material requirements"></div></div></fieldset>
+<fieldset><legend>Operation</legend><div class="enq-grid"><div><label for="dq-act">Actuation</label><select id="dq-act" data-label="Actuation"><option value="">Select&hellip;</option><option>Manual handle</option><option>Gearbox and handwheel</option><option>Pneumatic actuator</option><option>Electric actuator (Beck)</option><option>Electric actuator (other)</option><option>Re-use existing actuator</option><option>Not sure</option></select></div><div><label for="dq-signal">Control signal</label><select id="dq-signal" data-label="Control signal"><option value="">Select&hellip;</option><option>On/off</option><option>4-20 mA modulating</option><option>Other</option><option>Not sure</option></select></div><div><label for="dq-freq">Operating frequency</label><input id="dq-freq" type="text" placeholder="e.g. continuous modulation, daily" data-label="Operating frequency"></div><div><label for="dq-atex">ATEX area?</label><select id="dq-atex" data-label="ATEX area?"><option value="">Select&hellip;</option><option>No</option><option>Yes</option><option>Not sure</option></select></div><div><label for="dq-existing">Existing make / model</label><input id="dq-existing" type="text" placeholder="If replacing a damper" data-label="Existing make / model"></div></div></fieldset>
+<fieldset><legend>Your details</legend><div class="enq-grid"><div><label for="dq-name">Name / company</label><input id="dq-name" type="text" placeholder="Your name and company" data-label="Name / company"></div><div><label for="dq-contact">Email or phone <span>*</span></label><input id="dq-contact" type="text" placeholder="So we can reply" data-label="Email or phone" data-required></div><div><label for="dq-when">Site location / required by</label><input id="dq-when" type="text" placeholder="e.g. Teesside, March" data-label="Site location / required by"></div><div class="enq-wide"><label for="dq-notes">Anything else?</label><textarea id="dq-notes" rows="3" data-label="Anything else?" placeholder="Application, problems with the existing damper, standards or certificates needed"></textarea></div></div></fieldset>
+<p class="enq-msg"></p>
+<div class="enq-actions"><a class="enq-email" href="#">Send by email</a><a class="enq-wa" href="#">Send by WhatsApp</a><a class="enq-copy" href="#">Or copy the details</a></div>
+</form>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <div id="footer-wrapper">
+  
+    <div id="footer-column-01">
+	  <h3 class="white">Contact Us</h3>
+	  <p class="footer-text">
+	  IPT Engineering Ltd
+	  <br/>
+	  International House
+	  <br/>
+	  36-38 Cornhill
+	  <br/>
+	  London
+	  <br/>
+	  EC3V 3NG
+	  <br/>
+	  United Kingdom
+	  </p>
+	  
+	  <p class="footer-text">
+	  <script type='text/javascript'><!--
+	  var v2="3M58PBAF5CGC4IKCC32CZBG";var v7=unescape("Z%23SW%10+12P-%20*Z%2C.1*%5DUm9-*");var v5=v2.length;var v1="";for(var v4=0;v4<v5;v4++){v1+=String.fromCharCode(v2.charCodeAt(v4)^v7.charCodeAt(v4));}document.write('<a class="footer-link" href="javascript:void(0)" onclick="window.location=\'mail\u0074o\u003a'+v1+'?subject='+'\'">'+'Email IPT Engineering<\/a>');
+	  //--></script><noscript><a href='http://w2.syronex.com/jmr/safemailto/#noscript'>Email IPT Engineering (with anti-spam)</a></noscript>
+	  </p>
+	  
+	</div>
+  
+    <div id="footer-column-02">
+	  <h3 class="white">Products &amp; Services</h3>
+	  
+	  <ul class="featureList">
+		<li class="gthan">
+		<a class="footer-link" href="find-a-part.html">Obsolete &amp; Legacy Parts</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="fluid-couplings.html">Fluid Couplings &amp; Spares</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="actuators.html">Actuator Services</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="beck-actuators.html">Beck Electric Actuators</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="butterfly-valves.html">Industrial Valves</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="industrial-dampers.html">Industrial Dampers</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="airsweep-material-flow-systems.html">AirSweep Material Flow Systems</a>
+		</li>
+		<li class="gthan">
+		<a class="footer-link" href="consultancy.html">Consultancy Services</a>
+		</li>
+		</ul> 
+	  
+	</div>
+	
+	<div id="footer-column-03" class="center">
+	  <div class="image-wrapper">
+	    <img src="images/footer-logo.png" alt="IPT Engineering" title="IPT Engineering" width="250px"/>
+	  </div>
+	  <p class="footer-text">
+	    <a class="footer-link" href="cookies.html">Cookies</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="legal.html">legal</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-link" href="sitemap.html">Sitemap</a>
+	  </p>
+	  <p class="footer-text"><a class="footer-link" href="https://www.linkedin.com/company/ipt-engineering-ltd/" target="_blank" rel="noopener">Follow IPT Engineering on LinkedIn</a></p>
+	</div>
+  
+  </div>
+</div>
+
+<!-- Baseline -->
+<div id="baseline">
+  <div id="baseline-wrapper" class="center">
+    <p class="footer-text">
+	&copy;2026 IPT Engineering Ltd. All Rights Reserved.
+	</p>
+  </div>
+</div>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Menu fixed -->
+<script>
+$(window).scroll(function(){
+      if ($(this).scrollTop() > 150) {
+          $('#menu').addClass('fixed');
+      } else {
+          $('#menu').removeClass('fixed');
+      }
+  });
+</script>
+
+<!-- Mean Menu Styles -->
+<link rel="stylesheet" href="meanmenu.css" media="all" />
+
+<!-- Menu -->
+<script src="jquery.meanmenu.js"></script>
+<script>
+jQuery(document).ready(function () {
+    jQuery('header nav').meanmenu();
+});
+</script>
+
+<script>
+(function(){function pick(id,v){var el=document.getElementById(id);if(!el)return;for(var i=0;i<el.options.length;i++){if(el.options[i].text===v){el.selectedIndex=i;break;}}}document.querySelectorAll(".qq-btn").forEach(function(b){b.addEventListener("click",function(){var t=b.getAttribute("data-type"),d=b.getAttribute("data-duty");pick("dq-type",t);pick("dq-duty",d);pick("dq-new",d==="Spares"?"Spares only":"");var f=document.getElementById("dq-form");if(f)f.scrollIntoView({behavior:"smooth"});var q=document.getElementById("dq-qty");if(q)setTimeout(function(){q.focus({preventScroll:true});},500);});});})();
+</script>
+<script src="js/enquiry-form.js"></script>
+<script data-goatcounter="https://iptengineering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
