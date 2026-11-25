@@ -100,7 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .as-table th{background:#036;color:#fff;text-align:left;padding:10px 12px;font-weight:bold}
 .as-table td{border:1px solid #e3e6ea;padding:10px 12px;vertical-align:top;line-height:1.5;color:#333}
 .dp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.as-table strong{font-weight:bold}
+.as-table strong,.main-text strong,.cs-results strong{font-weight:bold}
 .dp-swipe{display:none;font-family:'Open Sans',sans-serif;font-size:.85em;color:#555;margin:0 0 6px}
 @media (max-width:700px){.dp-swipe{display:block}}
 @media (max-width:700px){.dp-scroll .as-table{font-size:.84em;display:table!important;min-width:560px}.dp-scroll .as-table thead{display:table-header-group!important}
@@ -294,7 +294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     Most industrial damper problems come down to one of four complaints: it won't move, it won't close, it won't hold position, or the actuator keeps failing. On energy from waste, biomass and boiler plant the cause is nearly always heat, ash and dust, or the way the damper and its drive have been linked together.
     </p>
     <p class="main-text">
-    This guide sets out what we see on site, what to check first and when it is time to replace the damper rather than keep repairing it. It covers multi-blade louvre dampers, single-blade dampers, fan inlet vanes and the actuators that drive them.
+    This guide sets out what we see on site, what to check first and when it is time to replace the damper rather than keep repairing it. It covers multi-blade louvre dampers, butterfly dampers on furnace and exhaust lines, fan inlet vanes and the actuators that drive them.
     </p>
     <p class="main-text">
     <strong>Always isolate the actuator and make the duct safe before working on a damper.</strong> A damper can move without warning when its drive is energised or the gas flow changes.
@@ -319,6 +319,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <thead><tr><th>Symptom</th><th>Likely causes</th><th>What to check first</th></tr></thead>
       <tbody>
         <tr><td><strong>Damper stiff or seized</strong></td><td>Ash or dust in the bearings; corroded or galled shafts; blades binding in the frame when hot; glands packed too tight.</td><td>Disconnect the actuator and try the damper by hand. If it is stiff on its own, the fault is in the damper, not the drive.</td></tr>
+        <tr><td><strong>Exhaust damper seizing</strong></td><td>Condensation in the exhaust line during heat-up and cool-down, mixing with dust; cast iron parts corroding.</td><td>Check when it seizes. If it sticks after a shutdown or start-up, moisture is the likely cause.</td></tr>
+        <tr><td><strong>Seat or disc damaged on a fast-cycling damper</strong></td><td>A heavy disc slamming onto a metal seat many times an hour; actuator much bigger than the damper needs.</td><td>Count the cycles per hour and compare the actuator's torque with what the damper actually needs.</td></tr>
         <tr><td><strong>Damper passing when shut</strong></td><td>Worn or burnt seals; warped or eroded blades; linkage or end position set so the blades never reach closed.</td><td>Compare the actuator's closed position with where the blades actually are. Inspect the seals and blade edges at the next shutdown.</td></tr>
         <tr><td><strong>Blades or frame distorted</strong></td><td>Running hotter than the damper was designed for; materials or blade sections not suited to the duty; uneven heating.</td><td>Compare the real gas temperature, including upsets, with the damper's design rating.</td></tr>
         <tr><td><strong>Poor control or hunting</strong></td><td>Slack in the linkage; damper only using part of the actuator stroke; linkage geometry wrong for the damper.</td><td>Watch the damper and actuator together through a full stroke and look for lost movement at the rod ends and crank arms.</td></tr>
@@ -343,6 +345,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="main-text">
     The first check is always the same: disconnect the actuator and move the damper by hand. If the damper is stiff on its own, the problem is the damper. Fitting a bigger actuator to a seized damper just moves the failure somewhere else, usually a sheared key, a bent linkage or a twisted shaft.
     </p>
+    <p class="main-text">
+    <strong>Condensation is a big one on exhaust lines.</strong> We were asked to look at a six-zone furnace where the exhaust valves kept seizing. Each zone had a modulating air valve and exhaust valve, and the exhaust valves were cast iron body and disc, with a maker's data sheet that said no moisture allowed. During heat-up and cool-down the exhaust gas condenses, mixes with the dust and the valve locks up. The answer there is stainless parts and a swing-through disc that does not need a tight seat. Most exhaust duties do not need tight shut-off, and a disc that swings through has nothing to stick against.
+    </p>
     <ul class="bullets cs-results">
       <li><span class="bullets">Clean out and free the bearings, or fit new ones. Bearings mounted outboard, away from the heat, last much longer.</span></li>
       <li><span class="bullets">Repack glands to the right tightness, and look at seal air or purged glands on dusty duties.</span></li>
@@ -361,6 +366,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </header>
     <p class="main-text">
     Heat is the hardest thing on a damper. Blades that are too thin, the wrong material, or not free to expand will distort, and once they distort the damper binds, passes and breaks its linkages. Temperature cycling makes it worse, as does running above the design temperature during upsets.
+    </p>
+    <p class="main-text">
+    Materials matter just as much. On one furnace, aluminium-bodied butterfly valves had been fitted on an exhaust duty up to 350&deg;C, with dust and some moisture at start-up. They had been repaired several times. An aluminium valve on that duty is always going to be living on borrowed time; a stainless swing-through damper built for the temperature is the better fit.
     </p>
     <p class="main-text">
     <strong>A real example.</strong> At a number of UK biomass and energy from waste plants, the original overfire air dampers supplied with the plant failed in the harsh conditions they worked in. They were replaced with <a class="link under" href="industrial-dampers.html">AMMTech dampers</a> designed as drop-in replacements, fitting the same ductwork and drives. They have now run for three to four years without any maintenance. The full story is in our <a class="link under" href="case-study-biomass-damper-recommissioning.html">biomass damper recommissioning case study</a>.
@@ -397,6 +405,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="main-content-bg">
   <div class="main-content-wrapper">
     <header>
+      <h2>Fast-Cycling Dampers</h2>
+      <h3>When the seat takes a hammering</h3>
+      <div class="hr"></div>
+    </header>
+    <p class="main-text">
+    Some furnace air and exhaust dampers open and close every 45 seconds or so, switching between cold air and dusty flue gas at 400&deg;C or more. That is over a thousand cycles a day, and it is very hard on the seat.
+    </p>
+    <p class="main-text">
+    On one job the existing dampers were metal ledge-seat valves with a heavy ductile iron disc, driven by a large spring-return actuator. The disc has real momentum when it hits the seat, and the seats were getting damaged. The heavier disc also needs more torque, so the actuator gets bigger, which makes the slam worse.
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Lighter disc.</strong> A 316 stainless disc is lighter than ductile iron, so it hits the seat with less force.</span></li>
+      <li><span class="bullets"><strong>Soft seat.</strong> A braided or elastomer seat, where the temperature allows, absorbs the closing force instead of the metal taking it.</span></li>
+      <li><span class="bullets"><strong>Right-sized actuator.</strong> The proposed DN200 replacement needed only about 30&nbsp;Nm to operate. A smaller pneumatic actuator costs less, uses less air on every stroke and slams the disc less.</span></li>
+      <li><span class="bullets"><strong>Can be stripped for cleaning.</strong> On dusty gas, a damper that comes apart for cleaning is worth a lot at the next outage.</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="main-content-wrapper">
+    <header>
       <h2>Poor Control and Hunting</h2>
       <h3>Usually the linkage, not the actuator</h3>
       <div class="hr"></div>
@@ -425,7 +455,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
-<div class="main-content">
+<div class="main-content-bg">
   <div class="main-content-wrapper">
     <header>
       <h2>Actuator Failures</h2>
@@ -441,7 +471,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
-<div class="main-content-bg">
+<div class="main-content">
   <div class="main-content-wrapper">
     <header>
       <h2>After a Damper Overhaul</h2>
@@ -460,7 +490,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
-<div class="main-content">
+<div class="main-content-bg">
   <div class="main-content-wrapper">
     <header>
       <h2>Repair or Replace?</h2>
@@ -472,6 +502,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </p>
     <p class="main-text">
     Replacement is usually the better answer when blades or frames are distorted, when the same damper fails every outage, or when the original maker no longer supports it. A drop-in replacement built to the existing flange and duct dimensions avoids changing the ductwork, and the existing actuator can often be reused.
+    </p>
+    <p class="main-text">
+    <strong>Check the fit before you order.</strong> Older plant is full of non-standard sizes, and these are the things that catch people out:
+    </p>
+    <ul class="bullets cs-results">
+      <li><span class="bullets"><strong>Face to face.</strong> Old valves were often thicker than today's standard wafer pattern. We have seen 63&nbsp;mm and 100&nbsp;mm bodies, and spool pieces fitted to fill the gap when a thinner valve went in.</span></li>
+      <li><span class="bullets"><strong>Body outside diameter.</strong> A wafer valve centres itself on the flange bolts. A standard PN body between ANSI flanges can be too small to centre properly, so measure the old one.</span></li>
+      <li><span class="bullets"><strong>Shaft and actuator drive.</strong> Square, star and double-D drives are not interchangeable, and a big actuator may not fit a smaller replacement shaft. Note the mounting flange (e.g. F07/F12) and drive size.</span></li>
+      <li><span class="bullets"><strong>Limit switches and positioners.</strong> Sites often want to keep the limit box or actuator they already stock, so check what can be carried over.</span></li>
+    </ul>
+    <p class="main-text">
+    Send us photos of the old damper, its nameplate and the measurements above and we will check what fits.
     </p>
   </div>
 </div>
@@ -486,6 +528,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="main-text">Usually ash or dust in the shaft bearings, corrosion on hot duties, or blades binding in the frame as they expand with heat. Over-tight glands are another common cause. Disconnect the actuator and move the damper by hand to confirm the damper is the problem.</p>
     <h3>Why is my damper leaking when it is closed?</h3>
     <p class="main-text">Worn or burnt seals, warped or eroded blades, or a linkage and end position set so the blades never reach fully closed. Check the actuator's closed position against the blades first.</p>
+    <h3>Why does my exhaust damper keep seizing?</h3>
+    <p class="main-text">Often condensation. During heat-up and cool-down the exhaust gas condenses and mixes with dust, and cast iron parts corrode and lock up. Stainless parts and a swing-through disc that does not need a tight seat are usually the cure.</p>
     <h3>Why does the damper actuator keep failing?</h3>
     <p class="main-text">Most often because the damper is binding, the actuator is too small for the torque at temperature, it is exposed to heat from the duct, or it is hunting continuously on a motor not rated for modulating duty.</p>
     <h3>Can you replace an obsolete damper without changing the ductwork?</h3>
@@ -498,6 +542,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
 {"@type": "Question", "name": "Why does my damper stick?", "acceptedAnswer": {"@type": "Answer", "text": "Usually ash or dust in the shaft bearings, corrosion on hot duties, or blades binding in the frame as they expand with heat. Over-tight glands are another common cause. Disconnect the actuator and move the damper by hand to confirm the damper is the problem."}},
 {"@type": "Question", "name": "Why is my damper leaking when it is closed?", "acceptedAnswer": {"@type": "Answer", "text": "Worn or burnt seals, warped or eroded blades, or a linkage and end position set so the blades never reach fully closed. Check the actuator's closed position against the blades first."}},
+{"@type": "Question", "name": "Why does my exhaust damper keep seizing?", "acceptedAnswer": {"@type": "Answer", "text": "Often condensation. During heat-up and cool-down the exhaust gas condenses and mixes with dust, and cast iron parts corrode and lock up. Stainless parts and a swing-through disc that does not need a tight seat are usually the cure."}},
 {"@type": "Question", "name": "Why does the damper actuator keep failing?", "acceptedAnswer": {"@type": "Answer", "text": "Most often because the damper is binding, the actuator is too small for the torque at temperature, it is exposed to heat from the duct, or it is hunting continuously on a motor not rated for modulating duty."}},
 {"@type": "Question", "name": "Can you replace an obsolete damper without changing the ductwork?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. AMMTech dampers can be built as drop-in replacements to the existing flange and duct dimensions, and the existing actuator can often be reused."}},
 {"@type": "Question", "name": "Do you supply damper spares?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Blades, shafts, bearings, seals, linkages and actuators, including parts for older dampers where the original maker no longer supports them."}}
